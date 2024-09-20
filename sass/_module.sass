@@ -1,0 +1,142 @@
+/*模組區*/
+
+/*內頁資料板型*/
+//資料table列表模組
+.modTableListBk
+	width: 100%
+	padding-left: 12px
+	padding-right: 12px
+	padding-bottom: 15px
+	overflow-x: auto
+.modTableList
+	padding: 30px 
+	border-bottom: $gray_line
+	@include maxcom
+		width: auto
+		border-bottom: none
+		min-width: 200%
+		padding: 25px 30px 
+		background: $bg-gray-200
+		border-radius: 8px
+		&:nth-of-type(2n)
+			background: #FFF
+	@include maxcom-1920
+		min-width: 100%
+
+//功能搜尋區
+.modOprBk
+	padding: 0 30px
+	@include ipad
+	@include maxcom
+		padding: 0 50px
+.modOpr
+	width: 100%
+	background: #FFF url(../images/page-dec--01.svg)
+	background-repeat: no-repeat
+	background-position-x: -50px
+	background-position-y: -70px
+	background-size: 250px
+	// overflow: hidden
+	position: relative
+	@include ipad
+		// width: 410px
+	@include maxcom
+		// height: 180px
+	@include maxcom-1920
+		display: flex
+		// justify-content: center
+		// align-items: start
+.modOpr-DataAddArea
+	position: relative
+	padding: 25px 30px 30px 30px
+	@include maxcom
+		padding: 25px 30px 20px 30px
+	@include maxcom-1920
+		min-width: 30%
+		padding: 25px 40px 30px 40px
+.modOpr-count
+	@include maxcom
+		display: inline-block
+		position: relative
+		top: 15px
+		padding-right: 100px
+	@include maxcom-1920
+		position: absolute
+		padding-right: 20px
+		top: 87px
+.modOpr-addBt
+	@include maxcom-1920
+		position: absolute
+		bottom: 27px
+		right: 30px
+.modOpr-searchArea
+	padding: 25px 0 30px 0
+	border-top: $gray-line
+	@include maxcom-1920
+		min-width: 70%
+		border-top: none
+		border-left: $gray-line
+		
+.modOpr-searchArea--titBk
+	padding-left: 30px
+	padding-right: 30px
+	padding-bottom: 20px
+	@include maxcom-1920
+		padding-bottom: 35px
+		padding-left: 40px
+		padding-right: 40px
+
+.modOpr-searchArea--fieldBk
+	@include maxcom-1920
+		padding-left: 10px
+		padding-right: 10px
+
+//重點強調資訊組
+.modInfoBk-EminfoBk
+	// display: flex
+	// flex-wrap: wrap
+	// align-items: center
+	// justify-content: stretch
+	// justify-items: center
+.modInfoBk-EminfoBk--info
+	// border-left: 2px solid $bg-gray-200
+	// border-right: 2px solid $bg-gray-200
+	// padding-right: 40px
+	// padding-left: 40px
+	// margin-bottom: 12px
+	// @include maxcom
+		// border-left: none
+.modInfoBk-EminfoBk--info--tit
+	margin-bottom: -3px
+.modInfoBk-EminfoBk--info--data
+	font:
+		family: $text-styleRegular--en,$text-styleMedium--ch
+
+.modInfoBk-EminfoBk--info--textDes
+	width: 100%
+	border-radius: 6px
+	background: $bg-gray-200
+	padding: 10px 30px
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-wrap: no-wrap	
+	&:nth-of-type(2n)
+		background: #FFF
+	@include maxcom-1920
+		padding: 12px 40px
+	.modInfoBk-EminfoBk--info--tit
+		min-width: 140px
+
+.modInfoBk-EminfoBk--info:last-of-type
+	border-right: none
+
+.modInfoBk-EminfoBk--lineDec
+	border-left: 2px solid $main-color-100
+	padding-left: 30px
+	padding-right: 30px
+	margin: 10px
+	+maxcom-1920
+		margin: 0px
+	&:last-of-type
+		border-right: 2px solid $main-color-100

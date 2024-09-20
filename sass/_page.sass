@@ -1,0 +1,694 @@
+//頁面畫面
+//index.html
+.pagOverLogoArea--sml
+    display: block
+    padding-left: 30px
+    padding-right: 30px
+    padding-bottom: 30px
+    +maxcom
+        display: none
+.pagOverDataSection
+    width: 100%
+    @include ipad
+        display: flex
+        flex-wrap: nowrap
+        justify-content: flex-start
+        padding: 0 0 0 10px
+    @include maxcom
+        padding: 0 35px
+        
+.pagOverDataBk
+    width: 280px
+    margin: 0 auto
+    @include ipad
+        margin: 0 
+        width: 250px
+    @include maxcom
+        width: 360px
+    @include maxcom-1920
+.pagOverData
+    width: 100%
+    background-repeat: no-repeat
+    background-size: 100% auto
+    padding: 35px 0 0 30px
+    position: relative
+    min-height: 170px
+    @include ipad
+        min-height: 140px
+    @include maxcom
+        padding: 40px 0 0 40px
+        min-height: 180px
+    @include maxcom-1920
+        min-height: 220px
+        padding: 50px 0 0 40px
+.pagOverData--blue
+    background-image: url(../images/index-emDataArea--blue.svg) 
+.pagOverData--green
+    background-image: url(../images/index-emDataArea--green.svg)
+.pagOverData--purple
+    background-image: url(../images/index-emDataArea--purple.svg)
+.pagOverData-titEn
+    padding-bottom: 5px
+.pagOverData-titCh
+    font:
+        size: $text-16
+    @include maxcom
+        font:
+            size: $text-20
+            family: $text-styleMedium--ch
+.pagOverData-count
+    font:
+        size: $text-48
+        family: $text-styleLight--en
+    color: $second-color
+    position: absolute
+    right: 30px
+    bottom: 20px
+    @include ipad
+        bottom: 5px
+    @include maxcom
+        bottom: 20px
+    @include maxcom-1920
+        bottom: 32px
+        right: 40px
+        font:
+            size: $text-60
+.pagOverOrderBk
+    width: 100%
+    padding-top: 10px
+    padding-bottom: 40px
+.pagOverOrder-tit
+    padding: 0 0 20px 0
+    @include maxcom
+        padding: 0 0 40px 0
+
+
+.pagEventListBk
+    @include maxcom
+        width: auto
+        padding-left: 12px
+        padding-right: 12px
+        padding-bottom: 15px
+        overflow-x: auto
+.pagEventList
+    padding: 30px 
+    border-bottom: $gray_line
+    @include maxcom
+        width: auto
+        border-bottom: none
+        min-width: 200%
+        padding: 20px 30px 
+        background: $bg-gray-200
+        border-radius: 8px
+        &:nth-of-type(2n)
+            background: #FFF
+    @include maxcom-1920
+        min-width: 100%
+.pagEventList-tit--phone
+    width: 100%
+    font:
+        size: $text-14
+        family: 'NotoSansTC-Regular', sans-serif
+    @include maxcom
+        display: none
+.pagEventList-statusOrder--phone
+    width: 100%
+    @include maxcom
+        display: none
+.pagEventList-statusOrder--phone--text
+    font:
+        size: $text-20
+        family: $text-styleMedium--ch
+    color: $main-color
+    // text-decoration: underline
+    img
+        width: 30px
+        height: 30px
+        margin: 0 12px 0 0
+        vertical-align: -8px
+//電腦時以表格呈現
+.pagEventList--maxcomBk
+    @include maxcom
+        display: flex
+        //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+        //而且用
+        display: -webkit-box
+        flex-wrap: nowrap
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: -ms-autohiding-scrollbar 
+        align-items: center
+        
+//手機時以card呈現，電腦時以表格呈現
+.modPhoneCardMaxcomTable-dataArea
+    width: 100%
+    border-bottom: $gray_line
+    padding-top: 8px
+    padding-bottom: 8px
+    &:last-of-type,&:first-of-type
+        border-bottom: none
+    @include maxcom
+        border-bottom: none
+        padding-right: 20px
+        padding-top: 0px
+        padding-bottom: 0px
+              
+
+.pagEventList-dataArea,.pagEventList-dataTit--maxcom
+    @include maxcom
+        &:nth-child(1)
+            width: 360px
+        &:nth-child(2)
+            width: 260px
+        &:nth-child(3)
+            width: 270px
+        &:nth-child(4)
+            width: 200px
+        &:nth-child(5)
+            width: 110px
+        &:nth-child(6)
+            width: 80px
+        &:nth-child(7)
+            width: 120px
+
+
+.pagEventList-btArea
+    width: 100%
+    padding-top: 20px
+    @include maxcom
+        padding-top: 0px
+
+//手機專用形式
+.pagEventList-dataArea--tit--phone
+    display: block
+    min-width: 55px
+    @include maxcom
+        display: none
+
+//電腦專用形式
+.pagEventList-dataArea--maxcom
+    display: none
+    opacity: 0
+    @include maxcom
+        opacity: 1
+        display: block
+
+
+//電腦專用tit
+.pagEventList-dataTitArea--maxcom
+    display: none
+    @include maxcom
+        padding: 25px 30px
+        display: flex
+        //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+        //而且用
+        display: -webkit-box
+        flex-wrap: nowrap
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: -ms-autohiding-scrollbar 
+        align-items: center
+.pagEventList-dataTit--maxcom
+    color: $black
+
+
+//setting.html
+.pagSettingOprBk
+    padding: 0 30px
+    @include ipad
+    @include maxcom
+        padding: 0 50px
+.pagSettingOpr
+    width: auto
+    background: #FFF url(../images/page-dec--01.svg)
+    background-repeat: no-repeat
+    background-position-x: -40px
+    background-position-y: -60px
+    background-size: 210px
+    overflow: hidden
+    padding: 25px 30px 30px 30px
+    position: relative
+    @include ipad
+        width: 410px
+    @include maxcom
+        height: 180px
+        overflow: hidden
+.pagSettingOpr-count
+    @include ipad
+        position: relative
+        top: 10px
+    @include maxcom
+        top: -10px
+.pagSettingOpr-addBt
+    @include ipad
+        position: absolute
+        bottom: 30px
+        right: 30px
+
+.pagSettingList-dataTitArea,.pagSettingList-dataArea
+    // width: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+
+.pagSettingList-dataTit
+    color: $black
+
+.pagSettingList-dataArea
+    min-width: 1460px
+    padding: 20px 30px 
+    background: $bg-gray-200
+    border-radius: 8px
+    &:nth-of-type(2n)
+        background: #FFF
+    @include maxcom-1920
+        min-width: 100%
+.pagSettingList-dataTit,.pagSettingList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 390px
+    &:nth-child(2)
+        width: 450px
+    &:nth-child(3)
+        width: 400px
+    &:nth-child(4)
+        width: 150px
+
+
+//setting-add.html
+.pagSettingAddBk
+    width: 100%
+    padding: 0 30px
+    @include ipad
+    @include maxcom
+        padding: 0 50px
+
+
+//users.html
+
+.pagUserList-dataTitArea,.pagUserList-dataArea
+    // width: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+
+.pagUserList-dataTit
+    color: $black
+
+.pagUserList-dataArea
+    min-width: 1400px
+    padding: 20px 30px 
+    background: $bg-gray-200
+    border-radius: 8px
+    &:nth-of-type(2n)
+        background: #FFF
+    @include maxcom-1920
+        min-width: 100%
+.pagUserList-dataTit,.pagUserList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 300px
+    &:nth-child(2)
+        width: 200px
+    &:nth-child(3)
+        width: 300px
+    &:nth-child(4)
+        width: 200px
+    &:nth-child(5)
+        width: 200px
+    &:nth-child(6)
+        width: 200px
+
+//materials.html
+.pagMatList-dataArea
+    width: 100%
+    overflow-x: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+    @include maxcom
+        padding: 25px 40px
+    @include maxcom-1920
+        min-width: 100%
+
+.pagMatList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 250px
+    &:nth-child(2)
+        width: 250px
+    &:nth-child(3)
+        width: 600px
+    &:nth-child(4)
+        width: 250px
+        padding-left: 30px
+
+
+//inventoies.html
+.pagInvmodOpr
+    background: #FFF url(../images/page-dec--02.svg)
+    background-repeat: no-repeat
+    background-position-x: -20px
+    background-position-y: 100px
+    background-size: 150px
+.pagInvmodOpr-addBt
+    @include maxcom-1920
+        position: static
+
+.pagInvList-dataArea
+    width: 100%
+    overflow-x: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+    @include maxcom
+        padding: 25px 40px
+    @include maxcom-1920
+        min-width: 100%
+
+.pagInvtList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 300px
+    &:nth-child(2)
+        width: 260px
+    &:nth-child(3)
+        width: 650px
+    &:nth-child(4)
+        width: 200px
+
+//inventories-edit.html
+.pagInvEditList-dataTitArea,.pagInvEditList-dataArea
+    // width: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+
+.pagInvEditList-dataTit
+    color: $black
+
+.pagInvEditList-dataArea
+    width: 750px
+    padding: 20px 30px 
+    background: $bg-gray-200
+    border-radius: 8px
+    &:nth-of-type(2n)
+        background: #FFF
+    @include maxcom-1920
+        width: 100%
+.pagInvEditList-dataTit,.pagInvEditList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 300px
+    &:nth-child(2)
+        width: 300px
+    &:nth-child(3)
+        width: 150px
+        padding-left: 40px
+
+
+//formula.html
+.pagForList-dataArea
+    width: 100%
+    overflow-x: auto
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+    @include maxcom
+        padding: 25px 40px
+    @include maxcom-1920
+        min-width: 100%
+
+.pagForList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 370px
+    &:nth-child(2)
+        width: 700px
+    &:nth-child(3)
+        padding-left: 30px
+        width: 250px
+
+//order.html
+.pagOrdmodOpr
+    background: #FFF url(../images/page-dec--04.svg)
+    background-repeat: no-repeat
+    background-position-x: 102%
+    background-position-y: -40px
+    background-size: 155px
+
+
+//order-edit.html
+.pagOrderEditList-dataTitArea,.pagOrderEditList-dataArea,.pagOrderEditList-totalArea
+    padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    display: -webkit-box
+    flex-wrap: nowrap
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar 
+    align-items: center
+
+.pagOrderEditList-dataTit
+    color: $black
+
+.pagOrderEditList-dataArea
+    // width: 750px
+    padding: 20px 30px 
+    background: $bg-gray-200
+    border-radius: 8px
+    &:nth-of-type(2n)
+        background: #FFF
+    @include maxcom-1920
+        // width: 100%
+        margin-right: 100px
+.pagOrderEditList-dataTit,.pagOrderEditList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 80px
+    &:nth-child(2)
+        width: 190px
+    &:nth-child(3)
+        width: 190px
+    &:nth-child(4)
+        width: 190px
+    &:nth-child(5)
+        width: 200px
+
+.pagOrderEditList-totalArea,.pagOrderEditList-totalArea
+    // background: $bg-gray-300
+    margin-bottom: 20px
+
+.pagOrderEditList-totalList
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    &:nth-child(1)
+        width: 460px
+        padding: 0 20px 0 270px
+        // flex-direction: row-reverse
+    &:nth-child(2)
+        width: 300px
+
+
+
+//order-in.html
+.pagOrderInList-dataArea
+    width: 100%
+    // overflow-x: auto
+    // overflow-y: visible
+    // padding: 25px 30px
+    display: flex
+    //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+    // display: -webkit-box
+    flex-wrap: wrap
+    // -webkit-overflow-scrolling: touch
+    // -ms-overflow-style: -ms-autohiding-scrollbar 
+    // align-items: center
+    @include maxcom
+        // padding: 25px 40px
+    @include maxcom-1920
+        min-width: 100%
+
+.pagOrderInList-data
+    display: flex
+    flex-wrap: nowrap
+    padding-right: 20px
+    // &:nth-child(1)
+    //     width: 370px
+    // &:nth-child(2)
+    //     width: 840px
+    // &:nth-child(3)
+    //     width: 160px
+
+.pagOrderIn-desArea
+    padding: 25px 30px
+    // border-bottom: $gray-line
+    @include maxcom-1920
+        padding: 10px 140px 40px 410px
+
+
+//newsli.html
+
+
+.pagNewsListBk
+    @include maxcom
+        width: auto
+        padding-left: 12px
+        padding-right: 12px
+        padding-bottom: 15px
+        overflow-x: auto
+.pagNewsList
+    padding: 30px 
+    border-bottom: $gray_line
+    @include maxcom
+        width: auto
+        border-bottom: none
+        min-width: 200%
+        padding: 20px 30px 
+        background: $bg-gray-200
+        border-radius: 8px
+        &:nth-of-type(2n)
+            background: #FFF
+    @include maxcom-1920
+        min-width: 100%
+.pagNewsList-tit--phone
+    width: 100%
+    font:
+        size: $text-14
+        family: 'NotoSansTC-Regular', sans-serif
+    @include maxcom
+        display: none
+.pagNewsList-statusOrder--phone
+    width: 100%
+    @include maxcom
+        display: none
+.pagNewsList-statusOrder--phone--text
+    font:
+        size: $text-20
+        family: $text-styleMedium--ch
+    color: $main-color
+    // text-decoration: underline
+    img
+        width: 30px
+        height: 30px
+        margin: 0 12px 0 0
+        vertical-align: -8px
+//電腦時以表格呈現
+.pagNewsList--maxcomBk
+    @include maxcom
+        display: flex
+        //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+        //而且用
+        display: -webkit-box
+        flex-wrap: nowrap
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: -ms-autohiding-scrollbar 
+        align-items: center
+        
+//手機時以card呈現，電腦時以表格呈現
+.modPhoneCardMaxcomTable-dataArea
+    width: 100%
+    border-bottom: $gray_line
+    padding-top: 8px
+    padding-bottom: 8px
+    &:last-of-type
+        border-bottom: none
+    @include maxcom
+        border-bottom: none
+        padding-right: 20px
+        padding-top: 0px
+        padding-bottom: 0px
+              
+
+.pagNewsList-dataArea,.pagNewsList-dataTit--maxcom
+    @include maxcom
+        &:nth-child(1)
+            width: 900px
+        &:nth-child(2)
+            width: 250px
+        &:nth-child(3)
+            width: 300px
+
+
+.pagNewsList-btArea
+    width: 100%
+    padding-top: 20px
+    @include maxcom
+        padding-top: 0px
+
+//手機專用形式
+.pagNewsList-dataArea--tit--phone
+    display: block
+    min-width: 55px
+    @include maxcom
+        display: none
+
+//電腦專用形式
+.pagNewsList-dataArea--maxcom
+    display: none
+    opacity: 0
+    @include maxcom
+        opacity: 1
+        display: block
+
+
+//電腦專用tit
+.pagNewsList-dataTitArea--maxcom
+    display: none
+    @include maxcom
+        padding: 25px 30px
+        display: flex
+        //不知為何，現在要加display: -webkit-box，flex才會是設定的固定寬度
+        //而且用
+        display: -webkit-box
+        flex-wrap: nowrap
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: -ms-autohiding-scrollbar 
+        align-items: center
+.pagNewsList-dataTit--maxcom
+    color: $black
+
+

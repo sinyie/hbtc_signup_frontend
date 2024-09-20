@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/cssreset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- semantic UI -->
+    <link href="css/semantic.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/html5-qrcode.min.js"></script>
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+    <!-- loading特效 -->
+    <link href="css/loader.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery.nimble.loader.js"></script>
+    <!-- 設定檔 -->
+    <script src="js/config.js"></script>
+    <!-- 本頁js -->
+    <script src="js/js-joincheckin.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/web-js.js"></script>
+
+    <!-- 網站區layout -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+    <img src="images/qr_code.png" id="qrcode_img" alt="QR Code" style="display: none;">
+
+</body>
+</html>

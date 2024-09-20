@@ -1,0 +1,89 @@
+/*行事曆樣式*/
+.status
+	width: 21px
+	bottom: 4px
+	position: absolute
+	left: calc(50% - 10px)
+	display: flex
+	flex-wrap: nowrap
+	justify-content: center 
+.calEvent 
+	width: 4px
+	height: 4px
+	border-radius: 4px
+	content: " "
+	display: block
+	background: $main-color
+	position: absolute
+	left: calc(50% - 3px)
+	bottom: 4px
+// .busy 
+// 	width: 5px
+// 	height: 5px
+// 	border-radius: 5px
+// 	margin: 0 1px
+// 	content: " "
+// 	display: block
+// 	background: #f64747
+
+
+/*事件列表*/
+.calEventList,.calEventList--project,.calEventList--meeting
+	// width: 100%
+	padding-right: 10px
+	margin-left: 10px
+	padding-bottom: 12px
+	border-left: 2px solid $line-gray
+	position: relative
+	.calEventList-clock
+		position: absolute
+		left: -8px
+	.calEventList-infoBk
+		margin-left: 20px
+		border-radius: 6px
+		padding: 15px 15px
+		overflow: hidden
+		display: block
+		&:hover
+			box-shadow: 0px 0px 8px rgba(34,34,34,.2) 
+		.calEventList-infoBk--startTime
+			width: 25%
+			float: left
+			text-align: right
+		.calEventList-infoBk--endTime
+			color: $color-info
+			opacity: .6
+			font:
+				weight: 500 
+		.calEventList-infoBk--listTit
+			width: 75%
+			float: right
+			padding-left: 20px
+		.calEventList-infoBk--listContent
+			width: 75%
+			float: right
+			padding-left: 20px
+
+			
+
+.calEventList--project
+	.calEventList-infoBk
+		background: $color-info
+	.calEventList-infoBk--startTime
+		color: $color-info
+	.calEventList-infoBk--listContent
+		color: $text-gray-400
+
+.calEventList--meeting
+	.calEventList-infoBk
+		background: $main-color-600
+	.calEventList-infoBk--startTime
+		color: $main-color-200 !important
+	.calEventList-infoBk--endTime
+		color: $main-color-200 !important
+		opacity: .6
+	.calEventList-infoBk--listTit
+		color: #FFF
+	.calEventList-infoBk--listContent
+		color: #FFF
+		opacity: .6

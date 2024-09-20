@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/cssreset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- semantic UI -->
+    <link href="css/semantic.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+    <!-- 時間區間特效 -->
+    <!-- <link href="css/flatpickr.min.css" rel="stylesheet" type="text/css" media="all"> -->
+    <!-- <script src="js/flatpickr.js"></script> -->
+    <!-- 上傳圖片js -->
+    <!-- <link rel="stylesheet" href="dropify/css/dropify.min.css"> -->
+    <!-- <script src="dropify/js/dropify.min.js"></script>   -->
+    <!-- table sort特效 -->
+    <script src="js/table-sort.js"></script>
+    <!-- loading特效 -->
+    <link href="css/loader.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery.nimble.loader.js"></script>
+    <!-- 設定檔 -->
+    <script src="js/config.js"></script>
+    <!-- 本頁js -->
+    <script src="js/js-newsli.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/web-js.js"></script>
+
+    <!-- 網站區layout -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+    <div class="jsNavMain">
+        <!-- main.js塞在裡面 -->
+    </div>
+
+    <div class="patMainbody">
+        <!-- 麵包屑 -->
+        <div class="patBiteArea">
+            <a href="newsli.html" class="patBiteBt patBiteBt--in">活動消息一覽</a>
+        </div>
+        <!-- 頁面大標 -->
+        <h1 class="patH1Tit patH1Tit">活動消息一覽</h1>
+        <div class="patPrimary">
+
+            <!-- news列表 -->
+            <div class="patListBk">
+                <div class="eleCard">
+                    <div class="pagNewsListBk">
+                        <div class="pagEventList-dataTitArea--maxcom">
+                            <h5 class="eleDataTit pagNewsList-dataTit--maxcom">標題</h5>
+                            <h5 class="eleDataTit pagNewsList-dataTit--maxcom">發佈日期</h5>
+                            <h5 class="eleDataTit pagNewsList-dataTit--maxcom">發佈人</h5>
+                        </div>
+                        <span id="list_div">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- semantic UI -->
+    <script src="js/semantic.min.js"></script>
+    <!-- semantic UI 初始化 js -->
+    <script src="js/semantic-ini.js"></script>
+    <!-- table sort 初始化 js -->
+    <script src="js/tableSort-ini.js"></script>
+
+</body>
+</html>

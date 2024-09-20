@@ -1,0 +1,722 @@
+//網站框架
+
+//系統資訊區
+.patSysInfoBk
+	position: fixed
+	right: 20px
+	z-index: 3
+	width: auto
+	padding: 20px 30px
+	display: flex
+	align-items: center
+	@include maxcom
+		padding: 40px 50px 30px 50px
+.patSysInfo-userInfoArea
+	width: auto
+	display: flex
+	align-items: center
+	position: relative
+	cursor: pointer
+.patSysInfo-userInfoBt
+	width: 38px
+	height: 38px
+	background: $secondColor-linearGradient180deg
+	border-radius: 50%
+	cursor: pointer
+	font:
+		size: $text-21
+	line-height: 38px
+	text-align: center
+	color: #FFF
+	@include btnEm-shadow
+	@include maxcom
+		width: 58px
+		height: 58px
+		font:
+			size: $text-34
+		line-height: 58px
+.patSysInfo-userInfo--uesrName--maxcom
+	display: none
+	@include maxcom
+		display: block	
+		margin-left: 20px	
+		margin-right: 40px	
+.patSysInfo-userInfo--uesrName--maxcom--text
+	font:
+		size: $text-15
+	@include ipad
+		font:
+			size: $text-16
+.patSysInfo-userInfoBt--arrow
+	width: 15px
+	height: 15px
+	position: absolute
+	right: -27px
+	top: 10px
+	@include maxcom
+		top: 20px
+		right: 0px
+.patSysInfo-userInfo
+	width: 260px
+	border-radius: 20px
+	position: fixed
+	z-index: 3
+	right: 30px
+	top: 70px
+	padding: 25px 30px
+	background: #FFF
+	display: none
+	@include btnEm-shadow
+	@include maxcom
+		right: 50px
+		top: 120px
+.patSysInfo-userInfo--uesrName--phone
+	@include maxcom
+		display: none
+.patSysInfo-userInfo--uesrName--phone--text
+	font:
+		size: $text-15
+	@include ipad
+		font:
+			size: $text-16
+.patSysInfo-userInfo--timer--phone
+	@include maxcom
+		display: none
+.patSysInfo-userInfo--timer--maxcom
+	display: none
+	@include maxcom
+		// display: block
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		margin-right: 40px
+.patSysInfo-userInfo--timer--setTimeOut
+	color: $text-gray-400
+	font:
+		size: $text-15
+	&::before
+		content: url(../images/clock--gray--15.svg)
+		margin-right: 12px
+		vertical-align: -3px
+.patSysInfo-userInfo--timer--lastLoginTime
+	color: $text-gray-200
+	font:
+		size: $text-15	
+.patSysInfo-userInfo--logOutBt
+	display: block
+	position: relative
+	.btn-base--icon
+		float: right
+		margin: 15px 0 0 0
+		@include maxcom
+			margin: 18px 0 0 0
+.patSysInfo-userInfo--links
+	display: block
+	color: $text-gray-200
+	font:
+		size: $text-16
+	padding: 0 0 12px 0
+	margin: 0 0 20px 0
+	border-bottom: $gray-line
+	position: relative
+	&::after
+		content: url(../images/arrow-right--gray--15.svg)
+		width: 15px
+		height: 15px
+		vertical-align: 10px
+		position: absolute
+		right: 0px
+		top: 2px
+		// text-align: right
+		// float: right
+		// display: inline-block
+		// position: absolute
+	
+//手機視口header
+.patSmlHeader
+	width: 30px
+	padding: 20px
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 4
+	// display: flex
+	// justify-content: space-between
+	// cursor: pointer
+	@include maxcom
+		display: none
+.patSmlHeader-navbt
+	width: 30px
+	height: 30px
+	margin: 4px 0 0 0
+// .patSmlHeader-webName
+// 	margin: 15px 0 0 0
+// 	font:
+// 		size: $text-14
+
+//手機視口navgation
+.patSmlNav
+	width: 320px
+	height: 100%
+	position: fixed
+	top: 0
+	left: -320px
+	z-index: 6
+	overflow-y: auto
+	background: #FFF
+	padding: 0 50px
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	// align-items: flex-start
+	// justify-content: flex-start
+	@include maxcom
+		display: block
+		left: 0px
+.patSmlNav-closeBt
+	width: 30px 
+	height: 30px
+	position: absolute
+	right: 20px
+	top: 20px
+	cursor: pointer
+	@include maxcom
+		display: none
+.patSmlNav-LogoNameBk
+	margin-top: 50px
+.patSmlNav-LogoNameBk--logo
+	width: 70px
+	margin-bottom: 10px
+	+ipad
+		width: 100px
+.patSmlNav-LogoNameBk--name
+	font:
+		size: $text-18
+		family: $text-styleMedium--ch
+	color: $text-gray-500
+	+ipad
+		font:
+			size: $text-21
+	margin-bottom: 50px
+	span
+		+ipad
+			font:
+				size: $text-28
+.patSmlNavopen_bg
+	width: 100%
+	height: 100%
+	background: $bg-gray-200
+	display: none
+	position: fixed
+	top: 0
+	z-index: 5		
+	opacity: 0.84
+			
+
+//小視口nav 功能連結
+.patNavMenu
+	width: 100%
+	margin-top: 50px
+.patNavMenu-list
+	margin: 5px 0
+	display: flex
+	flex-wrap: no-wrap
+	@include typoBasic
+	color: $bg-gray-700
+	font:
+		family: $text-styleMedium--ch
+		size: $text-18
+	letter-spacing: 1.5px
+	line-height: 58px
+	&:hover,&:active
+		color: $black
+		text-decoration: none
+		.patNavMenu-icon
+			mix-blend-mode: difference
+			opacity: 0.64
+		// .patNavMenu-iconArea
+		// 	background: $emColor-linearGradient0deg
+		// 	box-shadow: 0px 12px 22px rgba(210,211,216,0.8)
+.patNavMenu-iconArea
+	width: 58px
+	height: 58px
+	border-radius: 18px
+	text-align: center
+	line-height: 58px
+	margin-right: 20px
+.patNavMenu-icon
+	margin-top: 14px
+	width: 30px
+	height: 30px
+.patNavMenu-list--active
+	color: $black
+	.patNavMenu-iconArea
+		background: $emColor-linearGradient0deg
+		border-radius: 18px
+		.patNavMenu-icon
+			mix-blend-mode: screen
+.patNavMenu-secondList
+	width: 100%
+	padding: 0 30px 10px 96px 
+	margin: 0 
+	&:last-of-type
+		padding: 0 30px 20px 96px 
+
+.patNavOrderBt
+	display: block
+	height: 150px
+	margin: 90px 0 30px 0
+	box-shadow: 0px 25px 30px rgba(210,211,216,0.8)
+	border-radius: 20px
+	padding: 20px 30px
+	position: relative
+	text-align: center
+	background: $emColor-linearGradient180deg
+	@include btnHoverAct
+.patNavOrderBt-img
+	width: 100px
+	// margin: -70px 0 0 0
+	position: absolute
+	top: -50px
+	left: 50px
+	text-align: center
+.patNavOrderBt-textCh
+	color: #fff
+	margin-top: 30px
+	margin-bottom: 5px
+	letter-spacing: 1.5px
+	font:
+		size: $text-18
+.patNavOrderBt-textEn
+	font:
+		size: $text-14
+	color: #fff
+	opacity: 0.64
+
+//copyright
+.patNavCopyright
+	width: 230px
+	// align-self: flex-end
+	position: absolute
+	bottom: 50px
+	font:
+		size: $text-15
+		family: $text-styleRegular--en,$text-styleRegular--ch
+	// color: $black
+	// opacity: 0.64
+	color: $text-gray-200
+
+
+
+//手機視口通知區
+// .patSmlNavNote
+// 	width: 320px
+// 	height: 100%
+// 	position: fixed
+// 	top: 0
+// 	left: -320px
+// 	z-index: 5
+// 	overflow-y: auto
+// 	background: #FFF
+// 	.patSmlNavNote-closeBt
+// 		width: 30px 
+// 		height: 30px
+// 		position: absolute
+// 		right: 20px
+// 		top: 20px
+// 		cursor: pointer
+// 	.patSmlNavNote-note
+// 		width: 100%
+// 		background: $color-info
+// 		border-bottom: 1px solid #FFF
+// 		.patSmlNavNote-note--list
+// 		.patSmlNavNote-note--list--link
+// 			color: $color-info
+// 			text-decoration: underline
+// 			&:hover
+// 				color: $main-color
+// 		.patSmlNavNote-note--time
+// 			.patSmlNavNote-note--time--icon
+// 				margin-right: 10px
+// 				vertical-align: -2px
+
+//電腦視口navgation
+// .patBigNav
+// 	display: none
+// 	width: 100px
+// 	height: 100%
+// 	background: $main-color
+// 	@include maxcom
+// 		display: flex
+// 		align-content: center
+// 		flex-wrap: wrap
+// 		position: fixed
+// 		z-index: 3
+// .patBigNav-note
+// 	width: 30px
+// 	height: 30px
+// 	position: relative
+// 	top: 35px
+// 	margin: 0 0 0 35px
+// 	.patBigNav-note--count
+// 		right: -16px
+// 		top: -9px
+// .patBigNav-link
+// 	height: auto
+// .patBigNav-bt,.patBigNav-bt.patNavMenu-list--active
+// 	display: block
+// 	width: 100px
+// 	height: 80px
+// 	margin: 0 0 5px 10px
+// 	padding: 0 20px 0 0
+// 	line-height: 100px
+// 	transition: all 0.5s ease-in-out
+// 	text-align: center
+// 	border-radius: 6px
+// 	&:hover
+// 		background: $secondColor-linearGradient180deg
+// 		transition: all 0.5s ease-in-out
+// 		.patBigNav-bt--icon
+// 			mix-blend-mode: color-dodge
+// 	.patBigNav-bt--icon
+// 		width: 30px
+// 		height: 30px
+// .patBigNav-bt.patNavMenu-list--active
+// 	background: $secondColor-linearGradient180deg
+// 	.patBigNav-bt--icon
+// 		mix-blend-mode: color-dodge
+// .patBigNav-logout
+// 	width: 70px
+// 	height: 70px
+// 	padding: 20px
+// 	display: block
+// 	margin: 0 0 10px 15px
+// 	&:hover
+// 		mix-blend-mode: exclusion
+// 		// opacity: 0.6
+// 	.patBigNav-logout--icon
+// 		width: 30px
+// 		height: 30px
+
+//電腦視口系統名稱
+// .patBig-webName
+// 	display: none
+// 	@include maxcom
+// 		width: 520px
+// 		display: block
+// 		position: absolute
+// 		background: #FFF
+// 		left: 100px
+// 		top: 0
+// 		height: 80px
+// 		line-height: 82px
+// 		color: $black
+// 		letter-spacing: 1px
+// 		padding: 0 50px
+// 		font: 
+// 			family: $text-styleMedium--ch
+// 			size: $text-18
+
+//登出及倒數計時
+// .patLogoutCountArea
+// 	width: 100%
+// 	height: 70px
+// 	position: fixed
+// 	bottom: 0px
+// 	left: 0		
+// 	z-index: 3
+// 	@include maxcom
+// 		position: absolute
+// 		top: 0
+// 		right: 0
+// 		left: 620px
+// 		width: calc(100% - 620px)
+// 		height: 80px
+// .patLogoutCountArea-logoutBt
+// 	width: 60px
+// 	height: 70px
+// 	background: $secondColor-linearGradient0deg
+// 	text-align: center
+// 	cursor: pointer
+// 	display: block
+// 	float: left
+// 	padding: 20px 0 0 0
+// 	@include maxcom
+// 		width: 86px
+// 		height: 80px
+// 		padding: 24px 0 0 0
+// 	.icon
+// 		width: 30px
+// 		height: 30px
+// 	&:hover
+// 		opacity: 0.6
+// .patLogoutCountArea-countArea
+// 	float: left
+// 	width: calc( 100% - 60px )
+// 	background: $mainColor-linearGradient135deg
+// 	height: 70px
+// 	padding: 15px 20px 0px 20px
+// 	line-height: 1
+// 	@include maxcom
+// 		width: calc( 100% - 86px )
+// 		height: 80px
+// 		padding: 0 40px
+// .patLogoutCountArea-countArea--last,
+// .patLogoutCountArea-countArea--count
+// 	font:
+// 		size: $text-14
+// 	color: #fff
+// 	line-height: 1.8
+// 	letter-spacing: 0.5px
+// 	.icon
+// 		padding: 0 10px 0 0
+// 		vertical-align:  -4px
+// 	@include maxcom
+// 		font:
+// 			size: $text-16
+// 		display: inline-block
+// 		padding: 0 20px 0 0
+// 		line-height: 80px
+// 		letter-spacing: 1px
+// 		.icon
+// 			padding: 0 15px 0 0
+// 			vertical-align:  -3px
+// .patLogoutCountArea-countArea--last
+// 	color: $text-gray-200
+	
+
+/* 電腦視口header*/
+// .patBigHeader
+// 	width: 100%
+// 	background: #FFF 
+// 	display: none
+// 	@include computer
+// 		display: block
+// 		padding: 0 30px
+// 	@include maxcom-1920
+// 		padding: 0 50px
+
+
+
+//頁面結構框架
+.patWrapper
+	@include maxcom
+.patMainbody
+	width: 100%
+	@include maxcom
+		width: calc( 100% - 320px )
+		margin-left: 320px 
+.patPrimary
+	width: 100%
+	padding: 80px 0 40px 0 
+	@include maxcom
+		padding: 0px 0 40px 0 
+
+
+
+//麵包屑
+.patBiteArea
+	display: none
+	@include maxcom
+		display: inline-block
+		width: 100%
+		margin: 50px 0 0 0
+		padding: 0 50px
+.patBiteBt
+	font:
+		size: $text-17
+	color: $main-color
+	letter-spacing: 0.5px
+	line-height: 1.5em
+	position: relative
+	display: inline-block
+	float: left
+	margin: 0 30px 0 0
+	&:hover,&:active,&:focus
+		// color:  $text-gray-400
+		// text-decoration: none
+	&::after
+		background: url(../images/arrow-right--gray--15.svg) no-repeat
+		width: 15px
+		height: 15px
+		content: " "
+		position: absolute
+		top: 3px
+		margin: 0 8px
+	&:last-of-type
+		&:after
+			background: none
+.patBiteBt--in
+	color: $bg-gray-700
+	&:hover,&:active,&:focus
+		color: $bg-gray-700
+		text-decoration: none
+
+
+
+//頁面H1大標題
+.patH1Tit.patH1Tit
+	font:
+		size: $text-17
+		family: $text-styleMedium--ch
+	position: fixed
+	z-index: 4
+	top: 25px
+	left: 70px
+	letter-spacing: 1.2px 
+	padding: 0 30px 0 0
+	@include maxcom
+		position: relative
+		top: 0
+		left: 0		
+		margin: 35px 0 40px 0
+		padding: 0 50px
+		font:
+			size: $text-24
+			// family: $text-styleMedium--ch
+
+
+//頁面list區
+.patListBk
+	width: 100%
+	padding-left: 30px 
+	padding-right: 30px
+	@include maxcom
+		padding-left: 50px 
+		padding-right: 50px
+.patListBk-tit
+	padding: 30px 0 20px 0
+	@include maxcom
+		padding: 40px 0 40px 0
+.patList
+	width: 100%
+
+
+
+
+// 搜尋區
+.patHeader-searchCountBk
+	width: 100%
+	overflow: hidden
+	padding: 30px 0 0 0
+.patHeader-searchBk
+	position: relative
+	@include ipad
+		width: 300px
+		float: left
+.patHeader-search
+	width: 100% 
+	border: 1px solid rgba(255,255,255,0.3) 
+	background: $main-color-600 
+	color: #FFF 
+	height: 44px 
+	border-radius: 6px 
+	line-height: 44px 
+	padding: 0 20px 
+	font:
+		family: $text-style 
+		size: $text-16 
+		weight: 400 
+	color: #FFF 
+	transition: all 0.3s linear 
+	&::-webkit-input-placeholder
+		color: rgba(255,255,255,0.5)  !important
+	&::-moz-placeholder  /* Firefox 19+ */
+		color: rgba(255,255,255,0.5) !important
+	&:-ms-input-placeholder  /* IE 10+ */
+		color: rgba(255,255,255,0.5)  !important
+	&:-moz-placeholder  /* Firefox 18- */
+		color: rgba(255,255,255,0.5) !important
+.patHeader-search--bt
+	width: 40px
+	height: 40px
+	display: block
+	position: absolute
+	right: 12px
+	top: 1px
+	background: $main-color-600 
+	&:hover
+		transform: translateX(8px)
+
+
+//頁面標題及強調按鈕
+.patTitEmBt
+	width: 100%
+	padding-top: 40px
+	position: relative
+	z-index: 1
+.patTitEmBt-tit
+	// width: auto
+	float: left
+	@include typoNowrap
+	margin: 20px 0 0 0
+.patTitEmBt-backBt
+	/*mix-blend-mode: difference 要在有底色的狀況之下才有效果*/
+	float: left
+	margin: 20px 10px 0 0
+	width: 40px
+	height: 40px
+	transition: all 0.2s ease-in-out
+	cursor: pointer
+	&:hover
+		transform: translateX(-8px)
+		img
+			mix-blend-mode: difference
+.patTitEmBt-emBt
+	float: right
+	margin: 0 0 25px 0
+	transition: all 0.2s ease-in-out
+.patTitEmBt-total
+	width: auto
+	float: right
+	margin: 0 20px 0 0 
+	@include maxcom
+		margin: 0 30px 0 0 
+	.patTitEmBt-total--tit
+		margin-top: -5px
+	.patTitEmBt-total--num
+		font:
+			size: 2.5em
+			weight: 800
+		color: $main-color
+		letter-spacing: -0.5px
+		margin-top: -3px
+	.patTitEmBt-total--iconSize
+		font:
+			size: 0.75rem
+
+
+
+			
+/*頁籤切換區*/
+.patTabArea 
+	height: auto
+	width: 100%
+	// background: #FFF
+	// border-bottom: 1px solid rgba(255,255,255,.2)
+	// border-top: 1px solid $text-gray-200
+	@include typoNowrap
+	overflow-x: auto
+	display: flex
+	// flex-wrap: nowrap
+	// padding: 6px 0 0 0
+	// position: fixed
+	// left: 0
+	// top: 54px
+	// z-index: 1
+	@include computer
+		// position: static
+		// padding: 8px 0 0 0
+		overflow: visible
+		overflow-x: visible
+.patTabArea--fixed
+	position: fixed
+	top: 0
+	background: #FFF
+	box-shadow: 0px 5px 30px 0px $shadow-gray
+	padding-top: 10px
+	padding-left: 40px
+	z-index: 4
+	margin-left: -50px
+
+

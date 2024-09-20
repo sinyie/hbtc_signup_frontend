@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*google 搜尋*/
+
+.gsc-input-box{ border:none !important; height:50px !important; background-color: rgba(245,249,252,1) !important; padding: 0 10px !important; }
+.gsib_a{height:40px !important;}
+.gsc-search-box-tools .gsc-search-box .gsc-input{padding-right:0px !important;background-color: rgba(245,249,252,1)!important;}
+.gsc-search-button{ width:50px!important; height:22px!important; background:rgba(245,249,252,1)!important; }
+.gsc-search-button input{ padding:3px 17px!important;}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: rgba(245,249,252,1)!important;
+    background-color: rgba(245,249,252,1)!important;
+    background-image: none;
+    filter: none;
+}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
+	border-color: rgba(245,249,252,1)!important;
+}
+.cse .gsc-search-button-v2, .gsc-search-button-v2{
+	padding: 0 !important;
+}
+
+.gsc-search-box .gsc-input>input:hover, .gsc-input-box-hover{
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus{
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.gsc-search-button-v2 svg{
+	fill: rgba(0,100,255,1)!important;
+	/* opacity: 0.3 !important; */
+	width: 20px !important;
+	height: 20px !important;
+	/* padding: 1px; */
+}

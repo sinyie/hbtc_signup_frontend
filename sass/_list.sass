@@ -1,0 +1,310 @@
+/*列表區*/
+/*無分欄*/
+
+
+/*列表*/
+.list
+	width: 100%
+	border-radius: 13px
+	background: #FFF
+	margin: 0 0 15px 0
+	position: relative
+	@include computer
+		display: flex
+		flex-wrap: nowrap 
+		align-items: center
+		justify-content: space-between 
+		flex-direction: row
+		position: relative
+	.list-btArea
+		position: absolute
+		float: right
+		right: 20px
+		top: 20px
+		cursor: pointer
+		z-index: 1
+		display: block
+		@include computer
+			position: relative
+			top: 0px
+		.list-btArea--bt
+			vertical-align: middle
+
+/*列表資訊寬度*/
+.list-eleTit
+	margin-top: 20px
+	@include computer
+		width: 35%
+		// overflow: hidden
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 25%
+.list-eleInfoListArea
+	@include computer
+		width: 35%
+		// overflow: hidden
+		margin-bottom: 0px
+		top: 0px
+		padding-left: 0px
+	@include maxcom-1920
+		width: 50%
+.list-eleInfoListArea--big
+	@include computer
+		width: 50%
+		// overflow: hidden
+		margin-bottom: 0px
+		top: 0px
+		padding-left: 0px
+	@include maxcom-1920
+		width: 50%
+.list-eleLab
+	margin-top: 30px
+	@include computer
+		width: 20%
+		overflow: hidden
+		top: 0px
+		margin: 0px
+		padding: 0
+	@include maxcom-1920
+		width: 25%
+		margin-top: 10px
+.list-eleAlarm
+	@include computer
+		width: 50%
+		overflow: hidden
+		.eleAlarm-grandTit
+			margin-bottom: 0px
+
+/*user.html*/
+.list-eleTit--user
+	margin-top: 20px
+	@include computer
+		width: 50%
+		// overflow: hidden
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%
+
+.list-eleLab--user
+	margin-top: 30px
+	@include computer
+		width: 40%
+		overflow: hidden
+		top: 0px
+		margin-top: 10px
+		padding: 0
+	@include maxcom-1920
+		width: 50%
+
+/*device.html*/
+.list-eleTit--device
+	margin-top: 20px
+	@include computer
+		width: 100%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+
+/*configuration.html*/
+.list-eleTit--config
+	margin-top: 20px
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+
+.list-eleInfoListArea--config
+	@include computer
+		width: 50%
+		margin-bottom: 0px
+		top: 0px
+		padding-left: 0px
+
+
+/*plants.html*/
+.list-eleTit--plants
+	margin-top: 20px
+	@include computer
+		width: 50%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 50%
+
+.list-info--plants
+	@include computer
+		width: 25%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 25%
+
+
+/*plants-circuitdiagram.html*/
+.list-eleTit--plantsCircuitdiagram
+	margin-top: 20px
+	@include computer
+		width: 50%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 50%
+
+.list-info--plantsCircuitdiagram
+	margin-top: 20px
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%
+.list-bt--plantsCircuitdiagram
+	margin-top: 20px
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%
+
+/*plant-alarm.html*/
+.list-eleTit--plantsAlarm
+	margin-top: 20px
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%	
+
+.list-eleLab--plantsAlarm
+	margin-top: 20px
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%	
+
+.list-info--plantsAlarm
+	margin-top: 20px
+	@include computer
+		width: 30%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 30%	
+
+
+/*plant-user.html*/
+.list-eleTit--plantsUser
+	margin-top: 20px
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%	
+
+.list-eleLab--plantsUser
+	margin-top: 20px
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%	
+
+.list-bt--plantsUser
+	// margin-top: 20px
+	padding-right: 30px
+	@include computer
+		width: 15%
+		margin-bottom: 0px
+		margin-top: 0px
+	@include maxcom-1920
+		width: 15%	
+
+
+/*plants-mqttbroker.html*/
+.list-eleTit--plantMqtt
+	margin-top: 20px
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%	
+
+.list-info--plantMqtt
+	margin-top: 20px
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%	
+.list-bt--plantMqtt
+	margin-top: 20px
+	@include computer
+		width: 30%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 30%	
+
+/*plants-device.html*/
+.list-eleTit--plantDevice
+	@include computer
+		width: 40%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 40%	
+
+.list-info--plantDevice
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%	
+
+/*plants-maintain.html*/
+.list-eleTit--plantMain
+	@include computer
+		width: 30%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 30%	
+
+.list-info--plantMain
+	@include computer
+		width: 20%
+		margin-bottom: 0px
+		margin-top: 0px
+		top: 0px
+	@include maxcom-1920
+		width: 20%	

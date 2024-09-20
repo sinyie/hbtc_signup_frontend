@@ -1,0 +1,140 @@
+/*index.html*/
+/*登入頁*/
+.indBodyBg
+	background: $bg-gray-100 
+.indDecBk
+	width: 100vw
+	position: absolute
+	z-index: -1
+	overflow-x: hidden
+	min-height: 800px
+	@include ipad
+		min-height: 800px
+	@include maxcom
+		min-height: 800px
+.indDecBk-dec01
+	width: 140px
+	position: absolute
+	right: -70px
+	top: -70px
+	@include ipad
+		right: -40px
+		top: -60px
+	@include maxcom
+		right: 100px
+		top: 150px   
+	@include maxcom-1920
+		right: 560px
+.indDecBk-dec02
+	width: 280px
+	position: absolute
+	left: -110px
+	top: 75px
+	@include ipad
+		left: -110px
+		top: 90px
+	@include maxcom
+		left: 10px
+		top: 50px
+	@include maxcom-1920
+		left: 290px
+.indDecBk-dec03
+	width: 230px
+	position: absolute
+	right: -100px
+	top: 550px
+	@include ipad
+		right: -120px
+		top: 550px
+	@include maxcom
+		right: 430px
+		top: 530px
+	@include maxcom-1920
+		right: 750px
+		top: 510px
+.indWidth
+	width: 100%
+	@include maxcom-1920
+		width: 115em
+		margin: 0 auto
+.indPrimaryBk
+	width: 100%
+	position: relative
+	z-index: 2
+	@include ipad
+		width: 80%
+		margin: 0 10%
+	@include maxcom
+		width: 40%
+		margin: 0 10%
+		float: left
+		margin-top: 200px
+	@include maxcom-1920
+		width: 30%
+		margin: 0 0 0 20%
+		margin-top: 120px
+.indfield.ui.form
+	display: block
+.indLogoNameBk
+	padding: 30px 30px 50px 30px
+	@include ipad
+		padding: 50px 30px 50px 30px
+		width: 80%
+		margin: 0 10%
+	@include maxcom
+		width: 30%
+		margin: 0 10% 0 0
+		float: right
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-end
+		margin-top: 300px
+	@include maxcom-1920
+		width: 25%
+		margin: 0 10% 0 0 
+		margin-top: 280px
+.indLogoName-logo
+	width: 70px
+	margin-bottom: 10px
+	@include maxcom
+		width: 190px
+		margin-bottom: 30px
+.indLogoName-name
+	color: $text-gray-400
+	@include maxcom
+		font:
+			size: $text-24
+			family: $text-styleMedium--ch
+		text-align: right
+		margin-right: 30px
+.indSubmitBt
+	@include btn-base($emColor-linearGradient180deg , #FFF)
+	text-align: center
+	border-radius: 46px
+	@include btnEm-shadow
+	@include btnHoverAct
+	display: block
+	@include ipad
+		border-radius: 56px
+	&:hover
+		color: #FFF
+		text-decoration: none
+.indForgetBt
+	display: block
+	text-align: center
+	letter-spacing: 1px
+	padding: 0 20px
+	line-height: 50px
+	font:
+		size: $text-15
+	color: $black
+	// @include btnHoverAct
+	&:hover
+		color: $main-color
+	@include ipad
+		font:
+			family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
+			size: $text-17
+	
+
+

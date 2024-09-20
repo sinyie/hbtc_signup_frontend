@@ -1,0 +1,37 @@
+/*斷點設置*/
+//viewport 視窗視口
+@mixin minphone
+	@media all and (min-width: 20em)/*320px*/
+		@content
+
+@mixin iphone
+	@media all and (min-width: 25.8em)/*414px*/
+		@content
+
+@mixin ipad
+	@media all and (min-width: 48em)/*768px*/
+		@content
+
+@mixin computer
+	@media all and (min-width: 64em)/*1024px*/
+		@content
+
+@mixin maxcom
+	@media all and (min-width: 78em)/*1260px*/
+		@content
+
+@mixin maxcom-1920
+	@media all and (min-width: 115em)/*1850px*/
+		@content
+
+/*列印用*/
+/*列印用裡面生效的css*/
+@mixin print
+	@media print
+		@content
+/*列印時設定邊界用*/
+@page
+	// 橫式
+	// size: A4 landscape
+	
+

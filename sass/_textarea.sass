@@ -1,0 +1,85 @@
+//文編文章段落模組
+article.text_area
+	//style_01 編排
+	.style_01
+		margin: 0 auto 60px auto
+		@include text_style
+		.text_area
+			width: 100%
+			font-size: $text_17px
+			line-height: 2
+			word-break: break-all
+			float: left
+			a
+				color: $em_color
+			img
+				width: 100%
+				height: auto
+				margin: 0 0 40px 0
+	//style_02 編排
+	.style_02
+		margin: 0 auto 60px auto
+		@include text_style
+		// &:after
+		// 	clear: both
+		h2
+			width: 60px
+			padding: 55px 20px
+			text-align: center
+			-webkit-writing-mode: vertical-rl
+			writing-mode: vertical-rl
+			@include text_style
+			font:
+				size: 1.25em
+				weight: 500
+			letter-spacing: 1.2px
+			border: $black_line
+			margin: 0 30px 0 0
+			float: left
+			background: #FFF
+			@include ipad
+				margin: 0 60px 0 0
+		.text_area
+			width: 70%
+			font-size: $text_17px
+			line-height: 2
+			word-break: break-all
+			float: left
+			@include ipad
+				width: 82%
+			@include maxcom_1920
+				width: 88%
+			a
+				color: $em_color
+			img
+				width: 100%
+				height: auto
+				margin: 0 0 40px 0
+	//style_03 編排
+	.style_03
+		margin: 0 auto 60px auto
+		@include text_style
+		border: $black_line
+		background: #FFF
+		display: flex
+		align-content: stretch
+		h2
+			width: 60px
+			padding: 0 20px
+			text-align: center
+			-webkit-writing-mode: vertical-rl
+			writing-mode: vertical-rl
+			@include text_style
+			font:
+				size: 1.25em
+				weight: 500
+			letter-spacing: 1.2px
+			border-right: $black_line
+			background: $em_color
+		.text_area
+			font-size: $text_17px
+			line-height: 2
+			word-break: break-all
+			padding: 40px
+			
+			

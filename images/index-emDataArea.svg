@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="447.999" height="295.001" viewBox="0 0 447.999 295.001">
+  <defs>
+    <filter id="Union_6" x="0" y="0" width="447.999" height="295.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#d2d3d8" flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Union_5" x="0" y="0" width="447.999" height="295.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-2"/>
+      <feFlood flood-color="#d2d3d8" flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Union_6)">
+        <path id="Union_6-2" data-name="Union 6" d="M-10031,9497a30,30,0,0,1-30-30V9300.065c0-4.454,2.8-8.065,6.247-8.065h90.8c3.449,0,8.759,3.611,8.759,8.065l8.042,16.935H-9733a30,30,0,0,1,30,30v120a30,30,0,0,1-30,30Z" transform="translate(20472 -17144)" fill="rgba(255,255,255,0.9)"/>
+      </g>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e0f2f1"/>
+      <stop offset="1" stop-color="#00e5ff"/>
+    </linearGradient>
+  </defs>
+  <g id="_0000" data-name="0000" transform="translate(-2834 -5959)">
+    <g transform="matrix(1, 0, 0, 1, 2834, 5959)" filter="url(#Union_5)">
+      <path id="Union_5-2" data-name="Union 5" d="M-10031,9497a30,30,0,0,1-30-30V9300.065c0-4.454,2.8-8.065,6.247-8.065h90.8c3.449,0,8.759,3.611,8.759,8.065l8.042,16.935H-9733a30,30,0,0,1,30,30v120a30,30,0,0,1-30,30Z" transform="translate(10106 -9250)" fill="rgba(255,255,255,0.9)"/>
+    </g>
+    <g id="index-emDataArea--blue" transform="translate(-7532 13853)" opacity="0.3" clip-path="url(#clip-path)">
+      <circle id="Ellipse_21" data-name="Ellipse 21" cx="102.5" cy="102.5" r="102.5" transform="matrix(-0.875, 0.485, -0.485, -0.875, 10622.842, -7761.545)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

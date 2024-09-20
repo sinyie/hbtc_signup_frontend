@@ -1,0 +1,891 @@
+//元素設定
+//文字設定
+.eleSectionTit
+	font:
+		size: $text-15
+		family: $text-styleMedium--ch
+	color: $black
+	letter-spacing: 1px
+	@include ipad
+		font:
+			size: $text-20
+		letter-spacing: 1px
+	
+.eleDataTit
+	font:
+		size: $text-14
+		// family: $text-styleRegular--en
+	color: $text-gray-200
+	@include ipad
+		font:
+			size: $text-16
+
+.eleData-titCh
+	font:
+		size: $text-16
+	@include maxcom
+		font:
+			size: $text-20
+			family: $text-styleMedium--ch
+
+.eleData-count
+	font:
+		size: $text-48
+		family: $text-styleLight--en
+	color: $second-color
+	@include ipad
+	@include maxcom
+		font:
+			size: $text-70
+	@include maxcom-1920
+.eleData
+	font:
+		size: $text-14
+		// family: $text-styleRegular--en
+	color: $text-gray-300
+	@include ipad
+		font:
+			size: $text-17
+
+.eleDataLink
+	font:
+		size: $text-14
+		// family: $text-styleRegular--en
+	@include ipad
+		font:
+			size: $text-17
+
+.eleTextinIcon
+	vertical-align: -2px
+	margin-right: 12px
+
+.eleStatusIcon
+	vertical-align: -7px
+
+//驗證碼
+.eleReCAPTCHA
+	height: 52px
+	border-radius: 12px
+//卡片樣式
+.eleCard
+	width: 100%
+	background: #FFF
+	border-radius: 20px
+	box-shadow: 0px 15px 20px #E1E6F7
+//填寫表單用框架
+.eleCard-fid
+	padding-top: 30px
+	padding-bottom: 30px
+	@include maxcom
+		padding-top: 40px
+		padding-bottom: 40px
+
+		
+
+//卡片段落框架
+.eleSection--style
+	padding-top: 30px
+	padding-bottom: 30px
+	border-bottom: $gray-line
+	@include maxcom
+		padding-top: 40px
+		padding-bottom: 0px
+	&:first-of-type
+		padding-top: 0px
+	// &:last-of-type
+	// 	border-bottom: none
+	// 	padding-bottom: 0px
+
+.eleSection--style--bottom
+	border-bottom: $gray-line
+	&:last-of-type
+		border-bottom: $gray-line
+.eleSection--style--top
+	padding-top: 30px
+	padding-bottom: 30px
+	border-top: $gray-line
+
+
+
+
+.eleStatus-icon
+	vertical-align: -5px
+	padding-right: 8px
+
+.eleBgGray
+	background: $bg-gray-300
+
+
+//內容框架
+.eleSectionBk
+	padding-left: 30px 
+	padding-right: 30px
+	@include maxcom
+		padding-left: 50px 
+		padding-right: 50px
+
+
+//元素設定
+/*分隔線*/
+.eleGrayLine
+	width: 100%
+	height: 1px
+	border-top: $gray-line
+
+
+//使用者照片框
+.eleUserPhoto
+	width: 56px
+	height: 56px
+	border-radius: 28px
+	// @include eleEm_shadow
+	overflow: hidden
+
+//dropdown list 功能
+/*semantic UI*/
+.eleDropdown
+	border-radius: 11px !important
+	overflow: hidden !important
+	border: none !important
+	// @include eleEm-shadow 
+	.eleMenu-list
+		padding: 0 20px !important
+		line-height: 38px !important
+		font:
+			weight: 400 !important
+		&:first-of-type
+			padding-top: 10px !important
+		&:last-of-type
+			padding-bottom: 7px !important
+	.eleMenu-list--icon
+		margin: 0 15px 0 0 !important
+	.eleMenu-list--logout
+		width: 100%
+		background: $main-color-800
+		font:
+			weight: 600
+		text-align: center !important
+		color: #FFF !important
+		padding: 10px 30px 
+		padding-top: 5px !important
+		padding-bottom: 5px !important
+		&:hover
+			background: $main-color-500 !important
+		
+//標題樣式
+.eleTitBk
+	width: 100%
+	display: flex
+	align-items: center
+	transition: all 0.5s ease
+	flex-wrap: nowrap
+	// &:hover
+	// 	opacity: .8
+	// 	*
+	// 		text-decoration: underline
+
+.eleTitBk--alignTop
+	align-items: start
+
+
+//活動類型標籤
+.eleAct-label
+	width: auto
+	display: inline-block
+	height: 30px
+	padding: 0 12px
+	border-radius: 4px
+	line-height: 32px
+.eleAct-label--auto
+	background: $main-color-50
+	color: $main-color-500
+.eleAct-label--manual
+	background: $main-color-500
+	color: #FFF
+
+
+//案件標籤
+.eleTit-img
+	// @include eleEm-shadow
+	margin: 0 25px 0 0
+.eleTit-img--user
+	border-radius: 50%
+	width: 80px
+	height: 80px
+	overflow: hidden
+.eleTit-name
+	width: auto
+.eleTit-secondTit
+	color: $text-gray-200
+	margin-top: 3px
+
+
+//tab標籤切換
+.eleTab--ori,.eleTab--ori--newsTab,.eleTab--in,.eleTab--in--newsTab
+	display: inline-block
+	float: left
+	line-height: 44px 
+	margin: 0 20px 0 -7px
+	cursor: pointer
+	transition: all 0.5s ease-in-out
+	@include computer
+		margin: 0 40px 0 -20px
+		line-height: 56px 
+	a
+		color: $text-gray-400
+		font:
+			size: $text-15
+		@include ipad
+			font:
+				size: $text-19
+				family: $text-styleMedium--ch
+			letter-spacing: 1.2px
+			padding: 0 10px
+	&:hover
+		a
+			color: $black
+			text-decoration: none
+		&::after
+			background: $secondColor-linearGradient135deg
+			width: 100%
+	&::before
+		content: "　"
+	&::after
+		display: block
+		content: "　"
+		width: 0%
+		height: 7px
+		margin: 0 0 0 10px
+		border-radius: 7px 7px 0 0
+		transition: all 0 .5s ease-in-out
+
+.eleTab--in
+	a
+		color: $black
+	&::after
+		width: 100%
+		background: $secondColor-linearGradient135deg
+
+.eleTab--ori--newsTab
+	a
+		color: $text-gray-400
+	&:hover
+		a
+			color: $black
+
+.eleTab--in--newsTab
+	a
+		color: $black
+	&::after
+		width: 100%
+		background: $main-color
+
+		
+//資料項目
+.eleInfoList--phoneTit
+	display: block
+	color: $text-gray-400
+	font:
+		size: $text-15
+	@include maxcom
+		display: none
+.eleInfoList--context
+	font:
+		size: $text-17
+	@include maxcom
+		font:
+			size: $text-18
+
+.eleInfoListArea
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+
+.eleInfoList--50,.eleInfoList--100,.eleInfoList--50--phone
+	width: 100%
+	margin: 0 0 12px 0
+	// padding: 0 10px 0 0
+	float: left
+	letter-spacing: 0px
+	@include maxcom
+		margin: 0px 0 0px 0
+		// @include typoNowrap
+		word-wrap: break-word
+	// .eleInfoList_tit
+	// .eleInfoList_info
+	// 	// margin-top: 2px
+	// .eleInfoList_info--textarea
+	// 	max-height: 68px
+	// 	overflow-y: auto
+	// 	margin-right: -20px
+	// .eleInfoList_info--overflow
+	// 	height: 68px
+	// 	overflow: hidden
+	// 	text-overflow: ellipsis
+	// 	display: -webkit-box
+	// 	-webkit-line-clamp: 3
+	// 	-webkit-box-orient: vertical
+	// .eleInfoList_info--overflow--min
+	// 	height: 40px
+	// 	overflow: hidden
+	// 	text-overflow: ellipsis
+	// 	display: -webkit-box
+	// 	-webkit-line-clamp: 3
+	// 	-webkit-box-orient: vertical
+	// .eleInfoList_userArea
+	// 	width: 100%
+	// 	margin-top: 10px
+	// 	margin-left: 10px
+	// 	.eleInfoList_userArea--user
+	// 		width: 54px
+	// 		height: 54px
+	// 		display: block
+	// 		margin: 0 0 5px -8px
+	// 		border-radius: 50%
+	// 		border: 2px solid #ffffff 
+	// 		float: left
+	// 		overflow: hidden
+	// 		&:hover
+	// 			box-shadow: 0px 10px 16px rgba(10,31,143,0.24)
+	// 	.eleInfoList_userArea--count
+	// 		width: 54px
+	// 		height: 54px
+	// 		display: block
+	// 		margin: 0 0 5px -8px
+	// 		border-radius: 50%
+	// 		border: 2px solid #ffffff  
+	// 		background: $main-color
+	// 		line-height: 50px
+	// 		float: left
+	// 		font:
+	// 			weight: 700
+	// 			size: $text-17
+	// 		color: #FFF
+	// 		text-align: center
+	// 		letter-spacing: -0.2px
+	// 		&:hover
+	// 			background: $main-color-500
+	// 			box-shadow: 0px 10px 16px rgba(10,31,143,0.24)
+// .eleInfoList--50
+// 	width: 100%
+// 	@include ipad
+// 		width: 50%
+
+// .eleInfoList--50--phone
+// 	width: 50%
+// 	@include ipad
+// 		width: 50%
+
+		
+// // 手機搜尋及增加區
+// .elesmlSerAdd
+// 	position: fixed
+// 	z-index: 2
+// 	right: 15px
+// 	bottom: 15px
+// 	width: 60px
+// 	.elesmlSerAdd-Bt
+// 		width: 60px
+// 		height: 60px
+// 		border-radius: 50%
+// 		@include eleEm-shadow
+// 		margin: 0 0 12px 0
+// 		cursor: pointer
+// 		transition: all 0.5s ease
+// 		text-align: center
+// 		&:active
+// 			transform: translateY(-12px)
+// 	.elesmlSerAdd-Bt--img
+// 		vertical-align: -25px
+// 	.elesmlSerAdd-Bt--expo
+// 		background: #FFF
+// 		@include maxcom-1920
+// 			display: none
+// 	.elesmlSerAdd-Bt--search
+// 		background: #FFF
+// 		@include maxcom
+// 			display: none
+// 	.elesmlSerAdd-Bt--add
+// 		background: $main-color
+// 		@include computer
+// 			display: none
+
+
+//頁面搜尋範圍及匯出資料區--原生版本
+// .eleSortExpo
+// 	width: 100%
+// 	padding-left: 15px
+// 	padding-right: 15px
+// 	.eleSort
+// 		width: auto
+// 		height: 56px
+// 		border-radius: 11px
+// 		background: #FFF
+// 		box-shadow: 0px 3px 6px rgba(10,31,143,0.08)
+// 		float: left
+// 		margin-bottom: 20px
+// 		@include computer
+// 			margin-bottom: 40px
+// 		.eleSort-sortIcon
+// 			margin: 0 20px 0 20px
+// 			line-height: 56px
+// 			float: left
+// 			padding-top: 22px 
+// 		select.eleSort-sort
+// 			width: 170px
+// 			height: 56px
+// 			float: left
+// 			@include typoBasic
+// 			font:
+// 				weight: 700
+// 			color: $black
+// 			cursor: pointer
+// 			padding-right: 20px
+// 			float: left
+// 			// border-radius: 11px
+// 			line-height: 56px
+// 			option
+// 				font:
+// 					weight: 700
+// 				color: $black
+// 				background: #FFF
+// 				line-height: 50px !important
+// 				height: 50px !important
+// 		.eleSort-arrow
+// 			width: 20px
+// 			height: 20px
+// 			margin-top: 18px
+// 			margin-bottom: 18px
+// 			margin-left: -18px
+// 			float: left
+// 		.eleSort-line
+// 			width: 2px
+// 			height: 20px
+// 			border-radius: 1px
+// 			background: $bg-gray-200
+// 			margin: 18px 20px
+// 			float: left
+// 		.eleSort-serach
+// 			width: 150px
+// 			height: 56px
+// 			float: left
+// 			@include typoBasic
+// 			font:
+// 				weight: 700
+// 			color: $black
+// 			cursor: pointer
+// 			float: left
+// 			// border-radius: 11px
+// 			&::placeholder
+// 				color: $black
+// 		.eleSort-serachIcon
+// 			width: 56px
+// 			height: 56px
+// 			border-radius: 11px
+// 			background: #FFF
+// 			line-height: 64px
+// 			display: block
+// 			float: left
+// 			text-align: center
+// 			&:hover
+// 				opacity: 0.54
+// 	.eleExpo-bt
+// 		width: 210px
+// 		height: 56px
+// 		border-radius: 11px
+// 		background: #FFF
+// 		box-shadow: 0px 3px 6px rgba(10,31,143,0.08)
+// 		line-height: 56px
+// 		padding: 0 25px
+// 		@include typoBasic
+// 		font:
+// 			weight: 700
+// 		color: $black
+// 		float: right
+// 		margin-bottom: 20px
+// 		@include ipad
+// 			display: none
+// 		&:hover
+// 			transform: translateX(-12px)
+// 		.eleExpo-bt--icon
+// 			float: right
+// 			margin-top: 17px
+		
+//ui板搜尋及增加區
+.eleSortUiExpo
+	padding-left: 15px
+	padding-right: 15px
+	display: none
+	@include maxcom
+		display: block
+.eleSortUi
+	width: 100%
+	border-radius: 11px
+	background: #FFF
+	box-shadow: 0px 3px 6px rgba(10,31,143,0.08)
+	float: left
+	margin-bottom: 20px
+	@include computer
+		width: auto
+		margin-bottom: 35px
+	.eleSortUi-sortIcon
+		margin: 0 0 0 20px
+		line-height: 56px
+		float: left
+		padding-top: 20px 
+		display: none
+		@include ipad
+			display: block
+	.ui.selection.dropdown.eleSortUi-sort
+		width: 100% !important 
+		height: 56px !important 
+		float: left !important 
+		border-radius: 11px !important 
+		line-height: 56px !important 
+		height: 56px !important 
+		border-radius: 11px !important
+		border: 1px solid $line-gray !important
+		line-height: 56px !important
+		padding: 0 20px !important
+		background: #FFF !important
+		// background: #FFF url(../images/sort-arrow.svg) no-repaet right bottom !important
+		font:
+			family: $text-style !important
+			weight: 700 !important
+			size: $text-16 !important
+		color: $black !important
+		transition: all 0.5s linear !important
+		border: none !important 
+		@include ipad
+			width: auto !important 
+		.dropdown.icon
+			&:before
+				content: url(../images/sort-arrow.svg)
+				// background: url(../images/sort-arrow.svg) 
+			// img
+			// 	margin: -2px 0 0 10px
+	.ui.dropdown:not(.button).eleSortUi-sort > .default.text,
+	.ui.default.dropdown:not(.button).eleSortUi-sort > .text 
+		color: $black !important 
+		font:
+			weight: 700 !important 
+	.ui.dropdown.eleSortUi-sort > .text
+		padding-right: 30px !important 
+	.eleSortUi-line
+		width: 2px
+		height: 20px
+		border-radius: 1px
+		background: $bg-gray-200
+		margin: 18px 0
+		float: left
+		display: none
+		@include ipad
+			display: block
+	.eleSortUi-serach
+		width: 80%
+		height: 56px
+		float: left
+		@include typoBasic
+		font:
+			weight: 700
+		color: $black
+		cursor: pointer
+		float: left
+		border-radius: 11px
+		padding: 0 0 0  20px
+		@include ipad
+			width: 130px
+		&::placeholder
+			color: $black
+	.eleSortUi-serachIcon
+		width: 56px
+		height: 56px
+		border-radius: 11px
+		background: #FFF
+		line-height: 64px
+		display: block
+		float: right
+		text-align: center
+		&:hover
+			transform: translateX(-8px)
+			img
+				mix-blend-mode: difference
+.eleSortUiExpo-bt
+	width: 210px
+	padding: 0 25px
+	float: right
+	margin-bottom: 20px
+	display: none
+	@include maxcom-1920
+		display: block
+		margin-bottom: 35px
+	&:hover
+		box-shadow: 0px 10px 16px rgba(10,31,143,0.12)
+		color: $black
+	.eleExpo-bt--icon
+		float: right
+		margin-top: 17px
+.eleLayoutChange-bt
+	width: 56px
+	float: right
+	margin-bottom: 20px
+	margin-left: 12px
+	display: none
+	padding-left: 18px
+	padding-right: 0px
+	@include computer
+		display: block
+	&:hover
+		box-shadow: 0px 10px 16px rgba(10,31,143,0.12)
+	.eleLayoutChange-bt--icon
+		margin-left: auto
+		margin-right: auto
+		margin-top: 17px
+.eleLayoutChange-bt--active
+	background: $main-color-100
+.elePlantFunSort-area
+	float: left
+	margin-bottom: 20px
+	@include computer
+		width: auto
+		margin-bottom: 20px
+	@include maxcom
+		margin-right: 20px
+/*案場設定增加按鈕*/
+.elePlantFunAdd-bt
+	width: 100%
+	padding: 0 25px
+	float: left
+	margin-bottom: 20px
+	@include computer
+		width: 210px
+	@include maxcom
+		margin-bottom: 35px
+	&:hover
+		transform: translateX(12px)
+		color: $black
+	.eleExpo-bt--icon
+		float: right
+		margin-top: 17px
+
+//跳轉頁面區
+.elePage
+	width: auto
+	float: right
+	.elePage-arrowBt
+		width: 41px
+		height: 41px
+		display: inline-block
+		background: $bg-gray-500
+		border-radius: 6px
+		float: left
+		@include btnHoverAct
+		margin-top: 1px
+		text-decoration: none
+		// &:hover,&:active,&:focus
+		// 	border: 1px solid $second-color !important
+		// 	text-decoration: none
+		// 	background: #FFF
+	.elePage-arrowBt--back
+		img
+			margin: 13px 0 0 13px
+	.elePage-arrowBt--next
+		img
+			margin: 13px 0 0 13px
+	.elePage-conut
+		width: 120px 
+		// width: 140px
+		text-align: center
+		font:
+			size: $text-15
+			weight: 500
+		color: $black
+		margin: 0 12px
+		float: left
+		.ui.selection.dropdown
+			width: 100% !important
+			height: 42px !important
+			line-height: 42px !important
+			border-radius: 6px !important
+			background: #FFF !important
+			@include maxcom
+				width: 120px !important
+				height: 41px !important
+				line-height: 42px !important
+				font:
+					size: $text-17 !important
+			&:hover
+				border: 1px solid $second-color !important
+			&:focus
+				border: 1px solid $second-color !important
+			// &:read-only
+			// 	background: $bg-gray-200 !important
+			// 	color: $text-gray-200 !important
+			.menu .item
+				line-height: 1.5 !important
+			> .dropdown.icon
+				top: 0.2em
+
+		
+//系統通知樣式
+.eleAlarm
+	.eleAlarm-time
+		width: 100%
+		line-height: 20px
+		@include typoNowrap
+		margin-bottom: 8px
+		.eleAlarm-time--Icon	
+			vertical-align: -6px
+			width: 20px
+			height: 20px
+			margin-right: 12px
+	.eleAlarm-grandTit
+		width: 100%
+		line-height: 1.4
+		margin-bottom: 15px
+		.eleAlarm-grandTit--Icon
+			width: 10px
+			height: 10px
+			margin: 6px 20px 0 5px
+			border-radius: 50%
+			float: left
+		.eleAlarm-grandTit--Icon--grand01
+			background: $color-success
+		.eleAlarm-grandTit--Icon--grand02
+			// background: $color-emphasis
+		.eleAlarm-grandTit--Icon--grand03
+			// background: $color-system-blue
+		.eleAlarm-grandTit--Icon--grand04
+			background: $color-waring
+		.eleAlarm-grandTit--Icon--grand05
+			background: $color-danger
+	.eleAlarm-content
+		height: 80px
+		padding: 10px 25px 0 35px
+		overflow-y: auto
+		color: $text-gray-200
+		line-height: 1.6
+		background: $bg-gray-100
+		border-radius: 13px
+		font:
+			weight: 400
+		
+
+
+
+//表格區
+.eleTable
+	width: 100%
+	height: auto
+	overflow-x: auto !important
+	// overflow: scroll !important
+
+//頁面通知跳出訊息
+.eleNote
+	width: 100%
+	display: block
+	// position: relative
+	// bottom: 0
+	// z-index: 1
+	.ui.message
+		// border-radius: 0
+		border-radius: 6px7
+
+//上傳圖片特效
+.eledropify
+	width: 200px !important
+	// height: 130px !important
+
+//強調區樣式
+.eleGrayColorBg
+	background: $bg-gray-200 
+	// h1,h2,h3,h4,h5,h6,p,label
+	// 	color: #FFF !important
+	// span.fieverti
+	// 	color: $main-color-100 !important
+	// label
+	// 	color: #FFF !important
+.eleSecondColorBg
+	// background: $second-color-100
+
+
+//顏色小標
+.eleColorLabel,.eleColorLabel--main,.eleColorLabel--lightMain,.eleColorLabel--lightinfo,.eleColorLabel--info,.eleColorLabel--lightgray,.eleColorLabel--waring
+	display: inline-block
+	padding: 0 15px
+	height: 32px
+	line-height: 33px
+	border-radius: 4px
+	margin: 0
+
+.eleColorLabel--main
+	color: #FFF
+	background: $main-color-700
+
+.eleColorLabel--lightMain
+	color: $main-color
+	background: $main-color-100
+
+.eleColorLabel--lightinfo
+	color: $main-color
+	background: $color-info
+
+.eleColorLabel--info
+	color: #FFF
+	background: $color-info
+
+.eleColorLabel--lightgray
+	color: $main-color
+	background: $text-gray-200
+
+
+.eleColorLabel--waring
+	color: $main-color
+	background: $color-waring
+
+
+//狀態標籤
+.elestatusLabel
+	border-radius: 36px
+	padding: 3px 20px 3px 4px
+	line-height: 1
+	display: inline-block
+	font:
+		family: $text-styleMedium--ch
+	letter-spacing: 1px
+	border: 1px solid #FFF
+	&::before
+		padding: 0 7px 0 0
+		vertical-align: -9px
+
+
+//匯出按鈕
+.eleSearchArea-operationBt--export
+	// min-width: 130px
+	// float: left
+	// margin-right: 12px
+	// margin-bottom: 10px
+	// margin-bottom: 10px
+	position: relative
+	.icon
+		cursor: pointer
+		width: 15px
+		height: 15px
+		line-height: 1.21428571em
+		position: absolute
+		top: 18px
+		right: 20px
+	.ui.selection.dropdown
+		width: 100%
+		padding-left: 15px !important
+		padding-right: 15px !important
+		background: #FFF !important
+		font:
+			family: $text-styleMedium--ch !important
+	.ui.dropdown > .dropdown.icon:before
+		content: " "
+	.ui.dropdown:not(.button) > .default.text, .ui.default.dropdown:not(.button) > .text
+		// font:
+		// 	family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
+		// 	size: $text-17

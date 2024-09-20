@@ -1,0 +1,345 @@
+/*基底通用設定*/
+body
+	font-size: 100%
+	// background: $bg-gray-100
+	@include typoBasic
+	background: $bg-gray-100 url(../images/page-bg.png) repeat
+	background-size: auto 100% 
+	@include maxcom
+		background-size: 100% auto
+		
+
+a
+	@include typoBasic
+	text-decoration: none
+	-webkit-transition: all 0.3s ease-in-out
+	-moz-transition: all 0.3s ease-in-out
+	-o-transition: all 0.3s ease-in-out
+	-ms-transition: all 0.3s ease-in-out
+	transition: all 0.3s ease-in-out
+	letter-spacing: 0.5px
+	&:hover
+		text-decoration: underline
+
+/*反白字體*/
+::selection 
+	background: $main-color
+	color: #FFF
+
+
+/*按下無藍色框*/
+// *
+// 	-webkit-tap-highlight-color: rgba(66,125,245,0.54)
+
+/*無障礙focus用*/
+// *:focus
+	// outline: rgba(255,70,31,0.26) solid medium 
+	// border: rgba(213,0,0,0.26) solid medium 
+	// box-shadow: 0px 0px 0px 3px  rgba(213,0,0,0.26)
+	
+/*scrollbar*/
+::-webkit-scrollbar
+	width: 8px
+	height: 8px
+	
+
+::-webkit-scrollbar-track
+	background: $bg-gray-100
+
+::-webkit-scrollbar-thumb
+	background: $bg-gray-500
+	border-radius: 8px
+
+
+::-webkit-scrollbar-thumb:hover 
+	background: $second-color
+
+progress[value] 
+	-webkit-appearance: none
+	appearance: none
+	width: 100%
+	height: 8px
+
+progress[value]::-webkit-progress-bar 
+	background-color: $text-gray-200
+	border-radius: 4px
+	box-shadow: 0 0 10px rgba(34,34,34,.08) 
+
+progress[value]::-webkit-progress-value
+	background: $color-info
+	border-radius: 4px
+	box-shadow: 0 0 10px rgba(34,34,34,.12) 
+
+
+/*列印隱藏區域*/
+.print_hidden
+	@include print
+		display: none
+
+/*頁面框架及常用設定*/
+.max_width
+	width: 100%
+	margin: 0 auto
+	@include maxcom
+		width: $viewport-maxcom
+
+.com_width
+	width: 100%
+	margin: 0 auto
+	@include computer
+		width: $viewport-computer
+
+.clear
+	clear: both
+
+.overflow-hidden
+	overflow: hidden
+
+.floatRight
+	float: right 
+
+.floatLeft
+	float: left 
+
+.db
+	display: block
+
+.df
+	display: flex
+
+.textalign-center
+	text-align: center
+
+.textalign-right
+	text-align: right
+	
+.icon-inLine
+	vertical-align: -2px
+
+.plr-0
+	padding-left: 0px 
+	padding-right: 0px 
+.plr-15
+	padding-left: 15px 
+	padding-right: 15px 
+.plr-20
+	padding-left: 20px 
+	padding-right: 20px 
+.plr-30
+	padding-left: 30px 
+	padding-right: 30px 
+.plr-40
+	padding-left: 40px 
+	padding-right: 40px 
+.plr-50
+	padding-left: 50px 
+	padding-right: 50px 
+.plr-60
+	padding-left: 60px 
+	padding-right: 60px 
+
+.ptb-10
+	padding-top: 10px 
+	padding-bottom: 10px 
+.ptb-20
+	padding-top: 20px 
+	padding-bottom: 20px 
+.ptb-30
+	padding-top: 30px 
+	padding-bottom: 30px 
+.ptb-40
+	padding-top: 40px 
+	padding-bottom: 40px 
+.ptb-50
+	padding-top: 50px 
+	padding-bottom: 50px 
+.ptb-60
+	padding-top: 60px 
+	padding-bottom: 60px 
+
+.pl-10
+	padding-left: 10px 
+.pl-20
+	padding-left: 20px 
+.pl-30
+	padding-left: 30px 
+.pl-40
+	padding-left: 40px
+.pl-50
+	padding-left: 50px
+.pl-60
+	padding-left: 60px 
+.pl-70
+	padding-left: 70px 
+
+.pr-10
+	padding-right: 10px 
+.pr-20
+	padding-right: 20px 
+.pr-30
+	padding-right: 30px 
+.pr-40
+	padding-right: 40px 
+.pr-50
+	padding-right: 50px 
+.pr-60
+	padding-right: 60px 
+
+.pt-10
+	padding-top: 10px 
+.pt-12
+	padding-top: 12px 
+.pt-15
+	padding-top: 15px 
+.pt-20
+	padding-top: 20px 
+.pt-25
+	padding-top: 25px 
+.pt-30
+	padding-top: 30px 
+.pt-40
+	padding-top: 40px 
+.pt-50
+	padding-top: 50px 
+.pt-60
+	padding-top: 60px 
+
+.pb-0
+	padding-bottom: 0px 
+.pb-10
+	padding-bottom: 10px 
+.pb-15
+	padding-bottom: 15px 
+.pb-20
+	padding-bottom: 20px 
+.pb-25
+	padding-bottom: 25px 
+.pb-30
+	padding-bottom: 30px 
+.pb-40
+	padding-bottom: 40px 
+.pb-50
+	padding-bottom: 50px 
+
+.mt-0
+	margin-top: 0px 
+.mt-2
+	margin-top: 2px 
+.mt-3
+	margin-top: 3px 
+.mt-5
+	margin-top: 5px 
+.mt-7
+	margin-top: 7px 
+.mt-8
+	margin-top: 8px 
+.mt-10
+	margin-top: 10px 
+.mt-12
+	margin-top: 12px 
+.mt-15
+	margin-top: 15px 
+.mt-20
+	margin-top: 20px 
+.mt-25
+	margin-top: 25px 
+.mt-30
+	margin-top: 30px 
+.mt-35
+	margin-top: 35px 
+.mt-40
+	margin-top: 40px 
+.mt-60
+	margin-top: 60px 
+
+.mb-5
+	margin-bottom: 5px 
+.mb-8
+	margin-bottom: 8px 
+.mb-10
+	margin-bottom: 10px 
+.mb-15
+	margin-bottom: 15px 
+.mb-20
+	margin-bottom: 20px 
+.mb-25
+	margin-bottom: 25px 
+.mb-30
+	margin-bottom: 30px 
+.mb-40
+	margin-bottom: 40px 
+.mb-50
+	margin-bottom: 50px 
+
+.mr-5
+	margin-right: 5px 
+.mr-8
+	margin-right: 8px 
+.mr-10
+	margin-right: 10px 
+.mr-12
+	margin-right: 12px 
+.mr-20
+	margin-right: 20px 
+.mr-30
+	margin-right: 30px 
+.mr-40
+	margin-right: 40px 
+.mr-50
+	margin-right: 50px 
+.mr-80
+	margin-right: 80px 
+.mr-100
+	margin-right: 100px 
+
+.ml-10
+	margin-left: 10px 
+.ml-12
+	margin-left: 12px 
+.ml-20
+	margin-left: 20px 
+.ml-30
+	margin-left: 30px 
+.ml-50
+	margin-left: 50px 
+.ml-70
+	margin-left: 70px 
+
+.mtb-0
+	margin-top: 0px 
+	margin-bottom: 0px 
+.mtb-5
+	margin-top: 5px 
+	margin-bottom: 5px 
+.mtb-10
+	margin-top: 10px 
+	margin-bottom: 10px 
+.mtb-20
+	margin-top: 20px 
+	margin-bottom: 20px 
+.mtb-40
+	margin-top: 40px 
+	margin-bottom: 40px 
+.mtb-50
+	margin-top: 50px 
+	margin-bottom: 50px 
+.mtb-60
+	margin-top: 60px 
+	margin-bottom: 60px 
+
+.mlr-30
+	margin-left: 30px 
+	margin-right: 30px 
+
+	
+	 
+
+
+
+
+
+
+
+
+
+

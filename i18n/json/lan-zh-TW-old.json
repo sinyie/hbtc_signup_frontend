@@ -1,0 +1,72 @@
+{
+	"common_e-mail": "E-MAIL",
+	"common_password": "密碼",
+	"common_intelligent_cloud_plus_co._ltd_2019": "Intelligent Cloud Plus Co. Ltd 2019",
+	"common_submit": "送出",
+	"common_edit": "編輯",
+	"common_sign_out": "登出",
+	"common_organizational_structure": "組織架構",
+	"common_users_group_setting": "使用者群組設置",
+	"common_users_management": "使用者管理",
+	"common_devices_setting": "設備設置",
+	"common_remote_control": "遙控",
+	"common_configuration_settings": "配置設定",
+	"common_plants_management": "案場管理",
+	"common_logs": "日誌",
+	"common_english": "ENGLISH",
+	"common_traditional_chinese": "繁體中文",
+	"common_simplified_chinese": "簡體中文",
+	"common_edit_my_account": "編輯個人資料",
+	"common_export_report": "匯出報告",
+	"common_title": "標題",
+	"common_tel": "電話",
+	"common_email": "電子郵件信箱",
+	"common_region_country": "區域 ,國家",
+	"common_city_/town_/village": "城市/ 城鎮/ 村莊",
+	"common_address": "地址",
+	"common_user_list": "用戶列表",
+	"common_search_by_platform": "按平台搜尋",
+	"common_search_by_installation": "按設備搜尋",
+	"common_Search_by_client": "按用戶搜尋",
+	"common_search": "搜尋",
+	"common_index": "總覽",
+	"common_of": "之",
+	"common_please_choose": "請選擇",
+	"common_description": "描述",
+
+
+	"index_login_pv_ems_system": "登入 PV EMS 系統",
+	"index_remember_me": "記住我",
+	"index_sign_in": "登入",
+	"index_forgot_your_password?": "忘記密碼?",
+
+	"forget_forgot_your_password": "忘記密碼",
+	"forget_we'll_send_you_a_link_to_your_email": "我們將向您發送電子郵件的連結。 <br>請使用連結登錄並重設您的新密碼。",
+	
+	"organizational_organizational_structure": "組織架構",
+	"organizational_system_admin": "系統管理員",
+	"organizational_platform_managment_user": "平台管理用戶",
+	"organizational_installation_managment_user": "設備管理用戶",
+	"organizational_client_user": "客戶用戶",
+	"organizational_show_node": "顯示節點",
+	"organizational_edit_node": "編輯節點",
+	"organizational_create_child_node": "創建子節點",
+	"organizational_delete_node": "刪除節點",
+	"organizational_organizational_structure_info.": "組織架構資訊",
+
+	"user_group_user_group_settings": "用戶群組設置",
+	"user_group_total_groups": "群組總數",
+	"user_group_add_user_group": "增加用戶群組",
+	"user_group_editable": "可編輯",
+	"user_group_viewable": "可觀看",
+
+	"user_group_info_user_group_info": "用戶群組資訊",
+	
+	"user_group_edit_user_group": "用戶群組",
+	"user_group_edit_user_group_info": "用戶群組資訊",
+	
+
+
+
+	
+}

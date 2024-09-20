@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/cssreset.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- semantic UI -->
+    <link href="css/semantic.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+    <!-- 時間區間特效 -->
+    <!-- <link href="css/flatpickr.min.css" rel="stylesheet" type="text/css" media="all"> -->
+    <!-- <script src="js/flatpickr.js"></script> -->
+    <!-- 上傳圖片js -->
+    <!-- <link rel="stylesheet" href="dropify/css/dropify.min.css"> -->
+    <!-- <script src="dropify/js/dropify.min.js"></script>   -->
+    <!-- table sort特效 -->
+    <script src="js/table-sort.js"></script>
+    <!-- loading特效 -->
+    <link href="css/loader.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery.nimble.loader.js"></script>
+    <!-- 設定檔 -->
+    <script src="js/config.js"></script>
+    <!-- 本頁js -->
+    <script src="js/js-eventin.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/web-js.js"></script>
+
+    <!-- 網站區layout -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+    <div class="jsNavMain">
+        <!-- main.js塞在裡面 -->
+    </div>
+
+    <div class="patMainbody">
+        <!-- 麵包屑 -->
+        <div class="patBiteArea" id="breadcrumb_div">
+            <!-- <a href="eventli.html" class="patBiteBt">報名活動一覽</a>
+            <a href="#" class="patBiteBt patBiteBt--in">112年臺中市戒菸服務人員訓練－「基礎活動」</a> -->
+        </div>
+        <!-- 頁面大標 -->
+        <h1 class="patH1Tit patH1Tit">
+            <span class="typoMedium--en" id="activity_code_title"></span>
+            <span id="activity_name"></span>
+        </h1>
+
+        <div class="patPrimary">
+            <div class="pagSettingAddBk">
+
+                <div class="eleCard eleCard-fid mb-20">
+                    <!-- 活動相關資訊 -->
+                    <div class="gridBk mb-40">
+                        <section class="grid--25 fieldTitBk">
+                            <!-- <h2 class="eleSectionTit pb-30">活動相關資訊</h2> -->
+                            <h2 class="eleSectionTit">活動代碼</h2>
+                            <!-- <h6>活動代碼</h6> -->
+                            <p class="typoMainColor typoText-24 typoMedium--en pb-10 activity_code" id="activity_code"></p>
+                        </section>
+                        <section class="grid--75 fieldBk">
+                            <div class="pagOrderInList-dataArea">
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <h6>活動日期期間</h6>
+                                    <p class="typoText-20 typoGrayColor-200" id="activity_strdate">
+                                        <img src="images/clock--gray--15.svg" alt="clock" class="eleTextinIcon">
+                                    </p>
+                                </section>
+                                <!-- <section class="modInfoBk-EminfoBk--lineDec">
+                                    <h6>活動名額</h6>
+                                    <p class="typoText-20 typoGrayColor-200" id="join_limit"></p>
+                                </section> -->
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <h6>活動費用</h6>
+                                    <p class="typoText-20 typoGrayColor-200" id="join_price"></p>
+                                </section>
+                                <div class="pagOrderInList-data pl-30">
+                                    <a href="javascript:void(0);" class="btnCircleMainColor mr-8 mt-5 join_activity_btn" data-tooltip="報名活動" data-position="top center" style="display: none;">
+                                        <img src="images/add--white--30.svg" alt="print" class="btn-circleBase--icon">
+                                    </a>
+                                    <a href="javascript:void(0);" class="btnCircleSecondColor mr-5 mt-5 search_activity_btn" data-tooltip="查詢修改 / 取消報名" data-position="top center" style="display: none;">
+                                        <img src="images/search--white--30.svg" alt="edit" class="btn-circleBase--icon">
+                                    </a>
+                                </div>
+                            </div>
+                            <section class="pt-40">
+                                <div class="modInfoBk--line">
+                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
+                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">報名人數上限</h6>
+                                        <p id="join_limit"></p>
+                                    </div>
+                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
+                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">目前報名人數</h6>
+                                        <p id="join_total"></p>
+                                    </div>
+                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
+                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">報名成功人數</h6>
+                                        <p id="join_status2"></p>
+                                    </div>
+                                </div>
+                                <div class="modInfoBk-EminfoBk--info--textDes">
+                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">報名期間</h6>
+                                    <p class="typo-contentIcon" id="join_date"></p>
+                                </div>
+                                <div class="modInfoBk-EminfoBk--info--textDes">
+                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">活動地點</h6>
+                                    <p class="typo-contentIcon" id="activity_location"></p>
+                                </div>
+                                <div class="modInfoBk-EminfoBk--info--textDes">
+                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">活動說明</h6>
+                                    <p class="typo-contentIcon typo-wordBreak--all" id="activity_info"></p>
+                                </div>
+                                <div class="modInfoBk-EminfoBk--info--textDes">
+                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">其他說明事項</h6>
+                                    <p class="typo-contentIcon" id="activity_remarks"></p>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <!-- 報名者相關資訊 -->
+                    <div class="gridBk eleSection--style--top">
+                        <section class="grid--25 fieldTitBk">
+                            <h2 class="eleSectionTit pb-30">報名者相關資訊</h2>
+                        </section>
+                        <section class="grid--75 fieldBk">
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">參加對象</h6>
+                                <p id="activity_target"></p>
+                            </div>
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">資格審核</h6>
+                                <p id="activity_mode"></p>
+                            </div>
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">是否供餐</h6>
+                                <p id="activity_need_food"></p>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 活動聯絡人資訊 -->
+                    <div class="gridBk eleSection--style--top">
+                        <section class="grid--25 fieldTitBk">
+                            <h2 class="eleSectionTit pb-30">活動聯絡人資訊</h2>
+                        </section>
+                        <section class="grid--75 fieldBk">
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人姓名</h6>
+                                <p id="activity_contact_name"></p>
+                            </div>
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人電話</h6>
+                                <p id="activity_contact_tel"></p>
+                            </div>
+                            <div class="modInfoBk-EminfoBk--info--textDes">
+                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人Email</h6>
+                                <p id="activity_contact_email"></p>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 同意以上資料蒐集 -->
+                    <div class="gridBk">
+                        <section class="grid--25 fieldTitBk mb-30">
+                            <h2 class="eleSectionTit"></h2>
+                        </section>
+                        <section class="grid--75 fieldBk">
+                            <div class="gridBk plr-30">
+                                <section class="grid--100">
+                                    <div class="floatRight ">
+                                        <a href="javascript:void(0);" class="btnCurcleRec-mainColor mr-12 mt-12 join_activity_btn" style="display: none;">
+                                            報名活動
+                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-base--icon">
+                                        </a>
+                                        <a href="javascript:void(0);" class="btnCurcleRec-secondColor mt-12 search_activity_btn" style="display: none;">
+                                            查詢 / 取消報名
+                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-base--icon">
+                                        </a>
+                                    </div>
+                                </section>
+                                <div class="clear"></div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- semantic UI -->
+    <script src="js/semantic.min.js"></script>
+    <!-- semantic UI 初始化 js -->
+    <script src="js/semantic-ini.js"></script>
+    <!-- table sort 初始化 js -->
+    <script src="js/tableSort-ini.js"></script>
+
+</body>
+</html>

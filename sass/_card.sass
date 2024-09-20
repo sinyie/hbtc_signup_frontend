@@ -1,0 +1,58 @@
+
+
+
+/*卡片*/
+.card
+	width: 100%
+	@include ipad
+		display: flex
+		flex-wrap: wrap
+	@include maxcom
+
+/*卡片列表樣式*/	
+// .ui.sortable.table	
+.cardliLlistArea
+	// display: none
+.cardliList-content,.cardliList--titArea--tit
+	font:
+		weight: normal 
+.cardliList
+	width: 100%
+	// overflow: hidden
+	padding-top: 30px
+	padding-bottom: 20px
+	@include ipad
+		width: 50%
+		box-shadow: 0px 5px 30px 0px $shadow-gray
+		float: left
+	@include maxcom
+		width: 100%
+		margin-left: 0px
+		margin-right: 0px
+		margin-bottom: 0px
+		box-shadow: none
+		border-radius: 6px	
+		padding-bottom: 10px
+		padding-top: 10px
+		min-height: 90px
+		// border-bottom: 1px solid #E1E5F4
+.cardliList:nth-of-type(2n)
+	background: $bg-gray-100
+.cardliList-titArea
+	display: none
+	border-bottom: 1px solid #E1E5F4
+	@include maxcom
+		width: 100%
+		display: flex
+		text-align: left
+		padding-top: 20px
+		padding-bottom: 10px
+.cardliList-titArea--tit
+	line-height: 40px
+	color: $text-gray-400
+	font:
+		weight: normal 
+.cardliList--asideInfo
+	@include computer
+		flex-direction: column
+		align-items: start

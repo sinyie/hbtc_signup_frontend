@@ -1,0 +1,476 @@
+//表單樣式部件
+//上傳檔案備註標題
+
+//表單內容框架
+.fieldTitBk
+	padding-left: 30px 
+	padding-right: 30px
+	@include maxcom
+		padding-left: 50px 
+		padding-right: 50px
+
+.fieldBk
+	@include maxcom
+		padding-left: 20px 
+		padding-right: 20px
+
+.ui.form 
+	@include maxcom
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+.ui.form .field
+	margin: 0 0 0 0
+
+.fidArea
+	.fidArea--uploadTit
+		text-align: center
+		margin: 10px 0 0 0
+
+.fidArea,.fidArea--cheRad
+	// width: 100%
+	padding: 0 30px 12px 30px
+	@include maxcom
+		padding: 0 30px 40px 30px
+
+.fidArea--oprArea
+	padding: 0 30px 12px 30px
+	@include maxcom
+		padding: 0 6px 0 6px
+
+label
+	font:
+		family: $text-style !important
+		size: $text-14 !important
+		weight: normal !important
+	color: $text-gray-400 
+	margin: 0 0 10px 0 !important
+	letter-spacing: 0.5px
+	@include maxcom
+		font:
+			size: $text-17 !important
+
+
+.fieverti
+	// padding: 0 0 0 15px !important
+	color: $color-danger !important
+	padding: 0 0 0 12px
+
+
+.fidMustStyle
+	padding: 0 10px 0 0
+	color: $second-color
+
+	
+.ui.form .field > label
+	color: $text-gray-400 
+
+.ui.checkbox label
+	color: $black
+
+
+.fidArea--inline
+	width: 100%
+	padding: 0 0px 30px 0px
+	@include ipad
+		width: 100%
+		float: left
+		clear: none !important
+	@include computer
+		width: 50%
+		padding: 0 0px 30px 15px
+	@include maxcom-1920
+		width: 20%
+	
+.fidArea 
+	.fidArea--img
+		width: 100%
+		height: auto
+		border: 1px solid $line-gray
+
+
+/*semantic UI修改樣式*/
+
+/*checkbox radio 使用樣式*/
+.fidArea--cheRad
+	width: auto !important
+	float: left !important
+	clear: none !important
+	padding-bottom: 0 !important
+	padding-top: 10px !important
+.fidArea-radioCheck--tit
+	font:
+		family: $text-style !important
+		size: $text-17 !important
+		weight: 600 !important
+	color: $black !important
+	margin: 30px 0 10px 0 !important
+	padding-left: 30px
+	padding-right: 30px
+.fidArea--cheRad label
+	font:
+		family: $text-style !important
+		size: $text-17 !important
+		weight: 500 !important
+	color: $black !important
+	margin: 0 0 0 0 !important
+
+/*表格區塊*/
+.ui.selection.dropdown
+	color: $black !important
+	padding: 0 20px !important
+	border: 1px solid $bg-gray-400 !important
+	background: $bg-gray-400 !important
+	transition: all 0.3s linear !important 
+	height: 46px 
+	line-height: 46px !important
+	border-radius: 8px !important
+	font:
+		family: $text-style !important
+		size: $text-15 !important
+	@include maxcom
+		height: 52px 
+		border-radius: 12px !important
+		line-height: 52px !important
+		font:
+			size: $text-17 !important
+	&:hover
+		border: 1px solid $second-color !important
+	&:focus
+		border: 1px solid $second-color !important
+	// &:read-only
+	// 	background: $bg-gray-200 !important
+	// 	color: $text-gray-200 !important
+	.menu .item
+		line-height: 1.5 !important
+
+
+.ui.selection.active.dropdown .menu
+	border: 1px solid $second-color !important
+	// background: $bg-gray-400 !important
+	// border-top: none !important
+
+.ui.dropdown .menu .active.item
+	font-weight: normal !important
+
+.ui.dropdown:not(.button) > .default.text, .ui.default.dropdown:not(.button) > .text
+	color: $black !important  
+	// overflow: hidden !important  
+	text-overflow: ellipsis !important  
+	white-space: nowrap !important  
+	width: 100% !important  
+	font:
+		weight: 500 !important  
+.ui.selection.dropdown .menu
+	border-radius: 8px !important
+.ui.form
+	input,input[type="text"],input[type="number"],input[type="email"],input[type="password"],select
+		color: $black !important
+		padding: 0 20px !important
+		border: 1px solid $bg-gray-400 !important
+		background: $bg-gray-400 !important
+		transition: all 0.3s linear !important
+		overflow: hidden !important  
+		height: 46px 
+		line-height: 46px !important
+		border-radius: 8px !important
+		font:
+			family: $text-style !important
+			size: $text-15 !important
+		@include maxcom
+			height: 52px 
+			border-radius: 12px !important
+			line-height: 52px !important
+			font:
+				size: $text-17 !important
+		&:hover
+			border: 1px solid $second-color !important
+		&:focus
+			border: 1px solid $second-color !important
+		&::-webkit-input-placeholder
+			color: $black  !important
+		&::-moz-placeholder  /* Firefox 19+ */
+			color: $black !important
+		&:-ms-input-placeholder  /* IE 10+ */
+			color: $black  !important
+		&:-moz-placeholder  /* Firefox 18- */
+			color: $black !important
+		&:read-only
+			// background: $bg-gray-200 !important
+			color: $text-gray-200 !important
+	input[type="file"]
+		// height: 46px 
+		// line-height: 46px !important
+		// border-radius: 8px !important
+		// font:
+		// 	family: $text-style !important
+		// 	size: $text-15 !important
+		// @include maxcom
+		// 	height: 52px 
+		// 	border-radius: 12px !important
+		// 	line-height: 52px !important
+		// 	font:
+		// 		size: $text-17 !important
+		// &:read-only
+		// 	background: $bg-gray-200 
+		// &:hover
+		// 	border: 1px solid $second-color !important
+		// &:focus
+		// 	border: 1px solid $second-color !important
+	select
+		border: 1px solid $bg-gray-400 !important
+		background: $bg-gray-400 !important
+	textarea
+		padding-top: 10px !important
+		padding-bottom: 10px !important
+		width: 100% !important 
+		height: 150px !important 
+		line-height: 1.5 !important
+		padding: 10px 20px !important
+		border: 1px solid $bg-gray-400 !important
+		background: $bg-gray-400 !important
+		border-radius: 8px !important
+		@include typoBasic 
+		font:
+			family: $text-style !important
+			size: $text-15 !important
+		@include maxcom
+			border-radius: 12px !important
+			font:
+				size: $text-17 !important
+		/*禁用拖動*/
+		resize: none !important
+		&:hover
+			border: 1px solid $second-color !important
+		&:focus
+			border: 1px solid $second-color !important
+		&::-webkit-input-placeholder
+			color: $black !important  
+		&::-moz-placeholder  /* Firefox 19+ */
+			color: $black !important
+		&:-ms-input-placeholder  /* IE 10+ */
+			color: $black  !important
+		&:-moz-placeholder  /* Firefox 18- */
+			color: $black !important
+	input[type="checkbox"],input[type="radio"]
+		padding-left: 20px !important
+		border: 1px solid $bg-gray-400 !important
+		&:hover
+			border: 1px solid $bg-gray-400 !important
+		&:focus
+			border: 1px solid $bg-gray-400 !important
+
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before, .ui.checkbox input:checked:focus ~ .box:before, .ui.checkbox input:checked:focus ~ label:before
+	border-color:  $second-color !important
+	label
+		color: $black !important
+
+//multipal select 選單
+.ui.dropdown.selection.multiple
+	height: auto !important
+.ui.fluid.dropdown
+	height: 44px !important
+	line-height: auto !important
+
+.ui.multiple.dropdown > .label
+	vertical-align: middle
+
+//awesomplete
+//自定義樣式
+.autocomplete
+	width: 100% !important
+	// ul
+// 		height: auto !important
+// 		color: $black !important
+// 		border: 1px solid $bg-gray-400 !important
+// 		background: $bg-gray-400 !important
+// 		transition: all 0.3s linear !important
+// 		overflow: hidden !important  
+// 		height: 46px 
+// 		line-height: 46px !important
+// 		border-radius: 8px !important
+// 		border: 1px solid $second-color !important
+// 		font:
+// 			family: $text-style !important
+// 			size: $text-15 !important
+// 		@include maxcom
+// 			height: 52px 
+// 			border-radius: 12px !important
+// 			line-height: 52px !important
+// 			font:
+// 				size: $text-17 !important
+// 		&:hover
+// 			border: 1px solid $second-color !important
+// 		&:focus
+// 			border: 1px solid $second-color !important
+		li
+			&:hover
+				background: $bg-gray-300 !important
+// 			mark
+// 				background: $color-waring
+
+
+
+
+
+// 	input[type="checkbox"]
+// 		width: 30px
+// 		height: 30px
+// 		border-radius: 3px
+// 		border: 1px solid $input_blank_color
+// 		background: $black
+// 	input[type="file"]
+// 		width: 100%
+// 		height: 36px
+// 		border: none
+// 		padding: 0
+// 		margin: 5px 0 
+// 		background: #FFF
+// 		&:hover
+// 			box-shadow: none
+// 	.file_bt_area
+// 		width: 100%
+// 		margin: 0 0 25px 0
+// 		overflow: hidden		
+// 		a
+// 			@include bt_style_data_list(36px,$pink,$main_color,0 5px 0 0 ,0 15px)
+// 			&:hover
+// 				background: $main_color
+// 				color: #FFF
+
+
+// 	.che_rad_area
+// 		width: auto
+// 		float: left
+// 		margin: 20px 30px 10px 0
+// 		.che_rad_style
+// 			width: 20px
+// 			height: 20px
+// 			margin: 0 20px 0 0
+// 			background: $bg_gray
+// 			float: left
+// 		span
+// 			float: left
+// 			padding: 2px 0 0 0
+
+			
+		
+/*自定義checkbox 及 radio 樣式*/
+
+// @keyframes hover-color 
+// 	from
+// 		border-color: $bg_gray
+// 	to
+// 		border-color: $em_color
+
+// .magic-radio,.magic-checkbox 
+// 	position: absolute
+// 	display: none
+
+// .magic-radio[disabled],.magic-checkbox[disabled] 
+//  	cursor: not-allowed
+
+// .magic-radio + label,.magic-checkbox + label 
+// 	position: relative
+// 	display: block
+// 	padding-left: 45px
+// 	padding-top: 10px
+// 	cursor: pointer
+// 	vertical-align: middle
+
+
+// .magic-radio + label:hover:before,.magic-checkbox + label:hover:before 
+// 	animation-duration: 0.4s
+// 	animation-fill-mode: both
+// 	animation-name: hover-color
+
+// .magic-radio + label:before,.magic-checkbox + label:before
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	display: inline-block
+// 	width: 30px
+// 	height: 30px
+// 	content: ''
+// 	border: 1px solid $input_blank_color
+// 	background: $tit_bg_gray
+
+
+// .magic-radio + label:after,.magic-checkbox + label:after 
+// 	position: absolute
+// 	display: none
+// 	content: ''
+
+// .magic-radio[disabled] + label,.magic-checkbox[disabled] + label
+// 	cursor: not-allowed
+// 	// background: $em_color
+
+
+// .magic-radio[disabled] + label:hover, .magic-radio[disabled] + label:before, .magic-radio[disabled] + label:after,
+// .magic-checkbox[disabled] + label:hover,.magic-checkbox[disabled] + label:before,.magic-checkbox[disabled] + label:after 
+// 	cursor: not-allowed
+
+
+// .magic-radio[disabled] + label:hover:before,.magic-checkbox[disabled] + label:hover:before
+// 	border: $gray_line
+// 	animation-name: none
+
+
+
+// .magic-radio[disabled] + label:before,.magic-checkbox[disabled] + label:before
+// 	border-color: $bg_gray
+// 	background: $em_color
+
+// .magic-radio:checked + label:before,.magic-checkbox:checked + label:before
+// 	animation-name: none
+
+// .magic-radio:checked + label:after,.magic-checkbox:checked + label:after
+// 	display: block
+// 	background: $em_color
+
+// .magic-radio + label:before
+// 	border-radius: 50%
+
+// .magic-radio + label:after
+// 	top: 7px
+// 	left: 7px
+// 	width: 8px
+// 	height: 8px
+// 	border-radius: 50%
+// 	background: $em_color
+
+// .magic-radio:checked + label:before
+// 	border: $gray_line
+	
+
+// .magic-radio:checked[disabled] + label:before
+// 	border: $gray_line
+
+// .magic-radio:checked[disabled] + label:after
+// 	background: $bg_gray
+
+// .magic-checkbox + label:before
+// 	border-radius: 3px
+
+// .magic-checkbox + label:after
+// 	top: 3px
+// 	left: 10px
+// 	box-sizing: border-box
+// 	width: 10px
+// 	height: 20px
+// 	transform: rotate(45deg)
+// 	border-width: 3.5px
+// 	border-style: solid
+// 	border-color: #fff
+// 	border-top: 0
+// 	border-left: 0
+// 	border-radius: 3px
+
+// .magic-checkbox:checked + label:before
+// 	border: $em_color
+// 	background: $em_color
+
+// .magic-checkbox:checked[disabled] + label:before
+// 	border: $bg_gray
+// 	background: $bg_gray
+

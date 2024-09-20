@@ -1,0 +1,97 @@
+/*列印文件*/
+@mixin form_text
+	font:
+		family: "標楷體"
+		size: 14.5pt
+	color: #000
+	line-height: 1.4em
+
+.formBg
+	background: #FFF
+
+.fromA4
+	width: 21cm
+	height: 29.7cm
+	padding: 1cm
+	margin: 0 auto
+
+.fromA4--landscape
+	width: 29.7cm
+	// height: 21cm
+	padding: 0 1cm
+	@page
+		size: A4 landscape
+	// @include print
+
+
+
+/*order-form.html*/
+.form-orderform
+	h1,h2,h3,h4,h5,h6,p,div,section
+		@include form_text
+	h1
+		font:
+			size: 24px
+			weight: bold
+		line-height: 1.3em
+		text-align: center
+		margin: 0 auto 0.3cm auto
+	h2
+		font:
+			size: 20px
+			weight: bold
+		line-height: 1.3em
+		text-align: center
+		margin: 0 auto 0.5cm auto
+	.formTitArea
+		width: 100%
+		margin-bottom: 20px
+	.formTitArea-info
+		display: flex
+		margin: 0 auto 0.3cm auto
+	.formTitArea-infoSection
+		width: 50%
+	.formTitArea-infoSection--boldText
+		font:
+			weight: bold
+	.form-orderform-table
+		width: 100%
+		border: 1px solid #000
+		th
+			text-align: center
+			min-height: 1cm
+		th,td
+			border: 1px solid #000
+			padding: 0 10px
+			&:nth-of-type(1)
+				width: 10%
+				text-align: center
+			&:nth-of-type(2)
+				width: 23%
+			&:nth-of-type(3)
+				width: 10%
+				text-align: center
+			&:nth-of-type(4)
+				width: 10%
+				text-align: center
+			&:nth-of-type(5)
+				width: 10%
+				text-align: center
+			&:nth-of-type(6)
+				width: 10%
+				text-align: center
+			&:nth-of-type(7)
+				width: 17%
+			&:nth-of-type(8)
+				width: 10%
+				text-align: center
+	.formTitArea-footer
+		display: flex
+		margin: 0 auto 0.3cm auto
+	.formTitArea-footerSection
+		width: 25%
+
+
+
+			
+

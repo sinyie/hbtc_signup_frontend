@@ -1,0 +1,288 @@
+
+/*按鈕部件*/
+
+
+/*按鈕設置*/
+/*第一款 基本大按鈕*/
+// @mixin btn-emBt($width,$height,$bt_color,$text_color)
+// 	display: block
+// 	width: $width
+// 	height: $height
+// 	background: $bt_color
+// 	border-radius: 3px
+// 	box-shadow: 0px 2px 5px $shadow_color
+// 	@include text_style
+// 	color: $text_color
+// 	text-align: center
+// 	line-height: $height
+// 	&:hover
+// 		box-shadow: 0px 10px 20px $shadow_color
+// 		transform: translateX(-10px)
+
+/*強調按鈕陰影設定*/
+@mixin btnEm-shadow
+	box-shadow: 0px 12px 22px rgba(210,211,216,0.8)
+	&:hover
+		box-shadow: 0px 14px 26px rgba(200,201,206,0.8)
+
+@mixin btnHoverAct
+	//當a連結為文字時，必須為display: inline-block，transform才會有作用
+	display: inline-block
+	&:hover
+		transform: translateY(-6px)
+	&:active
+		transform: translateY(-6px)
+	&:focus
+		transform: translateY(-6px)	
+
+/*頁面基本按鈕--外框帶圓角矩形*/
+@mixin btn-base($bgcolor,$color)
+	display: inline-block
+	width: auto
+	height: 46px
+	padding: 0 20px
+	line-height: 47px
+	border-radius: 10px
+	background: $bgcolor
+	color: $color
+	font:
+		family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
+		size: $text-15
+		// weight: 500
+	letter-spacing: 1px
+	transition: all 0.3s linear
+	@include btnHoverAct
+	@include maxcom
+		height: 52px 
+		border-radius: 12px
+		line-height: 52px 
+		font:
+			size: $text-17 
+			family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
+	&:hover
+		text-decoration: none
+	&:active
+		text-decoration: none
+	&:focus
+		text-decoration: none
+	.btn-base--icon
+		margin-left: 10px
+		width: 15px
+		height: 15px
+		vertical-align: -2px
+
+
+
+/*主色漸層按鈕*/
+.btnMainColor
+	@include btn-base($mainColor-linearGradient0deg,#FFF)
+	border: none
+	&:hover,&:active,&:focus
+		color: #FFF
+		text-decoration: none
+
+/*副色漸層按鈕*/
+.btnSecondColor
+	@include btn-base($secondColor-linearGradient135deg,#FFF)
+	border: none
+	&:hover,&:active,&:focus
+		color: #FFF
+		text-decoration: none
+
+.btnlinearGradient-em
+	@include btn-base($emColor-linearGradient135deg,#FFF)
+	border: none
+	&:hover,&:active,&:focus
+		color: #FFF
+		text-decoration: none
+
+
+/*新增按鈕*/
+.btnAdd
+	@include btn-base($mainColor-linearGradient0deg,#FFF)
+	&:hover
+		color: #FFF
+
+
+//白色灰框按鈕
+.btnWhite
+	@include btn-base(#FFF,$black)
+	border: $gray-line
+	&:hover,&:active,&:focus
+		color: $black
+		text-decoration: none
+	
+
+/*刪除按鈕*/
+.btnDelete
+	@include btn-base(#FFF,$text-gray-300)
+	border: 1px solid $text-gray-300
+	&:hover
+		color: $text-gray-300
+	.icon
+		vertical-align: -2px
+
+
+/*頁面強調按鈕*/
+.btnEm-bt
+	display: block
+	width: 210px
+	height: 50px
+	line-height: 50px
+	background: $main-color-700
+	border-radius: 25px
+	@include btnEm-shadow
+	@include typoBasic
+	text-transform: capitalize
+	font:
+		weight: 700
+	color: #FFF
+	padding: 0 20px 0 25px
+	float: right 
+	margin: 0 0 25px 10px
+	transition: all 0.3s ease-in-out
+	.btnEm-bt--icon
+		padding: 14px 0 0 0
+		float: right
+	&:hover
+		transform: translateX(10px)
+		transition: all 0.3s ease-in-out
+		color: #FFF
+
+
+/*頁面強調按鈕--外框圓形*/
+@mixin btn-circleRec($bgcolor)
+	@include typoBasic
+	@include btnEm-shadow
+	@include btnHoverAct
+	display: inline-block
+	width: auto
+	background: $bgcolor
+	height: 50px
+	line-height: 50px
+	border-radius: 25px
+	text-transform: capitalize
+	font:
+		size: $text-15
+		family: $text-styleMedium--ch
+	color: #FFF
+	padding: 0 20px 0 20px
+	transition: all 0.3s ease-in-out
+	@include ipad
+		height: 56px
+		line-height: 55px
+		border-radius: 28px
+		font:
+			size: $text-17
+	.btn-btn-circleRec--icon
+		margin-left: 20px
+		vertical-align: -3px
+	.btn-base--icon
+		position: relative
+		// right: 30px
+		top: 2px
+		padding-left: 10px
+	&:hover
+		text-decoration: none
+		color: #FFF
+	&:active
+		text-decoration: none
+		color: #FFF
+	&:focus
+		text-decoration: none
+		color: #FFF
+
+
+.btnCurcleRec-LinearGradient--em
+	@include btn-circleRec($emColor-linearGradient135deg)
+.btnCurcleRec-LinearGradient--success--large
+	@include btn-circleRec($successColor-linearGradient90deg)
+	width: 200px
+	position: relative
+	.btn-btn-circleRec--icon
+		position: absolute
+		right: 30px
+		top: 20px
+.btnCurcleRec-secondColor
+	@include btn-circleRec($second-color)
+	
+.btnCurcleRec-mainColor
+	@include btn-circleRec($main-color)
+
+.btnCurcleRec-whiteColor
+	@include btn-circleRec(#FFF)
+	color: $text-gray-200
+	border: $gray-line
+	// background: $bg-gray-200
+	&:hover
+		color: $bg-gray-700
+
+
+/*圓形按鈕*/
+@mixin btn-circleBase($bgcolor)
+	display: inline-block
+	width: 48px
+	height: 48px
+	line-height: 48px
+	border-radius: 48px
+	background: $bgcolor
+	transition: all 0.3s linear
+	text-align: center
+	color: #FFF
+	@include btnHoverAct
+	// @include btnEm-shadow
+	&:hover,&:active,&:focus
+		text-decoration: none
+	.btn-circleBase--icon
+		width: 30px
+		height: 30px
+		vertical-align: -10px
+
+
+.btnCircleMainColor
+	@include btn-circleBase($main-color)
+
+.btnCircleSecondColor
+	@include btn-circleBase($second-color)
+	
+
+.btnCircleWhiteColor
+	@include btn-circleBase(#FFF)
+	border: $gray_line
+
+.btnCircleLinearGradient--em
+	@include btn-circleBase($emColor-linearGradient135deg)
+	&:hover
+		color: #fff
+		text-decoration: none
+	&:active
+		color: #fff
+		text-decoration: none
+	&:focus
+		color: #fff
+		text-decoration: none
+		
+
+.btnText
+	&:hover
+		text-decoration: underline
+	&:active
+		text-decoration: underline
+	&:focus
+		text-decoration: underline
+
+//按鈕寬度100%
+.btn100
+	width: 100%
+	position: relative
+	.btn-base--icon
+		position: absolute
+		float: right
+		right: 20px
+		top: 15px
+		@include maxcom
+			right: 20px
+			top: 20px
+
+.btnHoverAct
+	@include btnHoverAct

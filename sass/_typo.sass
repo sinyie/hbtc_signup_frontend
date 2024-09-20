@@ -1,0 +1,103 @@
+/*文字相關設定*/
+/*文字單行+nowrap*/
+@mixin typoNowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+
+/*文字基本設定*/
+@mixin typoBasic
+	font:
+		family: $text-style 
+		size: $text-17
+	color: $black
+	line-height: 1.8
+	letter-spacing: 0.5px
+
+
+h1,h2,h3,h4,h5,h6,p
+	margin: 0 0 0 0		
+	@include typoBasic
+	font-weight: normal
+	// word-break: break-all
+
+
+h6,p,div
+	font:
+		// weight: 400
+	letter-spacing: 0.5px
+	font:
+		size: $text-17
+	@include maxcom
+		font:
+			size: $text-18
+	.icon
+		vertical-align: -2px
+
+.typoBlack.typoBlack
+	color: $black
+
+.typoMainColor.typoMainColor
+	color: $main-color
+
+.typoSecondColor.typoSecondColor
+	color: $second-color
+
+.typoWarningColor.typoWarningColor
+	color: $color-waring
+
+.typoDangerColor.typoDangerColor
+	color: $color-danger
+
+.typoSuccessColor.typoSuccessColor
+	color: $color-success
+
+.typoGrayColor-200.typoGrayColor-200
+	color: $text-gray-200
+
+.typoGrayColor-200.typoGrayColor-200
+	color: $text-gray-300
+
+.typoGrayColor-400.typoGrayColor-400
+	color: $text-gray-400
+	
+.typoWhiteColor.typoWhiteColor
+	color: #FFF
+	
+.typoText-20
+	font-size: $text-20
+
+.typoText-22
+	font-size: $text-22
+
+.typoText-32
+	font-size: $text-32
+
+.typoText-34
+	font-size: $text-34
+
+.typoNowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+.typoRegular--en
+	font:
+		family: 'Montserrat-Regular'
+		
+.typoWeight--medium
+	font-family: $text-styleMedium--ch
+
+.typoDecUnderLine
+	text-decoration: underline
+
+.typo-contentIcon
+	display: table
+.typo-contentIcon--icon
+	vertical-align: middle
+	&:hover,&:active,&:focus
+		opacity: 0.64
+
+.typo-wordBreak--all
+	word-break: break-all

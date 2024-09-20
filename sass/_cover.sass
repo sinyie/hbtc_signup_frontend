@@ -1,0 +1,45 @@
+/*狀紙*/
+.coverA4
+	width: 21cm
+	height: 29.7cm
+	background: #FFF
+	padding: 2cm
+	margin: 0 auto
+.coverLogo
+	width: 10cm
+	height: auto
+	margin: 0 auto 1cm auto
+	text-align: center
+	display: block
+.coverTit
+	font-family: "標楷體"
+	line-height: 2
+.coverTit--underLine
+	text-align: center
+	text-decoration: underline
+.coverqrcodeBk
+	width: 9cm
+	height: 9cm
+	border: 2px solid black
+	margin: 0 auto
+.coverqrcode
+	// width: 3cm
+	// height: 3cm
+	margin: 1.7cm auto
+	display: block
+.coverAddTit
+	font-family: "標楷體"
+	text-align: right
+	line-height: 1.8
+
+
+
+
+
+
+/*列印用*/
+@mixin print
+	@media print
+		@content
+
+
