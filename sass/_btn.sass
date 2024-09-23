@@ -47,7 +47,7 @@
 	color: $color
 	font:
 		family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
-		size: $text-15
+		size: $text-16
 		// weight: 500
 	letter-spacing: 1px
 	transition: all 0.3s linear
@@ -57,7 +57,7 @@
 		border-radius: 12px
 		line-height: 52px 
 		font:
-			size: $text-17 
+			size: $text-20 
 			family: 'Montserrat-Medium', sans-serif, NotoSansTC-Medium, sans-serif
 	&:hover
 		text-decoration: none
@@ -163,7 +163,7 @@
 	border-radius: 25px
 	text-transform: capitalize
 	font:
-		size: $text-15
+		size: $text-16
 		family: $text-styleMedium--ch
 	color: #FFF
 	padding: 0 20px 0 20px
@@ -173,10 +173,11 @@
 		line-height: 55px
 		border-radius: 28px
 		font:
-			size: $text-17
+			size: $text-20
+		padding: 0 24px
 	.btn-btn-circleRec--icon
 		margin-left: 20px
-		vertical-align: -3px
+		vertical-align: -2px
 	.btn-base--icon
 		position: relative
 		// right: 30px
@@ -195,27 +196,36 @@
 
 .btnCurcleRec-LinearGradient--em
 	@include btn-circleRec($emColor-linearGradient135deg)
+	&:hover,&:active,&:focus
+		background: $emColor-linearGradient0deg
 .btnCurcleRec-LinearGradient--success--large
 	@include btn-circleRec($successColor-linearGradient90deg)
 	width: 200px
 	position: relative
+	&:hover,&:active,&:focus
+		background: $secondColor-linearGradient0deg
 	.btn-btn-circleRec--icon
 		position: absolute
 		right: 30px
 		top: 20px
 .btnCurcleRec-secondColor
 	@include btn-circleRec($second-color)
+	&:hover,&:active,&:focus
+		background: $color-info
+
 	
 .btnCurcleRec-mainColor
 	@include btn-circleRec($main-color)
+	&:hover,&:active,&:focus
+		background: $text-gray-300
 
 .btnCurcleRec-whiteColor
 	@include btn-circleRec(#FFF)
-	color: $text-gray-200
-	border: $gray-line
+	color: $text-gray-300
+	border: 1px solid $bg-gray-500
 	// background: $bg-gray-200
-	&:hover
-		color: $bg-gray-700
+	&:hover,&:active,&:focus
+		color: $text-gray-300
 
 
 /*圓形按鈕*/

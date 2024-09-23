@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <title>臺中市政府衛生局　線上報名系統</title>
     <meta name="Robots" content="none">
@@ -51,6 +51,9 @@
 </head>
 
 <body>
+    <noscript>
+		<h2>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</h2>
+	</noscript>
 
     <div class="jsNavMain">
         <!-- main.js塞在裡面 -->
@@ -67,7 +70,7 @@
         <!-- 頁面大標 -->
         <h1 class="patH1Tit patH1Tit" id="activity_name"></h1>
 
-        <div class="patPrimary">
+        <div class="patPrimary" id="acckeyC">
             <div class="pagSettingAddBk">
                 <div class="eleCard pt-40">
                     <form name="myform" id="myform" method="post" autocomplete="off" enctype="multipart/form-data">
@@ -75,7 +78,7 @@
                         <!-- 填寫個人資料 -->
                         <div class="gridBk eleSection--style">
                             <section class="grid--33 fieldTitBk">
-                                <h2 class="eleSectionTit pb-30">填寫個人資料</h2>
+                                <p class="eleSectionTit pb-30">填寫個人資料</p>
                             </section>
                             <section class="grid--66 fieldBk">
                                 <div class="ui form">
@@ -159,7 +162,7 @@
                         <!-- 送出申請 -->
                         <div class="gridBk eleSection--style">
                             <section class="grid--33 fieldTitBk mb-30">
-                                <h2 class="eleSectionTit">送出報名</h2>
+                                <p class="eleSectionTit">送出報名</p>
                             </section>
                             <section class="grid--66 fieldBk">
                                 <div class="ui form">
@@ -183,7 +186,7 @@
                                     <div class="field fidArea grid--25">
                                         <a href="javascript:void(0);" id="chk_button" class="btnCurcleRec-LinearGradient--em btn100 mt-35 ">
                                             送出報名
-                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-base--icon">
+                                            <img src="images/arrow-right--white--15.svg" alt="" class="btn-base--icon">
                                         </a>
                                     </div>
                                 </div>

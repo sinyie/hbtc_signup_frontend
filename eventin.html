@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <title>臺中市政府衛生局　線上報名系統</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,6 +50,9 @@
 </head>
 
 <body>
+    <noscript>
+		<h2>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</h2>
+	</noscript>
 
     <div class="jsNavMain">
         <!-- main.js塞在裡面 -->
@@ -67,82 +70,84 @@
             <span id="activity_name"></span>
         </h1>
 
-        <div class="patPrimary">
+        <div class="patPrimary" id="acckeyC">
             <div class="pagSettingAddBk">
 
                 <div class="eleCard eleCard-fid mb-20">
                     <!-- 活動相關資訊 -->
                     <div class="gridBk mb-40">
-                        <section class="grid--25 fieldTitBk">
+                        <div class="grid--25 fieldTitBk">
                             <!-- <h2 class="eleSectionTit pb-30">活動相關資訊</h2> -->
-                            <h2 class="eleSectionTit">活動代碼</h2>
+                            <p class="eleSectionTit">活動代碼</p>
                             <!-- <h6>活動代碼</h6> -->
                             <p class="typoMainColor typoText-24 typoMedium--en pb-10 activity_code" id="activity_code"></p>
-                        </section>
-                        <section class="grid--75 fieldBk">
+                        </div>
+                        <div class="grid--75 fieldBk">
                             <div class="pagOrderInList-dataArea">
                                 <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>活動日期期間</h6>
-                                    <p class="typoText-20 typoGrayColor-200" id="activity_strdate">
-                                        <img src="images/clock--gray--15.svg" alt="clock" class="eleTextinIcon">
+                                    <p>活動日期期間</p>
+                                    <p class="typoText-22 typoGrayColor-400" id="activity_strdate">
+                                        <img src="images/clock--gray--15.svg" alt="" class="eleTextinIcon">
                                     </p>
                                 </section>
                                 <!-- <section class="modInfoBk-EminfoBk--lineDec">
                                     <h6>活動名額</h6>
                                     <p class="typoText-20 typoGrayColor-200" id="join_limit"></p>
                                 </section> -->
+                                
+                            </div>
+                            <div class="pagOrderInList-dataArea pt-25">
                                 <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>活動費用</h6>
-                                    <p class="typoText-20 typoGrayColor-200" id="join_price"></p>
+                                    <p>活動費用</p>
+                                    <p class="typoText-22 typoGrayColor-400" id="join_price"></p>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <p>報名人數上限</p>
+                                    <p class="typoText-22 typoGrayColor-400" id="join_limit"></p>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <p>目前報名人數</p>
+                                    <p class="typoText-22 typoGrayColor-400" id="join_total"></p>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <p>報名成功人數</p>
+                                    <p class="typoText-22 typoGrayColor-400" id="join_status2"></p>
                                 </section>
                                 <div class="pagOrderInList-data pl-30">
-                                    <a href="javascript:void(0);" class="btnCircleMainColor mr-8 mt-5 join_activity_btn" data-tooltip="報名活動" data-position="top center" style="display: none;">
-                                        <img src="images/add--white--30.svg" alt="print" class="btn-circleBase--icon">
+                                    <a href="javascript:void(0);" class="btnCircleMainColor mr-8 mt-20 join_activity_btn" data-tooltip="報名活動" data-position="top center" style="display: none;">
+                                        <img src="images/add--white--30.svg" alt="點此報名活動" class="btn-circleBase--icon">
                                     </a>
-                                    <a href="javascript:void(0);" class="btnCircleSecondColor mr-5 mt-5 search_activity_btn" data-tooltip="查詢修改 / 取消報名" data-position="top center" style="display: none;">
-                                        <img src="images/search--white--30.svg" alt="edit" class="btn-circleBase--icon">
+                                    <a href="javascript:void(0);" class="btnCircleSecondColor mr-5 mt-20 search_activity_btn" data-tooltip="查詢修改 / 取消報名" data-position="top center" style="display: none;">
+                                        <img src="images/search--white--30.svg" alt="點此查詢修改 / 取消報名" class="btn-circleBase--icon">
                                     </a>
                                 </div>
+                               
                             </div>
                             <section class="pt-40">
-                                <div class="modInfoBk--line">
-                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
-                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">報名人數上限</h6>
-                                        <p id="join_limit"></p>
-                                    </div>
-                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
-                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">目前報名人數</h6>
-                                        <p id="join_total"></p>
-                                    </div>
-                                    <div class="modInfoBk--grid33 modInfoBk--line--gutter">
-                                        <h6 class="typoGrayColor-400 modInfoBk-infoList--tit pr-20">報名成功人數</h6>
-                                        <p id="join_status2"></p>
-                                    </div>
-                                </div>
-                                <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">報名期間</h6>
+                                <section class="modInfoBk-EminfoBk--info--textDes">
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">報名期間</p>
                                     <p class="typo-contentIcon" id="join_date"></p>
-                                </div>
-                                <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">活動地點</h6>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--info--textDes">
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">活動地點</p>
                                     <p class="typo-contentIcon" id="activity_location"></p>
-                                </div>
-                                <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">活動說明</h6>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--info--textDes">
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">活動說明</p>
                                     <p class="typo-contentIcon typo-wordBreak--all" id="activity_info"></p>
-                                </div>
-                                <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">其他說明事項</h6>
+                                </section>
+                                <section class="modInfoBk-EminfoBk--info--textDes">
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">其他說明事項</p>
                                     <p class="typo-contentIcon" id="activity_remarks"></p>
-                                </div>
+                                </section>
                             </section>
-                        </section>
+                        </div>
                     </div>
                     <!-- 報名者相關資訊 -->
                     <div class="gridBk eleSection--style--top">
-                        <section class="grid--25 fieldTitBk">
-                            <h2 class="eleSectionTit pb-30">報名者相關資訊</h2>
-                        </section>
+                        <div class="grid--25 fieldTitBk">
+                            <p class="eleSectionTit pb-30">報名者相關資訊</p>
+                        </div>
                         <section class="grid--75 fieldBk">
                             <div class="modInfoBk-EminfoBk--info--textDes">
                                 <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">參加對象</h6>
@@ -163,43 +168,43 @@
                         <section class="grid--25 fieldTitBk">
                             <h2 class="eleSectionTit pb-30">活動聯絡人資訊</h2>
                         </section>
-                        <section class="grid--75 fieldBk">
-                            <div class="modInfoBk-EminfoBk--info--textDes">
-                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人姓名</h6>
+                        <div class="grid--75 fieldBk">
+                            <section class="modInfoBk-EminfoBk--info--textDes">
+                                <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人姓名</p>
                                 <p id="activity_contact_name"></p>
-                            </div>
-                            <div class="modInfoBk-EminfoBk--info--textDes">
-                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人電話</h6>
+                            </section>
+                            <section class="modInfoBk-EminfoBk--info--textDes">
+                                <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人電話</p>
                                 <p id="activity_contact_tel"></p>
-                            </div>
-                            <div class="modInfoBk-EminfoBk--info--textDes">
-                                <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人Email</h6>
+                            </section>
+                            <section class="modInfoBk-EminfoBk--info--textDes">
+                                <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡人Email</p>
                                 <p id="activity_contact_email"></p>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                     <!-- 同意以上資料蒐集 -->
                     <div class="gridBk">
-                        <section class="grid--25 fieldTitBk mb-30">
-                            <h2 class="eleSectionTit"></h2>
-                        </section>
-                        <section class="grid--75 fieldBk">
+                        <div class="grid--25 fieldTitBk mb-30">
+                            
+                        </div>
+                        <div class="grid--75 fieldBk">
                             <div class="gridBk plr-30">
                                 <section class="grid--100">
-                                    <div class="floatRight ">
+                                    <div class="floatRight">
                                         <a href="javascript:void(0);" class="btnCurcleRec-mainColor mr-12 mt-12 join_activity_btn" style="display: none;">
                                             報名活動
-                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-base--icon">
+                                            <img src="images/arrow-right--white--15.svg" alt="" class="btn-base--icon">
                                         </a>
                                         <a href="javascript:void(0);" class="btnCurcleRec-secondColor mt-12 search_activity_btn" style="display: none;">
                                             查詢 / 取消報名
-                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-base--icon">
+                                            <img src="images/arrow-right--white--15.svg" alt="" class="btn-base--icon">
                                         </a>
                                     </div>
                                 </section>
                                 <div class="clear"></div>
                             </div>
-                        </section>
+                        </div>
                     </div>
 
 

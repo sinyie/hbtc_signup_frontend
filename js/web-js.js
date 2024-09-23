@@ -1,6 +1,17 @@
 /*網站區js*/
 $(document).ready(function() {
+	// $(".js-patNavMenu-list").attr("tabindex", -1);
+	var windowWidth = window.innerWidth;
+	console.log("瀏覽器寬度為：" + windowWidth + "px");
 
+	// 基於寬度進行其他操作
+	if (windowWidth < 768) {
+		// 執行手機版操作
+		$(".js-patNavMenu-list").attr("tabindex", -1);
+	} else {
+		// 執行電腦版操作
+		$(".js-patNavMenu-list").attr("tabindex", 0);
+	}
 
 	/*03*/
 	/*小視口導覽列開合*/
@@ -10,6 +21,7 @@ $(document).ready(function() {
 		  left: '0',
 		});
 		$(".jsNavSml-openbg").show();
+		$(".js-patNavMenu-list").attr("tabindex", 0);
 	});
 	$(".jsNavSml-bt--close").on('click',function(){
 		// console.log("我有觸發關閉事件");
@@ -17,6 +29,7 @@ $(document).ready(function() {
 			left: '-320',
 		});
 		$(".jsNavSml-openbg").fadeOut(500);
+		$(".js-patNavMenu-list").attr("tabindex", -1);
 	});
 	$(".jsNavSml-openbg").on('click',function(){
 		// console.log("我有觸發關閉事件");
@@ -24,9 +37,10 @@ $(document).ready(function() {
 			left: '-320',
 		});
 		// $(".jspatSmlNavNote").animate({
-		// 	left: '-320',
-		// });
+			// 	left: '-320',
+			// });
 		$(".jsNavSml-openbg").fadeOut(500);
+		$(".js-patNavMenu-list").attr("tabindex", -1);
 	});
 
 	/*小視口導覽列以及大視口導覽列第二層開合特效*/

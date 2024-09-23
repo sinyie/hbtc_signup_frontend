@@ -10,10 +10,9 @@
 @mixin typoBasic
 	font:
 		family: $text-style 
-		size: $text-17
+		size: $text-18
 	color: $black
 	line-height: 1.8
-	letter-spacing: 0.5px
 
 
 h1,h2,h3,h4,h5,h6,p
@@ -23,15 +22,16 @@ h1,h2,h3,h4,h5,h6,p
 	// word-break: break-all
 
 
-h6,p,div
+h6,p,div,a
+	@include typoBasic
 	font:
 		// weight: 400
-	letter-spacing: 0.5px
 	font:
-		size: $text-17
+		size: $text-18
 	@include maxcom
 		font:
-			size: $text-18
+			size: $text-20
+			
 	.icon
 		vertical-align: -2px
 
@@ -39,7 +39,7 @@ h6,p,div
 	color: $black
 
 .typoMainColor.typoMainColor
-	color: $main-color
+	color: $main-color !important
 
 .typoSecondColor.typoSecondColor
 	color: $second-color
@@ -70,6 +70,12 @@ h6,p,div
 
 .typoText-22
 	font-size: $text-22
+
+.typoText-24
+	font-size: $text-24
+
+.typoText-26
+	font-size: $text-26
 
 .typoText-32
 	font-size: $text-32

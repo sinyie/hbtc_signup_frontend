@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <title>臺中市政府衛生局　線上報名系統</title>
     <meta name="Robots" content="none">
@@ -51,6 +51,9 @@
 </head>
 
 <body>
+    <noscript>
+		<h2>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</h2>
+	</noscript>
 
     <div class="jsNavMain">
         <!-- main.js塞在裡面 -->
@@ -73,24 +76,27 @@
                     <!-- 報名者相關資訊 -->
                     <div class="gridBk mb-40">
                         <section class="grid--25 fieldTitBk">
-                            <h2 class="eleSectionTit pb-30">報名者相關資訊</h2>
+                            <p class="eleSectionTit pb-30">報名者相關資訊</p>
                         </section>
                         <section class="grid--75 fieldBk">
                             <div class="pagOrderInList-dataArea">
                                 <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>姓名</h6>
-                                    <p class="typoText-20 typoGrayColor-200" id="join_name"></p>
+                                    <p>姓名</p>
+                                    <p class="typoText-20 typoGrayColor-400" id="join_name"></p>
+                                </section>
+                                <br />
+                                <br />
+                                
+                                <section class="modInfoBk-EminfoBk--lineDec">
+                                    <p>E-mail</p>
+                                    <p class="typoText-20 typoGrayColor-400 typo-wordBreak--all" id="join_email"></p>
                                 </section>
                                 <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>E-mail</h6>
-                                    <p class="typoText-20 typoGrayColor-200 typo-wordBreak--all" id="join_email"></p>
+                                    <p>身分證 / 居留證後四碼</p>
+                                    <p class="typoText-20 typoGrayColor-400" id="join_id_number"></p>
                                 </section>
                                 <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>身分證 / 居留證後四碼</h6>
-                                    <p class="typoText-20 typoGrayColor-200" id="join_id_number"></p>
-                                </section>
-                                <section class="modInfoBk-EminfoBk--lineDec">
-                                    <h6>審核狀態</h6>
+                                    <p>審核狀態</p>
                                     <span id="join_status"></span>
                                     <!-- <p class="typoText-20 typo-contentIcon typoGrayColor-200">
                                         <img src="images/status--unstage.svg" alt="審核中" class="typo-contentIcon--icon mr-5">
@@ -109,27 +115,27 @@
                             <section class="pt-40">
                                 <h2 class="eleSectionTit fieverti" id="errMsg_status"></h2>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">機關名稱</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">機關名稱</p>
                                     <p class="typo-contentIcon" id="join_organs"></p>
                                 </div>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">部門</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">部門</p>
                                     <p id="join_department"></p>
                                 </div>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">職稱</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">職稱</p>
                                     <p id="join_title"></p>
                                 </div>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">聯絡電話</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">聯絡電話</p>
                                     <p id="join_tel"></p>
                                 </div>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">是否用餐</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">是否用餐</p>
                                     <p id="join_need_food"></p>
                                 </div>
                                 <div class="modInfoBk-EminfoBk--info--textDes">
-                                    <h6 class="modInfoBk-EminfoBk--info--tit typoGrayColor-200 pr-20">備註</h6>
+                                    <p class="modInfoBk-EminfoBk--info--tit typoGrayColor-400 pr-20">備註</p>
                                     <p id="join_remarks"></p>
                                 </div>
                             </section>
@@ -137,7 +143,7 @@
                     </div>
                     <div class="gridBk">
                         <section class="grid--25 fieldTitBk mb-30">
-                            <h2 class="eleSectionTit"></h2>
+                            <p class="eleSectionTit"></p>
                         </section>
                         <section class="grid--75 fieldBk">
                             <div class="gridBk plr-30">
@@ -149,7 +155,7 @@
                                         </a> -->
                                         <a href="javascript:void(0);" id="chk_logout" class="btnCurcleRec-LinearGradient--em mt-12">
                                             退出查詢
-                                            <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-btn-circleRec--icon">
+                                            <img src="images/arrow-right--white--15.svg" alt="" class="btn-btn-circleRec--icon">
                                         </a>
                                     </div>
                                 </section>

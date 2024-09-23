@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="zh-Hant-TW">
 <head>
     <title>臺中市政府衛生局　線上報名系統</title>
     <meta name="Robots" content="none">
@@ -51,6 +51,9 @@
 </head>
 
 <body>
+    <noscript>
+		<h2>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</h2>
+	</noscript>
 
     <div class="jsNavMain">
         <!-- main.js塞在裡面 -->
@@ -66,7 +69,7 @@
         <!-- 頁面大標 -->
         <h1 class="patH1Tit patH1Tit">確認完成報名</h1>
 
-        <div class="patPrimary">
+        <div class="patPrimary" id="acckeyC">
             <div class="pagSettingAddBk">
                 <div class="eleCard eleCard-fid">
                     <form name="myform" id="myform" method="post" autocomplete="off" enctype="multipart/form-data">
@@ -74,10 +77,9 @@
                         <!-- 報名完成 -->
                         <div class="gridBk">
                             <section class="grid--25 fieldTitBk">
-                                <!-- <h2 class="eleSectionTit pb-40">報名完成</h2> -->
                             </section>
                             <section class="grid--75 fieldBk">
-                                <div class="modInfoBk-EminfoBk--info--textDes">
+                                <div class="modInfoBk-EminfoBk--info--textDes pt-30 pb-30">
                                     <div id="reply_info">
                                         您已確認並完成報名流程，感謝您參加本次活動！<br><br>
                                         以下為活動資訊，屆時請於報到時間準時參加，謝謝！<br><br>
@@ -94,7 +96,7 @@
                         <!-- 同意以上資料蒐集 -->
                         <div class="gridBk">
                             <section class="grid--25 fieldTitBk">
-                                <h2 class="eleSectionTit"></h2>
+                                <p class="eleSectionTit"></p>
                             </section>
                             <section class="grid--75 fieldBk">
                                 <div class="ui form">
@@ -103,7 +105,7 @@
                                             <div class="floatRight mt-30">
                                                 <a href="index.html" class="btnCurcleRec-secondColor">
                                                     返回首頁
-                                                    <img src="images/arrow-right--white--15.svg" alt="arrow" class="btn-btn-circleRec--icon">
+                                                    <img src="images/arrow-right--white--15.svg" alt="" class="btn-btn-circleRec--icon">
                                                 </a>
                                             </div>
                                         </section>

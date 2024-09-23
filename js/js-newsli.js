@@ -81,20 +81,20 @@ $(document).ready(function () {
                         <ul class="pagNewsList--maxcomBk">
                             <li class="modPhoneCardMaxcomTable-dataArea pagNewsList-dataArea">
                                 <a href="newsin.html?nid=` + news.id + `">
-                                    <h3 class="pagEventList-statusOrder--phone--text pr-30">
+                                    <p class="pagEventList-statusOrder--phone--text pr-30">
                                         ` + news.title + `
-                                    </h3>
+                                    </p>
                                 </a>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagNewsList-dataArea">
-                                <h6 class="eleDataTit pagNewsList-dataArea--tit--phone pr-20">發佈日期</h6>
+                                <p class="eleDataTit pagNewsList-dataArea--tit--phone pr-20">發佈日期</p>
                                 <p class="eleData pagNewsList-dataArea--data">
                                     <img src="images/clock--gray--15.svg" alt="clock" class="eleTextinIcon">
                                     ` + news.str_date + `
                                 </p>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagNewsList-dataArea">
-                                <h6 class="eleDataTit pagNewsList-dataArea--tit--phone pr-20">發佈人</h6>
+                                <p class="eleDataTit pagNewsList-dataArea--tit--phone pr-20">發佈人</p>
                                 <p class="eleData pagNewsList-dataArea--data pr-30">
                                     ` + user_array[news.poster] + `
                                 </p>

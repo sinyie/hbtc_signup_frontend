@@ -560,7 +560,7 @@ body {
 }
 
 html {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 body {
@@ -570,7 +570,7 @@ body {
   min-width: 320px;
   background: #FFFFFF;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
@@ -28907,7 +28907,7 @@ a.ui.card:hover,
   width: calc( 12.5%  -  1em );
   margin-left: 0.5em;
   margin-right: 0.5em;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .ui.nine.cards {
@@ -28919,7 +28919,7 @@ a.ui.card:hover,
   width: calc( 11.11111111%  -  1em );
   margin-left: 0.5em;
   margin-right: 0.5em;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .ui.ten.cards {
@@ -31259,10 +31259,10 @@ a.ui.card:hover,
 .ui.checkbox .box:before,
 .ui.checkbox label:before {
   position: absolute;
-  top: -1px;
+  top: 2px;
   left: 0px;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   content: '';
   background: #FFFFFF;
   border-radius: 0.21428571rem;
@@ -31280,11 +31280,11 @@ a.ui.card:hover,
 .ui.checkbox .box:after,
 .ui.checkbox label:after {
   position: absolute;
-  font-size: 14px;
+  font-size: 1.12rem;
   top: 0px;
   left: 0px;
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
   text-align: center;
   opacity: 0;
   color: rgba(0, 0, 0, 0.87);
@@ -31857,7 +31857,7 @@ a.ui.card:hover,
 
 .ui.checkbox input:indeterminate ~ .box:after,
 .ui.checkbox input:indeterminate ~ label:after {
-  font-size: 12px;
+  font-size: 0.75rem;
   content: '\e801';
 }
 

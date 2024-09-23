@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-  <g id="clock--gray--15" transform="translate(-432 -32)">
-    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(432 32)" fill="none" stroke="#a4b7d1" stroke-width="1.2">
-      <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
-      <circle cx="7.5" cy="7.5" r="6.9" fill="none"/>
-    </g>
-    <g id="Group_110" data-name="Group 110" transform="translate(436.662 36.662)">
-      <line id="Line_5" data-name="Line 5" y2="3.508" transform="translate(3.346 -0.162)" fill="none" stroke="#a4b7d1" stroke-linecap="round" stroke-width="1"/>
-      <line id="Line_6" data-name="Line 6" x2="3.346" transform="translate(0 3.346)" fill="none" stroke="#a4b7d1" stroke-linecap="round" stroke-width="1"/>
-    </g>
-  </g>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8_29)">
+<path d="M8.00002 15.36C12.0648 15.36 15.36 12.0648 15.36 8.00002C15.36 3.9352 12.0648 0.640015 8.00002 0.640015C3.9352 0.640015 0.640015 3.9352 0.640015 8.00002C0.640015 12.0648 3.9352 15.36 8.00002 15.36Z" stroke="#A7A9B2" stroke-width="1.2"/>
+<path d="M8.54187 4.79999V8.54185" stroke="#A7A9B2" stroke-linecap="round"/>
+<path d="M4.97278 8.54187H8.54184" stroke="#A7A9B2" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_8_29">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
 </svg>

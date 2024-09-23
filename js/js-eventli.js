@@ -101,39 +101,37 @@ $(document).ready(function () {
                     <article class="pagEventList">
                         <ul class="pagEventList--maxcomBk">
                             <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea">
-                                <a href="eventin.html?activity_id=` + activity.id + `">
-                                    <h3 class="pagEventList-statusOrder--phone--text pr-30">
-                                        <p class="eleData typoMainColor">
-                                            ` + activity.activity_code + `
-                                        </p>
-                                        ` + activity.name + `
-                                    </h3>
+                                <a href="eventin.html?activity_id=` + activity.id + `" class="pagEventList-statusOrder--phone--text pr-30">
+                                    <p class="eleData typoMainColor">
+                                        ` + activity.activity_code + `
+                                    </p>
+                                    ` + activity.name + `
                                 </a>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea">
-                                <h6 class="eleDataTit pagEventList-dataArea--tit--phone pr-20">活動日期與時間</h6>
+                                <p class="eleDataTit pagEventList-dataArea--tit--phone pr-20">活動日期與時間</p>
                                 <p class="eleData pagEventList-dataArea--data">
-                                    <img src="images/clock--gray--15.svg" alt="clock" class="eleTextinIcon">
+                                    <img src="images/clock--gray--15.svg" alt="" class="eleTextinIcon">
                                     ` + activity_strdate_str + `
                                     － <br />
-                                    <img src="images/clock--gray--15.svg" alt="clock" class="eleTextinIcon">
+                                    <img src="images/clock--gray--15.svg" alt="" class="eleTextinIcon">
                                     ` + activity_enddate_str + `
                                 </p>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea">
-                                <h6 class="eleDataTit pagEventList-dataArea--tit--phone pr-20">參加對象</h6>
+                                <p class="eleDataTit pagEventList-dataArea--tit--phone pr-20">參加對象</p>
                                 <p class="eleData pagEventList-dataArea--data pr-30">
                                     ` + activity.target + `
                                 </p>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea">
-                                <h6 class="eleDataTit pagEventList-dataArea--tit--phone pr-20">報名期間</h6>
+                                <p class="eleDataTit pagEventList-dataArea--tit--phone pr-20">報名期間</p>
                                 <p class="eleData pagEventList-dataArea--data">
                                 ` + activity_str_date_str + ` － <br /> ` + activity_end_date_str + `
                                 </p>
                             </li>
                             <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea">
-                                <h6 class="eleDataTit pagEventList-dataArea--tit--phone pr-20">活動名額</h6>
+                                <p class="eleDataTit pagEventList-dataArea--tit--phone pr-20">活動名額</p>
                                 <p class="eleData pagEventList-dataArea--data">` + join_limit_str + `</p>
                             </li>
                             `
@@ -152,7 +150,7 @@ $(document).ready(function () {
                                 list_str += `
                                 <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea pagEventList-btArea">
                                     <a href="eventsearch.html?activity_id=` + activity.id + `" class="btnCircleSecondColor mr-5" data-tooltip="查詢修改 / 取消報名" data-position="top center">
-                                        <img src="images/search--white--30.svg" alt="edit" class="btn-circleBase--icon">
+                                        <img src="images/search--white--30.svg" alt="" class="btn-circleBase--icon">
                                     </a>
                                 </li>
                                 `
@@ -165,7 +163,7 @@ $(document).ready(function () {
                                 list_str += `
                                 <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea pagEventList-btArea">
                                     <a href="eventsearch.html?activity_id=` + activity.id + `" class="btnCircleSecondColor mr-5" data-tooltip="查詢修改 / 取消報名" data-position="top center">
-                                        <img src="images/search--white--30.svg" alt="edit" class="btn-circleBase--icon">
+                                        <img src="images/search--white--30.svg" alt="" class="btn-circleBase--icon">
                                     </a>
                                 </li>
                                 `
@@ -173,14 +171,14 @@ $(document).ready(function () {
                                 list_str += `
                                 <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea pagEventList-btArea">
                                     <a href="eventdeclare.html?activity_id=` + activity.id + `" class="btnCircleMainColor mr-5" data-tooltip="報名活動" data-position="top center">
-                                        <img src="images/add--white--30.svg" alt="print" class="btn-circleBase--icon">
+                                        <img src="images/add--white--30.svg" alt="" class="btn-circleBase--icon">
                                     </a>
                                 </li>
                                 `
                                 list_str += `
                                 <li class="modPhoneCardMaxcomTable-dataArea pagEventList-dataArea pagEventList-btArea">
                                     <a href="eventsearch.html?activity_id=` + activity.id + `" class="btnCircleSecondColor mr-5" data-tooltip="查詢修改 / 取消報名" data-position="top center">
-                                        <img src="images/search--white--30.svg" alt="edit" class="btn-circleBase--icon">
+                                        <img src="images/search--white--30.svg" alt="" class="btn-circleBase--icon">
                                     </a>
                                 </li>
                                 `

@@ -1,5 +1,23 @@
 //網站框架
 
+// 無障礙跳至主要內容區按鈕
+.patSkip_main
+	position: absolute
+	overflow: hidden
+	z-index: -999
+	left: -1000px
+	&:active,&:focus
+		position: relative
+		left: 0px
+		z-index: 999
+		display: block
+		width: 100%
+		height: auto
+		background: $main-color
+		color: $main-color-50
+		text-align: center
+		padding: 10px 
+
 //系統資訊區
 .patSysInfoBk
 	position: fixed
@@ -134,8 +152,8 @@
 	
 //手機視口header
 .patSmlHeader
-	width: 30px
-	padding: 20px
+	width: 48px
+	margin: 15px
 	position: fixed
 	top: 0
 	left: 0
@@ -145,10 +163,14 @@
 	// cursor: pointer
 	@include maxcom
 		display: none
+.jsNavSml-bt
+	width: 48px
+	height: 48px
+	display: block
 .patSmlHeader-navbt
 	width: 30px
 	height: 30px
-	margin: 4px 0 0 0
+	margin: 9px
 // .patSmlHeader-webName
 // 	margin: 15px 0 0 0
 // 	font:
@@ -157,33 +179,38 @@
 //手機視口navgation
 .patSmlNav
 	width: 320px
-	height: 100%
+	height: 100vh
 	position: fixed
 	top: 0
 	left: -320px
 	z-index: 6
-	overflow-y: auto
+	// overflow-y: auto
 	background: #FFF
-	padding: 0 50px
+	padding: 0 40px
 	display: flex
-	flex-wrap: wrap
+	// flex-wrap: wrap
 	flex-direction: column
+	justify-content: space-around
 	// align-items: flex-start
 	// justify-content: flex-start
 	@include maxcom
-		display: block
 		left: 0px
 .patSmlNav-closeBt
-	width: 30px 
-	height: 30px
+	display: block
+	width: 48px 
+	height: 48px
 	position: absolute
 	right: 20px
 	top: 20px
 	cursor: pointer
+	text-align: center
+	padding: 9px 0
 	@include maxcom
 		display: none
 .patSmlNav-LogoNameBk
-	margin-top: 50px
+	margin-top: 40px
+	+maxcom
+		margin-top: 0px
 .patSmlNav-LogoNameBk--logo
 	width: 70px
 	margin-bottom: 10px
@@ -216,24 +243,26 @@
 //小視口nav 功能連結
 .patNavMenu
 	width: 100%
-	margin-top: 50px
+	// margin-top: 50px
 .patNavMenu-list
 	margin: 5px 0
 	display: flex
 	flex-wrap: no-wrap
 	@include typoBasic
-	color: $bg-gray-700
+	color: $text-gray-400
 	font:
 		family: $text-styleMedium--ch
 		size: $text-18
 	letter-spacing: 1.5px
 	line-height: 58px
+	+computer
+		font:
+			size: $text-21
 	&:hover,&:active
 		color: $black
 		text-decoration: none
-		.patNavMenu-icon
-			mix-blend-mode: difference
-			opacity: 0.64
+		// .patNavMenu-icon
+			// mix-blend-mode: difference
 		// .patNavMenu-iconArea
 		// 	background: $emColor-linearGradient0deg
 		// 	box-shadow: 0px 12px 22px rgba(210,211,216,0.8)
@@ -248,13 +277,14 @@
 	margin-top: 14px
 	width: 30px
 	height: 30px
+	opacity: 0.64
 .patNavMenu-list--active
 	color: $black
 	.patNavMenu-iconArea
-		background: $emColor-linearGradient0deg
+		background: $emColor-linearGradient135deg
 		border-radius: 18px
 		.patNavMenu-icon
-			mix-blend-mode: screen
+			mix-blend-mode: color-dodge
 .patNavMenu-secondList
 	width: 100%
 	padding: 0 30px 10px 96px 
@@ -295,16 +325,18 @@
 
 //copyright
 .patNavCopyright
-	width: 230px
-	// align-self: flex-end
-	position: absolute
-	bottom: 50px
+	width: 100%
+	align-self: flex-end
 	font:
-		size: $text-15
+		size: $text-16
 		family: $text-styleRegular--en,$text-styleRegular--ch
 	// color: $black
 	// opacity: 0.64
-	color: $text-gray-200
+	color: $text-gray-400
+	+computer
+		// position: absolute
+		// bottom: 50px
+
 
 
 
@@ -524,8 +556,8 @@
 		padding: 0 50px
 .patBiteBt
 	font:
-		size: $text-17
-	color: $main-color
+		size: $text-16
+	color: $text-gray-400
 	letter-spacing: 0.5px
 	line-height: 1.5em
 	position: relative
@@ -547,9 +579,9 @@
 		&:after
 			background: none
 .patBiteBt--in
-	color: $bg-gray-700
+	color: $second-color 
 	&:hover,&:active,&:focus
-		color: $bg-gray-700
+		color: $main-color 
 		text-decoration: none
 
 
@@ -557,7 +589,7 @@
 //頁面H1大標題
 .patH1Tit.patH1Tit
 	font:
-		size: $text-17
+		size: $text-18
 		family: $text-styleMedium--ch
 	position: fixed
 	z-index: 4
@@ -572,7 +604,7 @@
 		margin: 35px 0 40px 0
 		padding: 0 50px
 		font:
-			size: $text-24
+			size: $text-28
 			// family: $text-styleMedium--ch
 
 

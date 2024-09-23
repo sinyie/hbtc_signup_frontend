@@ -67,8 +67,8 @@ $(document).ready(function() {
 
                 var breadcrumb_div = "";
                 breadcrumb_div += `
-                <a href="eventli.html" class="patBiteBt" title="報名活動一覽">報名活動一覽</a>
-                <a href="eventin.html?activity_id=` + activity_id + `" class="patBiteBt" title="` + activity.name + `">` + activity.name + `</a>
+                <a href="eventli.html" class="patBiteBt">報名活動一覽</a>
+                <a href="eventin.html?activity_id=` + activity_id + `" class="patBiteBt">` + activity.name + `</a>
                 <a href="javascript:void(0);" class="patBiteBt patBiteBt--in">活動報名：隱私權及資訊安全政策</a>
                 `
                 $("#breadcrumb_div").html(breadcrumb_div);

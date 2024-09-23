@@ -1,9 +1,9 @@
 /*基底通用設定*/
 body
 	font-size: 100%
-	// background: $bg-gray-100
+	background: $bg-gray-200
 	@include typoBasic
-	background: $bg-gray-100 url(../images/page-bg.png) repeat
+	// background: $bg-gray-100 url(../images/page-bg.png) repeat
 	background-size: auto 100% 
 	@include maxcom
 		background-size: 100% auto
@@ -26,29 +26,33 @@ a
 	background: $main-color
 	color: #FFF
 
+// 無障礙AA文字相關設定
+*
+	line-height: 1.5 
+	letter-spacing: 0.05rem !important
+	word-spacing: 0.16rem !important
 
 /*按下無藍色框*/
 // *
 // 	-webkit-tap-highlight-color: rgba(66,125,245,0.54)
 
 /*無障礙focus用*/
-// *:focus
-	// outline: rgba(255,70,31,0.26) solid medium 
-	// border: rgba(213,0,0,0.26) solid medium 
-	// box-shadow: 0px 0px 0px 3px  rgba(213,0,0,0.26)
+*:focus
+	outline: $second-color solid medium 
+
 	
 /*scrollbar*/
 ::-webkit-scrollbar
-	width: 8px
-	height: 8px
+	width: 10px
+	height: 10px
 	
 
 ::-webkit-scrollbar-track
-	background: $bg-gray-100
+	background: $main-color-50
 
 ::-webkit-scrollbar-thumb
-	background: $bg-gray-500
-	border-radius: 8px
+	background: $emColor-linearGradient180deg 
+	// border-radius: 10px
 
 
 ::-webkit-scrollbar-thumb:hover 
@@ -58,7 +62,7 @@ progress[value]
 	-webkit-appearance: none
 	appearance: none
 	width: 100%
-	height: 8px
+	height: 10px
 
 progress[value]::-webkit-progress-bar 
 	background-color: $text-gray-200
@@ -69,6 +73,10 @@ progress[value]::-webkit-progress-value
 	background: $color-info
 	border-radius: 4px
 	box-shadow: 0 0 10px rgba(34,34,34,.12) 
+
+button
+	border: none
+	background: none
 
 
 /*列印隱藏區域*/
@@ -195,9 +203,9 @@ progress[value]::-webkit-progress-value
 	padding-top: 20px 
 .pt-25
 	padding-top: 25px 
-.pt-30
+.pt-30.pt-30
 	padding-top: 30px 
-.pt-40
+.pt-40.pt-40
 	padding-top: 40px 
 .pt-50
 	padding-top: 50px 
@@ -214,9 +222,9 @@ progress[value]::-webkit-progress-value
 	padding-bottom: 20px 
 .pb-25
 	padding-bottom: 25px 
-.pb-30
+.pb-30.pb-30
 	padding-bottom: 30px 
-.pb-40
+.pb-40.pb-40
 	padding-bottom: 40px 
 .pb-50
 	padding-bottom: 50px 

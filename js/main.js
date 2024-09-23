@@ -279,54 +279,55 @@ function ShowNavigation(menu_id, sysconfig) {
     if (menu_id == '2') menu_ss2 = "patNavMenu-list--active"; else menu_ss2 = "";
 
     $(".jsNavMain").html(`
+        <a class="patSkip_main js-patNavMenu-list" href="#acckeyC" accesskey="C" title="中央內容區塊" tabindex="1" id="patSkip_main">跳到主要內容區</a>
         <!-- 漢堡選單 -->
         <header class="patSmlHeader">
-            <a href="javascript:void(0);" class="jsNavSml-bt">
-                <img src="images/nav-open--gray.svg" alt="打開功能列表" width="30px" height="30px" class="patSmlHeader-navbt">
-            </a>
+            <button class="jsNavSml-bt">
+                <img src="images/nav-open--gray.svg" alt="打開功能列表按鈕" width="30" height="30" class="patSmlHeader-navbt">
+            </button>
         </header>
         <!-- nav功能選單 -->
         <nav class="patSmlNav jsNavSmall">
-            <div class="patSmlNav-closeBt jsNavSml-bt--close">
-                <img src="images/nav-close--gray.svg" alt="close button" width="30" height="30">
-            </div>
+            
             <div class="patSmlNav-LogoNameBk">
-                <img src="images/logo.png" alt="LOGO" class="patSmlNav-LogoNameBk--logo">
-                <h1 class="patSmlNav-LogoNameBk--name">
+                <img src="images/logo.png" alt="臺中市政府衛生局LOGO" class="patSmlNav-LogoNameBk--logo">
+                <p class="patSmlNav-LogoNameBk--name">
                     臺中市政府衛生局<br />
                     <span>` + sysconfig[1].setvalue + `</span>
-                    
-                </h1>
+                </p>
             </div>
             <section class="patNavMenu">
                 <ul class="jsfirst-level-area">
-                    <a href="index.html" class="patNavMenu-list ` + menu_ss + `" title="系統總覽頁">
+                    <a href="index.html" class="patNavMenu-list js-patNavMenu-list ` + menu_ss + `" title="系統總覽頁">
                         <div class="patNavMenu-iconArea">
-                            <img class="patNavMenu-icon" src="images/nav-home--gray.svg" alt="系統總覽頁" >
+                            <img class="patNavMenu-icon" src="images/nav-home--gray.svg" alt="" >
                         </div>
                         系統總覽頁
                     </a>
                     <div class="clear"></div>
                 </ul>
                 <ul class="jsfirst-level-area">
-                    <a href="eventli.html" class="patNavMenu-list ` + menu_ss1 + `" title="報名活動一覽">
+                    <a href="eventli.html" class="patNavMenu-list js-patNavMenu-list ` + menu_ss1 + `" title="報名活動一覽">
                         <div class="patNavMenu-iconArea">
-                            <img class="patNavMenu-icon" src="images/nav-event--gray.svg" alt="報名活動一覽" >
+                            <img class="patNavMenu-icon" src="images/nav-event--gray.svg" alt="" >
                         </div>
                         報名活動一覽
                     </a>
                     <div class="clear"></div>
                 </ul>
                 <ul class="jsfirst-level-area">
-                    <a href="newsli.html" class="patNavMenu-list ` + menu_ss2 + `" title="活動消息一覽">
+                    <a href="newsli.html" class="patNavMenu-list js-patNavMenu-list ` + menu_ss2 + `" title="活動消息一覽">
                         <div class="patNavMenu-iconArea">
-                            <img class="patNavMenu-icon" src="images/nav-news--gray.svg" alt="活動消息一覽" >
+                            <img class="patNavMenu-icon" src="images/nav-news--gray.svg" alt="" >
                         </div>
                         活動消息一覽
                     </a>
                     <div class="clear"></div>
                 </ul>
             </section>
+            <button class="patSmlNav-closeBt jsNavSml-bt--close js-patNavMenu-list">
+                <img src="images/nav-close--gray.svg" alt="關掉功能列表按鈕" width="30" height="30">
+            </button>
             <p class="patNavCopyright">
                 本網站為臺中市政府衛生局版權所有，請尊重智慧財產權，未經允許請勿任意轉載、複製或做商業用途。<br /><br />
                 請使用Chrome、FireFox、Edge等瀏覽器瀏覽 <br /><br />

@@ -39,7 +39,7 @@
 }
 @font-face {
   font-family: "NotoSansTC-Regular";
-  src: local("Noto Sans CJK TC");
+  src: local("Noto Sans TC");
   src: url("../fonts/Noto_Sans_TC/NotoSansTC-Regular.woff") format("woff");
   src: url("../fonts/Noto_Sans_TC/NotoSansTC-Regular.otf") format("opentype");
   font-weight: normal;
@@ -47,7 +47,7 @@
 }
 @font-face {
   font-family: "NotoSansTC-Medium";
-  src: local("Noto Sans CJK TC");
+  src: local("Noto Sans TC");
   src: url("../fonts/Noto_Sans_TC/NotoSansTC-Medium.woff") format("woff");
   src: url("../fonts/Noto_Sans_TC/NotoSansTC-Medium.otf") format("opentype");
   font-weight: normal;
@@ -58,24 +58,26 @@
 /*文字基本設定*/
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 0 0;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   font-weight: normal;
 }
 
-h6, p, div {
-  letter-spacing: 0.5px;
-  font-size: 1.0625rem;
+h6, p, div, a {
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
+  color: #0F172A;
+  line-height: 1.8;
+  font-size: 1.125rem;
 }
 @media all and (min-width: 78em) {
-  h6, p, div {
-    font-size: 1.125rem;
+  h6, p, div, a {
+    font-size: 1.25rem;
   }
 }
-h6 .icon, p .icon, div .icon {
+h6 .icon, p .icon, div .icon, a .icon {
   vertical-align: -2px;
 }
 
@@ -84,11 +86,11 @@ h6 .icon, p .icon, div .icon {
 }
 
 .typoMainColor.typoMainColor {
-  color: #1976D2;
+  color: #006fca !important;
 }
 
 .typoSecondColor.typoSecondColor {
-  color: #5DD0FC;
+  color: #2095e8;
 }
 
 .typoWarningColor.typoWarningColor {
@@ -100,7 +102,7 @@ h6 .icon, p .icon, div .icon {
 }
 
 .typoSuccessColor.typoSuccessColor {
-  color: #00E208;
+  color: #1eab0c;
 }
 
 .typoGrayColor-200.typoGrayColor-200 {
@@ -125,6 +127,14 @@ h6 .icon, p .icon, div .icon {
 
 .typoText-22 {
   font-size: 1.38rem;
+}
+
+.typoText-24 {
+  font-size: 1.5rem;
+}
+
+.typoText-26 {
+  font-size: 1.625rem;
 }
 
 .typoText-32 {
@@ -309,12 +319,11 @@ h6 .icon, p .icon, div .icon {
 /*基底通用設定*/
 body {
   font-size: 100%;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  background: #F7FAFF;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
-  background: #FBFCFF url(../images/page-bg.png) repeat;
   background-size: auto 100%;
 }
 @media all and (min-width: 78em) {
@@ -324,11 +333,10 @@ body {
 }
 
 a {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -340,33 +348,43 @@ a:hover {
 
 /*反白字體*/
 ::-moz-selection {
-  background: #1976D2;
+  background: #006fca;
   color: #FFF;
 }
 ::selection {
-  background: #1976D2;
+  background: #006fca;
   color: #FFF;
+}
+
+* {
+  line-height: 1.5;
+  letter-spacing: 0.05rem !important;
+  word-spacing: 0.16rem !important;
 }
 
 /*按下無藍色框*/
 /*無障礙focus用*/
+*:focus {
+  outline: #2095e8 solid medium;
+}
+
 /*scrollbar*/
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FBFCFF;
+  background: #F0F2F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E1E5F4;
-  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(98, 0, 234)), to(rgb(25, 118, 210)));
+  background: linear-gradient(180deg, rgb(98, 0, 234), rgb(25, 118, 210));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5DD0FC;
+  background: #2095e8;
 }
 
 progress[value] {
@@ -374,7 +392,7 @@ progress[value] {
   -moz-appearance: none;
        appearance: none;
   width: 100%;
-  height: 8px;
+  height: 10px;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -389,6 +407,11 @@ progress[value]::-webkit-progress-value {
   border-radius: 4px;
   -webkit-box-shadow: 0 0 10px rgba(34, 34, 34, 0.12);
           box-shadow: 0 0 10px rgba(34, 34, 34, 0.12);
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 /*列印隱藏區域*/
@@ -594,11 +617,11 @@ progress[value]::-webkit-progress-value {
   padding-top: 25px;
 }
 
-.pt-30 {
+.pt-30.pt-30 {
   padding-top: 30px;
 }
 
-.pt-40 {
+.pt-40.pt-40 {
   padding-top: 40px;
 }
 
@@ -630,11 +653,11 @@ progress[value]::-webkit-progress-value {
   padding-bottom: 25px;
 }
 
-.pb-30 {
+.pb-30.pb-30 {
   padding-bottom: 30px;
 }
 
-.pb-40 {
+.pb-40.pb-40 {
   padding-bottom: 40px;
 }
 
@@ -859,7 +882,7 @@ progress[value]::-webkit-progress-value {
   background: linear-gradient(0deg, rgb(100, 130, 198), rgb(59, 107, 186));
   color: #FFF;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -883,7 +906,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -918,7 +941,7 @@ progress[value]::-webkit-progress-value {
   background: linear-gradient(135deg, rgb(0, 229, 255), rgb(24, 255, 255));
   color: #FFF;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -942,7 +965,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -976,7 +999,7 @@ progress[value]::-webkit-progress-value {
   background: linear-gradient(135deg, rgb(98, 0, 234), rgb(25, 118, 210));
   color: #FFF;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -1000,7 +1023,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -1036,7 +1059,7 @@ progress[value]::-webkit-progress-value {
   background: linear-gradient(0deg, rgb(100, 130, 198), rgb(59, 107, 186));
   color: #FFF;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -1059,7 +1082,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -1092,7 +1115,7 @@ progress[value]::-webkit-progress-value {
   background: #FFF;
   color: #0F172A;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -1116,7 +1139,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -1151,7 +1174,7 @@ progress[value]::-webkit-progress-value {
   background: #FFF;
   color: #7E818D;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -1175,7 +1198,7 @@ progress[value]::-webkit-progress-value {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -1211,11 +1234,10 @@ progress[value]::-webkit-progress-value {
   border-radius: 25px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   text-transform: capitalize;
   font-weight: 700;
   color: #FFF;
@@ -1243,11 +1265,10 @@ progress[value]::-webkit-progress-value {
 
 /*頁面強調按鈕--外框圓形*/
 .btnCurcleRec-LinearGradient--em {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
   display: inline-block;
@@ -1258,7 +1279,7 @@ progress[value]::-webkit-progress-value {
   line-height: 50px;
   border-radius: 25px;
   text-transform: capitalize;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: "NotoSansTC-Medium";
   color: #FFF;
   padding: 0 20px 0 20px;
@@ -1286,12 +1307,13 @@ progress[value]::-webkit-progress-value {
     height: 56px;
     line-height: 55px;
     border-radius: 28px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    padding: 0 24px;
   }
 }
 .btnCurcleRec-LinearGradient--em .btn-btn-circleRec--icon {
   margin-left: 20px;
-  vertical-align: -3px;
+  vertical-align: -2px;
 }
 .btnCurcleRec-LinearGradient--em .btn-base--icon {
   position: relative;
@@ -1310,13 +1332,16 @@ progress[value]::-webkit-progress-value {
   text-decoration: none;
   color: #FFF;
 }
+.btnCurcleRec-LinearGradient--em:hover, .btnCurcleRec-LinearGradient--em:active, .btnCurcleRec-LinearGradient--em:focus {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(98, 0, 234)), to(rgb(25, 118, 210)));
+  background: linear-gradient(0deg, rgb(98, 0, 234), rgb(25, 118, 210));
+}
 
 .btnCurcleRec-LinearGradient--success--large {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
   display: inline-block;
@@ -1328,7 +1353,7 @@ progress[value]::-webkit-progress-value {
   line-height: 50px;
   border-radius: 25px;
   text-transform: capitalize;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: "NotoSansTC-Medium";
   color: #FFF;
   padding: 0 20px 0 20px;
@@ -1358,12 +1383,13 @@ progress[value]::-webkit-progress-value {
     height: 56px;
     line-height: 55px;
     border-radius: 28px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    padding: 0 24px;
   }
 }
 .btnCurcleRec-LinearGradient--success--large .btn-btn-circleRec--icon {
   margin-left: 20px;
-  vertical-align: -3px;
+  vertical-align: -2px;
 }
 .btnCurcleRec-LinearGradient--success--large .btn-base--icon {
   position: relative;
@@ -1382,6 +1408,10 @@ progress[value]::-webkit-progress-value {
   text-decoration: none;
   color: #FFF;
 }
+.btnCurcleRec-LinearGradient--success--large:hover, .btnCurcleRec-LinearGradient--success--large:active, .btnCurcleRec-LinearGradient--success--large:focus {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(24, 255, 255)), to(rgb(0, 229, 255)));
+  background: linear-gradient(0deg, rgb(24, 255, 255), rgb(0, 229, 255));
+}
 .btnCurcleRec-LinearGradient--success--large .btn-btn-circleRec--icon {
   position: absolute;
   right: 30px;
@@ -1389,22 +1419,21 @@ progress[value]::-webkit-progress-value {
 }
 
 .btnCurcleRec-secondColor {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
   display: inline-block;
   display: inline-block;
   width: auto;
-  background: #5DD0FC;
+  background: #2095e8;
   height: 50px;
   line-height: 50px;
   border-radius: 25px;
   text-transform: capitalize;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: "NotoSansTC-Medium";
   color: #FFF;
   padding: 0 20px 0 20px;
@@ -1432,12 +1461,13 @@ progress[value]::-webkit-progress-value {
     height: 56px;
     line-height: 55px;
     border-radius: 28px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    padding: 0 24px;
   }
 }
 .btnCurcleRec-secondColor .btn-btn-circleRec--icon {
   margin-left: 20px;
-  vertical-align: -3px;
+  vertical-align: -2px;
 }
 .btnCurcleRec-secondColor .btn-base--icon {
   position: relative;
@@ -1456,24 +1486,26 @@ progress[value]::-webkit-progress-value {
   text-decoration: none;
   color: #FFF;
 }
+.btnCurcleRec-secondColor:hover, .btnCurcleRec-secondColor:active, .btnCurcleRec-secondColor:focus {
+  background: rgb(0, 102, 255);
+}
 
 .btnCurcleRec-mainColor {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
   display: inline-block;
   display: inline-block;
   width: auto;
-  background: #1976D2;
+  background: #006fca;
   height: 50px;
   line-height: 50px;
   border-radius: 25px;
   text-transform: capitalize;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: "NotoSansTC-Medium";
   color: #FFF;
   padding: 0 20px 0 20px;
@@ -1501,12 +1533,13 @@ progress[value]::-webkit-progress-value {
     height: 56px;
     line-height: 55px;
     border-radius: 28px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    padding: 0 24px;
   }
 }
 .btnCurcleRec-mainColor .btn-btn-circleRec--icon {
   margin-left: 20px;
-  vertical-align: -3px;
+  vertical-align: -2px;
 }
 .btnCurcleRec-mainColor .btn-base--icon {
   position: relative;
@@ -1525,13 +1558,15 @@ progress[value]::-webkit-progress-value {
   text-decoration: none;
   color: #FFF;
 }
+.btnCurcleRec-mainColor:hover, .btnCurcleRec-mainColor:active, .btnCurcleRec-mainColor:focus {
+  background: #7E818D;
+}
 
 .btnCurcleRec-whiteColor {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   -webkit-box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
           box-shadow: 0px 12px 22px rgba(210, 211, 216, 0.8);
   display: inline-block;
@@ -1542,13 +1577,13 @@ progress[value]::-webkit-progress-value {
   line-height: 50px;
   border-radius: 25px;
   text-transform: capitalize;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: "NotoSansTC-Medium";
   color: #FFF;
   padding: 0 20px 0 20px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  color: #A7A9B2;
+  color: #7E818D;
   border: 1px solid #E1E5F4;
 }
 .btnCurcleRec-whiteColor:hover {
@@ -1572,12 +1607,13 @@ progress[value]::-webkit-progress-value {
     height: 56px;
     line-height: 55px;
     border-radius: 28px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    padding: 0 24px;
   }
 }
 .btnCurcleRec-whiteColor .btn-btn-circleRec--icon {
   margin-left: 20px;
-  vertical-align: -3px;
+  vertical-align: -2px;
 }
 .btnCurcleRec-whiteColor .btn-base--icon {
   position: relative;
@@ -1596,8 +1632,8 @@ progress[value]::-webkit-progress-value {
   text-decoration: none;
   color: #FFF;
 }
-.btnCurcleRec-whiteColor:hover {
-  color: #A4B7D1;
+.btnCurcleRec-whiteColor:hover, .btnCurcleRec-whiteColor:active, .btnCurcleRec-whiteColor:focus {
+  color: #7E818D;
 }
 
 /*圓形按鈕*/
@@ -1607,7 +1643,7 @@ progress[value]::-webkit-progress-value {
   height: 48px;
   line-height: 48px;
   border-radius: 48px;
-  background: #1976D2;
+  background: #006fca;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   text-align: center;
@@ -1641,7 +1677,7 @@ progress[value]::-webkit-progress-value {
   height: 48px;
   line-height: 48px;
   border-radius: 48px;
-  background: #5DD0FC;
+  background: #2095e8;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   text-align: center;
@@ -1850,8 +1886,8 @@ progress[value]::-webkit-progress-value {
 }
 
 label {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
-  font-size: 0.88rem !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
+  font-size: 1rem !important;
   font-weight: normal !important;
   color: #575A6A;
   margin: 0 0 10px 0 !important;
@@ -1859,7 +1895,7 @@ label {
 }
 @media all and (min-width: 78em) {
   label {
-    font-size: 1.0625rem !important;
+    font-size: 1.25rem !important;
   }
 }
 
@@ -1870,11 +1906,11 @@ label {
 
 .fidMustStyle {
   padding: 0 10px 0 0;
-  color: #5DD0FC;
+  color: #2095e8;
 }
 
 .ui.form .field > label {
-  color: #575A6A;
+  color: #323749;
 }
 
 .ui.checkbox label {
@@ -1921,8 +1957,8 @@ label {
 }
 
 .fidArea-radioCheck--tit {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
-  font-size: 1.0625rem !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
+  font-size: 1.125rem !important;
   font-weight: 600 !important;
   color: #0F172A !important;
   margin: 30px 0 10px 0 !important;
@@ -1931,7 +1967,7 @@ label {
 }
 
 .fidArea--cheRad label {
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
   font-size: 1.0625rem !important;
   font-weight: 500 !important;
   color: #0F172A !important;
@@ -1949,7 +1985,7 @@ label {
   height: 46px;
   line-height: 46px !important;
   border-radius: 8px !important;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
   font-size: 0.9375rem !important;
 }
 @media all and (min-width: 78em) {
@@ -1961,17 +1997,17 @@ label {
   }
 }
 .ui.selection.dropdown:hover {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.selection.dropdown:focus {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.selection.dropdown .menu .item {
   line-height: 1.5 !important;
 }
 
 .ui.selection.active.dropdown .menu {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 
 .ui.dropdown .menu .active.item {
@@ -1993,30 +2029,29 @@ label {
 .ui.form input, .ui.form input[type=text], .ui.form input[type=number], .ui.form input[type=email], .ui.form input[type=password], .ui.form select {
   color: #0F172A !important;
   padding: 0 20px !important;
-  border: 1px solid #ECEFFA !important;
+  border: 2px solid #ECEFFA !important;
   background: #ECEFFA !important;
   -webkit-transition: all 0.3s linear !important;
   transition: all 0.3s linear !important;
   overflow: hidden !important;
-  height: 46px;
   line-height: 46px !important;
   border-radius: 8px !important;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
-  font-size: 0.9375rem !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
+  font-size: 1rem !important;
 }
 @media all and (min-width: 78em) {
   .ui.form input, .ui.form input[type=text], .ui.form input[type=number], .ui.form input[type=email], .ui.form input[type=password], .ui.form select {
     height: 52px;
     border-radius: 12px !important;
     line-height: 52px !important;
-    font-size: 1.0625rem !important;
+    font-size: 1.125rem !important;
   }
 }
 .ui.form input:hover, .ui.form input[type=text]:hover, .ui.form input[type=number]:hover, .ui.form input[type=email]:hover, .ui.form input[type=password]:hover, .ui.form select:hover {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.form input:focus, .ui.form input[type=text]:focus, .ui.form input[type=number]:focus, .ui.form input[type=email]:focus, .ui.form input[type=password]:focus, .ui.form select:focus {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.form input::-webkit-input-placeholder, .ui.form input[type=text]::-webkit-input-placeholder, .ui.form input[type=number]::-webkit-input-placeholder, .ui.form input[type=email]::-webkit-input-placeholder, .ui.form input[type=password]::-webkit-input-placeholder, .ui.form select::-webkit-input-placeholder {
   color: #0F172A !important;
@@ -2037,7 +2072,7 @@ label {
   color: #A7A9B2 !important;
 }
 .ui.form select {
-  border: 1px solid #ECEFFA !important;
+  border: 2px solid #ECEFFA !important;
   background: #ECEFFA !important;
 }
 .ui.form textarea {
@@ -2047,30 +2082,29 @@ label {
   height: 150px !important;
   line-height: 1.5 !important;
   padding: 10px 20px !important;
-  border: 1px solid #ECEFFA !important;
+  border: 2px solid #ECEFFA !important;
   background: #ECEFFA !important;
   border-radius: 8px !important;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
-  font-size: 0.9375rem !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
+  font-size: 1rem !important;
   /*禁用拖動*/
   resize: none !important;
 }
 @media all and (min-width: 78em) {
   .ui.form textarea {
     border-radius: 12px !important;
-    font-size: 1.0625rem !important;
+    font-size: 1.125rem !important;
   }
 }
 .ui.form textarea:hover {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.form textarea:focus {
-  border: 1px solid #5DD0FC !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.form textarea::-webkit-input-placeholder {
   color: #0F172A !important;
@@ -2086,20 +2120,37 @@ label {
 }
 .ui.form input[type=checkbox], .ui.form input[type=radio] {
   padding-left: 20px !important;
-  border: 1px solid #ECEFFA !important;
+  background: #ECEFFA !important;
 }
 .ui.form input[type=checkbox]:hover, .ui.form input[type=radio]:hover {
-  border: 1px solid #ECEFFA !important;
+  border: 2px solid #ECEFFA !important;
 }
 .ui.form input[type=checkbox]:focus, .ui.form input[type=radio]:focus {
-  border: 1px solid #ECEFFA !important;
+  border: 2px solid #ECEFFA !important;
 }
 
 .ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before, .ui.checkbox input:checked:focus ~ .box:before, .ui.checkbox input:checked:focus ~ label:before {
-  border-color: #5DD0FC !important;
+  border-color: #2095e8 !important;
 }
 .ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before label, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before label, .ui.checkbox input:checked:focus ~ .box:before label, .ui.checkbox input:checked:focus ~ label:before label {
   color: #0F172A !important;
+}
+
+.ui.checkbox .box:before, .ui.checkbox label:before {
+  border: 1px solid #B6C5DA !important;
+  background: #ECEFFA !important;
+}
+
+.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
+  color: #006fca !important;
+  top: -1px !important;
+  left: 1px !important;
+}
+
+.ui.checkbox .box:before, .ui.checkbox label:before {
+  width: 24px !important;
+  height: 24px !important;
+  top: -1px !important;
 }
 
 .ui.dropdown.selection.multiple {
@@ -2121,25 +2172,25 @@ label {
 
 /*自定義checkbox 及 radio 樣式*/
 .eleSectionTit {
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-family: "NotoSansTC-Medium";
   color: #0F172A;
   letter-spacing: 1px;
 }
 @media all and (min-width: 48em) {
   .eleSectionTit {
-    font-size: 1.25rem;
+    font-size: 1.625rem;
     letter-spacing: 1px;
   }
 }
 
 .eleDataTit {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: #A7A9B2;
 }
 @media all and (min-width: 48em) {
   .eleDataTit {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -2148,7 +2199,7 @@ label {
 }
 @media all and (min-width: 78em) {
   .eleData-titCh {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-family: "NotoSansTC-Medium";
   }
 }
@@ -2156,7 +2207,7 @@ label {
 .eleData-count {
   font-size: 3rem;
   font-family: "Montserrat-Light";
-  color: #5DD0FC;
+  color: #2095e8;
 }
 @media all and (min-width: 78em) {
   .eleData-count {
@@ -2164,12 +2215,12 @@ label {
   }
 }
 .eleData {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: #7E818D;
 }
 @media all and (min-width: 48em) {
   .eleData {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -2184,7 +2235,7 @@ label {
 
 .eleTextinIcon {
   vertical-align: -2px;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .eleStatusIcon {
@@ -2439,7 +2490,7 @@ label {
 }
 .eleTab--in--newsTab::after {
   width: 100%;
-  background: #1976D2;
+  background: #006fca;
 }
 
 .eleInfoList--phoneTit {
@@ -2536,7 +2587,7 @@ label {
   line-height: 56px !important;
   padding: 0 20px !important;
   background: #FFF !important;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei" !important;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei" !important;
   font-weight: 700 !important;
   font-size: 1rem !important;
   color: #0F172A !important;
@@ -2578,11 +2629,10 @@ label {
   width: 80%;
   height: 56px;
   float: left;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
   font-weight: 700;
   color: #0F172A;
   cursor: pointer;
@@ -2780,10 +2830,10 @@ label {
   }
 }
 .elePage .elePage-conut .ui.selection.dropdown:hover {
-  border: 1px solid #5DD0FC !important;
+  border: 1px solid #2095e8 !important;
 }
 .elePage .elePage-conut .ui.selection.dropdown:focus {
-  border: 1px solid #5DD0FC !important;
+  border: 1px solid #2095e8 !important;
 }
 .elePage .elePage-conut .ui.selection.dropdown .menu .item {
   line-height: 1.5 !important;
@@ -2819,7 +2869,7 @@ label {
   float: left;
 }
 .eleAlarm .eleAlarm-grandTit .eleAlarm-grandTit--Icon--grand01 {
-  background: #00E208;
+  background: #1eab0c;
 }
 .eleAlarm .eleAlarm-grandTit .eleAlarm-grandTit--Icon--grand04 {
   background: #ff0;
@@ -2875,12 +2925,12 @@ label {
 }
 
 .eleColorLabel--lightMain {
-  color: #1976D2;
+  color: #006fca;
   background: #E1E5F4;
 }
 
 .eleColorLabel--lightinfo {
-  color: #1976D2;
+  color: #006fca;
   background: rgb(0, 102, 255);
 }
 
@@ -2890,12 +2940,12 @@ label {
 }
 
 .eleColorLabel--lightgray {
-  color: #1976D2;
+  color: #006fca;
   background: #A7A9B2;
 }
 
 .eleColorLabel--waring {
-  color: #1976D2;
+  color: #006fca;
   background: #ff0;
 }
 
@@ -3511,6 +3561,25 @@ label {
   }
 }
 
+.patSkip_main {
+  position: absolute;
+  overflow: hidden;
+  z-index: -999;
+  left: -1000px;
+}
+.patSkip_main:active, .patSkip_main:focus {
+  position: relative;
+  left: 0px;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #006fca;
+  color: #F0F2F9;
+  text-align: center;
+  padding: 10px;
+}
+
 .patSysInfoBk {
   position: fixed;
   right: 20px;
@@ -3714,8 +3783,8 @@ label {
 }
 
 .patSmlHeader {
-  width: 30px;
-  padding: 20px;
+  width: 48px;
+  margin: 15px;
   position: fixed;
   top: 0;
   left: 0;
@@ -3727,46 +3796,53 @@ label {
   }
 }
 
+.jsNavSml-bt {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
 .patSmlHeader-navbt {
   width: 30px;
   height: 30px;
-  margin: 4px 0 0 0;
+  margin: 9px;
 }
 
 .patSmlNav {
   width: 320px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: -320px;
   z-index: 6;
-  overflow-y: auto;
   background: #FFF;
-  padding: 0 50px;
+  padding: 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 @media all and (min-width: 78em) {
   .patSmlNav {
-    display: block;
     left: 0px;
   }
 }
 
 .patSmlNav-closeBt {
-  width: 30px;
-  height: 30px;
+  display: block;
+  width: 48px;
+  height: 48px;
   position: absolute;
   right: 20px;
   top: 20px;
   cursor: pointer;
+  text-align: center;
+  padding: 9px 0;
 }
 @media all and (min-width: 78em) {
   .patSmlNav-closeBt {
@@ -3775,7 +3851,12 @@ label {
 }
 
 .patSmlNav-LogoNameBk {
-  margin-top: 50px;
+  margin-top: 40px;
+}
+@media all and (min-width: 78em) {
+  .patSmlNav-LogoNameBk {
+    margin-top: 0px;
+  }
 }
 
 .patSmlNav-LogoNameBk--logo {
@@ -3818,7 +3899,6 @@ label {
 
 .patNavMenu {
   width: 100%;
-  margin-top: 50px;
 }
 
 .patNavMenu-list {
@@ -3828,24 +3908,24 @@ label {
   display: flex;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
-  font-size: 1.0625rem;
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
+  font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
-  letter-spacing: 0.5px;
-  color: #A4B7D1;
+  color: #575A6A;
   font-family: "NotoSansTC-Medium";
   font-size: 1.125rem;
   letter-spacing: 1.5px;
   line-height: 58px;
 }
+@media all and (min-width: 64em) {
+  .patNavMenu-list {
+    font-size: 1.3125rem;
+  }
+}
 .patNavMenu-list:hover, .patNavMenu-list:active {
   color: #0F172A;
   text-decoration: none;
-}
-.patNavMenu-list:hover .patNavMenu-icon, .patNavMenu-list:active .patNavMenu-icon {
-  mix-blend-mode: difference;
-  opacity: 0.64;
 }
 
 .patNavMenu-iconArea {
@@ -3861,18 +3941,18 @@ label {
   margin-top: 14px;
   width: 30px;
   height: 30px;
+  opacity: 0.64;
 }
 
 .patNavMenu-list--active {
   color: #0F172A;
 }
 .patNavMenu-list--active .patNavMenu-iconArea {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(98, 0, 234)), to(rgb(25, 118, 210)));
-  background: linear-gradient(0deg, rgb(98, 0, 234), rgb(25, 118, 210));
+  background: linear-gradient(135deg, rgb(98, 0, 234), rgb(25, 118, 210));
   border-radius: 18px;
 }
 .patNavMenu-list--active .patNavMenu-iconArea .patNavMenu-icon {
-  mix-blend-mode: screen;
+  mix-blend-mode: color-dodge;
 }
 
 .patNavMenu-secondList {
@@ -3934,14 +4014,13 @@ label {
 }
 
 .patNavCopyright {
-  width: 230px;
-  position: absolute;
-  bottom: 50px;
-  font-size: 0.9375rem;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 1rem;
   font-family: "Montserrat-Regular", "NotoSansTC-Regular";
-  color: #A7A9B2;
+  color: #575A6A;
 }
-
 /* 電腦視口header*/
 .patMainbody {
   width: 100%;
@@ -3976,8 +4055,8 @@ label {
 }
 
 .patBiteBt {
-  font-size: 1.0625rem;
-  color: #1976D2;
+  font-size: 1rem;
+  color: #575A6A;
   letter-spacing: 0.5px;
   line-height: 1.5em;
   position: relative;
@@ -3999,15 +4078,15 @@ label {
 }
 
 .patBiteBt--in {
-  color: #A4B7D1;
+  color: #2095e8;
 }
 .patBiteBt--in:hover, .patBiteBt--in:active, .patBiteBt--in:focus {
-  color: #A4B7D1;
+  color: #006fca;
   text-decoration: none;
 }
 
 .patH1Tit.patH1Tit {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   font-family: "NotoSansTC-Medium";
   position: fixed;
   z-index: 4;
@@ -4023,7 +4102,7 @@ label {
     left: 0;
     margin: 35px 0 40px 0;
     padding: 0 50px;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -4077,7 +4156,7 @@ label {
   border-radius: 6px;
   line-height: 44px;
   padding: 0 20px;
-  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Regular", sans-serif, "Microsoft JhengHei";
+  font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
   font-size: 1rem;
   font-weight: 400;
   color: #FFF;
@@ -4167,7 +4246,7 @@ label {
 .patTitEmBt-total .patTitEmBt-total--num {
   font-size: 2.5em;
   font-weight: 800;
-  color: #1976D2;
+  color: #006fca;
   letter-spacing: -0.5px;
   margin-top: -3px;
 }
@@ -4412,7 +4491,7 @@ label {
   background: linear-gradient(180deg, rgb(98, 0, 234), rgb(25, 118, 210));
   color: #FFF;
   font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -4441,7 +4520,7 @@ label {
     height: 52px;
     border-radius: 12px;
     line-height: 52px;
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-family: "Montserrat-Medium", sans-serif, NotoSansTC-Medium, sans-serif;
   }
 }
@@ -4496,7 +4575,7 @@ label {
   color: #0F172A;
 }
 .indForgetBt:hover {
-  color: #1976D2;
+  color: #006fca;
 }
 @media all and (min-width: 48em) {
   .indForgetBt {
@@ -4527,7 +4606,7 @@ label {
   border-radius: 4px;
   content: " ";
   display: block;
-  background: #1976D2;
+  background: #006fca;
   position: absolute;
   left: calc(50% - 3px);
   bottom: 4px;
@@ -4748,7 +4827,7 @@ label {
   width: 100%;
   border-radius: 6px;
   background: #F7FAFF;
-  padding: 10px 30px;
+  padding: 20px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4766,7 +4845,7 @@ label {
 }
 @media all and (min-width: 115em) {
   .modInfoBk-EminfoBk--info--textDes {
-    padding: 12px 40px;
+    padding: 20px 40px;
   }
 }
 .modInfoBk-EminfoBk--info--textDes .modInfoBk-EminfoBk--info--tit {
@@ -4782,11 +4861,6 @@ label {
   padding-left: 30px;
   padding-right: 30px;
   margin: 10px;
-}
-@media all and (min-width: 115em) {
-  .modInfoBk-EminfoBk--lineDec {
-    margin: 0px;
-  }
 }
 .modInfoBk-EminfoBk--lineDec:last-of-type {
   border-right: 2px solid #E1E5F4;
@@ -4896,7 +4970,7 @@ label {
 .pagOverData-count {
   font-size: 3rem;
   font-family: "Montserrat-Light";
-  color: #5DD0FC;
+  color: #2095e8;
   position: absolute;
   right: 30px;
   bottom: 20px;
@@ -4988,9 +5062,9 @@ label {
 }
 
 .pagEventList-statusOrder--phone--text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: "NotoSansTC-Medium";
-  color: #1976D2;
+  color: #006fca;
 }
 .pagEventList-statusOrder--phone--text img {
   width: 30px;
@@ -5040,7 +5114,7 @@ label {
     width: 260px;
   }
   .pagEventList-dataArea:nth-child(3), .pagEventList-dataTit--maxcom:nth-child(3) {
-    width: 270px;
+    width: 250px;
   }
   .pagEventList-dataArea:nth-child(4), .pagEventList-dataTit--maxcom:nth-child(4) {
     width: 200px;
@@ -5049,10 +5123,10 @@ label {
     width: 110px;
   }
   .pagEventList-dataArea:nth-child(6), .pagEventList-dataTit--maxcom:nth-child(6) {
-    width: 80px;
+    width: 90px;
   }
   .pagEventList-dataArea:nth-child(7), .pagEventList-dataTit--maxcom:nth-child(7) {
-    width: 120px;
+    width: 130px;
   }
 }
 
@@ -5664,7 +5738,7 @@ label {
 .pagNewsList-statusOrder--phone--text {
   font-size: 1.25rem;
   font-family: "NotoSansTC-Medium";
-  color: #1976D2;
+  color: #006fca;
 }
 .pagNewsList-statusOrder--phone--text img {
   width: 30px;
