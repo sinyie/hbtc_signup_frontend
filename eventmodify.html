@@ -219,12 +219,12 @@
                                     </div>
                                     <div class="field fidArea grid--25">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             輸入驗證碼
                                             <span class="fieverti" id="errMsg_captchaCode"></span>
                                         </label>
-                                        <input type="text" name="captchaCode" id="captchaCode" placeholder="輸入驗證碼">
-                                        <input type="hidden" name="captcha_key" id="captcha_key">
+                                        <input type="text" name="captchaCode" id="captchaCode" placeholder="輸入驗證碼" required>
+                                        <input type="hidden" name="captcha_key" id="captcha_key" title="驗證碼圖型">
                                     </div>
                                     <div class="field fidArea grid--35">
                                         <a href="javascript:void(0);" id="chk_button" class="btnCurcleRec-LinearGradient--em mt-35 mr-50">

@@ -83,19 +83,19 @@
                                 <div class="ui form">
                                     <div class="field fidArea grid--33">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             E-mail
                                             <span class="fieverti" id="errMsg_email"></span>
                                         </label>
-                                        <input type="text" name="join_edit_email" id="join_edit_email" placeholder="請輸入E-mail">
+                                        <input type="text" name="join_edit_email" id="join_edit_email" placeholder="請輸入E-mail" required>
                                     </div>
                                     <div class="field fidArea grid--33">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             身分證 / 居留證後四碼
                                             <span class="fieverti" id="errMsg_id_number"></span>
                                         </label>
-                                        <input type="text" name="join_edit_id_number" id="join_edit_id_number" class="chkNumber" maxlength="4" placeholder="請輸入身分證 / 居留證後四碼">
+                                        <input type="text" name="join_edit_id_number" id="join_edit_id_number" class="chkNumber" maxlength="4" placeholder="請輸入身分證 / 居留證後四碼" required>
                                     </div>
                                 </div>
                             </section>
@@ -117,12 +117,12 @@
                                     </div>
                                     <div class="field fidArea grid--25">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             輸入驗證碼
                                             <span class="fieverti" id="errMsg_captchaCode"></span>
                                         </label>
-                                        <input type="text" name="captchaCode" id="captchaCode" placeholder="輸入驗證碼">
-                                        <input type="hidden" name="captcha_key" id="captcha_key">
+                                        <input type="text" name="captchaCode" id="captchaCode" placeholder="輸入驗證碼" required>
+                                        <input type="hidden" name="captcha_key" id="captcha_key" title="驗證碼圖形">
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <a href="javascript:void(0);" id="chk_button" class="btnCurcleRec-LinearGradient--em mt-35 mr-12 chk_button">

@@ -2123,34 +2123,59 @@ label {
   background: #ECEFFA !important;
 }
 .ui.form input[type=checkbox]:hover, .ui.form input[type=radio]:hover {
-  border: 2px solid #ECEFFA !important;
+  border: 2px solid #2095e8 !important;
 }
 .ui.form input[type=checkbox]:focus, .ui.form input[type=radio]:focus {
-  border: 2px solid #ECEFFA !important;
+  border: 2px solid #2095e8 !important;
 }
 
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before, .ui.checkbox input:checked:focus ~ .box:before, .ui.checkbox input:checked:focus ~ label:before {
-  border-color: #2095e8 !important;
-}
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before label, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before label, .ui.checkbox input:checked:focus ~ .box:before label, .ui.checkbox input:checked:focus ~ label:before label {
-  color: #0F172A !important;
-}
-
-.ui.checkbox .box:before, .ui.checkbox label:before {
-  border: 1px solid #B6C5DA !important;
-  background: #ECEFFA !important;
-}
-
-.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
+.ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before {
   color: #006fca !important;
   top: -1px !important;
   left: 1px !important;
+  background: #ECEFFA !important;
+  border: 2px solid #2095e8 !important;
+}
+.ui.checkbox input:checked ~ .box:before:hover, .ui.checkbox input:checked ~ label:before:hover {
+  border: 2px solid #2095e8 !important;
+  background: #ECEFFA !important;
+}
+.ui.checkbox input:checked ~ .box:before:focus, .ui.checkbox input:checked ~ label:before:focus {
+  border: 2px solid #2095e8 !important;
+  background: #ECEFFA !important;
 }
 
 .ui.checkbox .box:before, .ui.checkbox label:before {
   width: 24px !important;
   height: 24px !important;
-  top: -1px !important;
+  top: -2px !important;
+  background: #ECEFFA !important;
+}
+.ui.checkbox .box:before:hover, .ui.checkbox label:before:hover {
+  border: 2px solid #2095e8 !important;
+  background: #ECEFFA !important;
+}
+.ui.checkbox .box:before:focus, .ui.checkbox label:before:focus {
+  border: 2px solid #2095e8 !important;
+  background: #ECEFFA !important;
+}
+
+.ui.checkbox input:focus ~ .box:before, .ui.checkbox input:focus ~ label:before {
+  border: 2px solid #2095e8 !important;
+}
+.ui.checkbox input:focus ~ .box:before:hover, .ui.checkbox input:focus ~ label:before:hover {
+  border: 2px solid #2095e8 !important;
+}
+.ui.checkbox input:focus ~ .box:before:focus, .ui.checkbox input:focus ~ label:before:focus {
+  border: 2px solid #2095e8 !important;
+}
+
+.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after {
+  color: #006fca !important;
+}
+
+.ui.checkbox .box:after, .ui.checkbox label:after {
+  left: 2px !important;
 }
 
 .ui.dropdown.selection.multiple {

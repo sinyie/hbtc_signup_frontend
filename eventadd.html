@@ -84,36 +84,36 @@
                                 <div class="ui form">
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             E-mail
                                             <span class="fieverti" id="errMsg_email"></span>
                                         </label>
-                                        <input type="text" name="join_edit_email" id="join_edit_email" placeholder="請輸入E-mail">
+                                        <input type="text" name="join_edit_email" id="join_edit_email" placeholder="請輸入E-mail" required>
                                         <br><span class="fidMustStyle">(※此欄位為系統發送通知用！請詳細填寫正確信箱，避免無法成功收到相關資訊通知！)</span>
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             身分證 / 居留證後四碼
                                             <span class="fieverti" id="errMsg_id_number"></span>
                                         </label>
-                                        <input type="text" name="join_edit_id_number" id="join_edit_id_number" class="chkNumber" maxlength="4" placeholder="請輸入身分證 / 居留證後四碼">
+                                        <input type="text" name="join_edit_id_number" id="join_edit_id_number" class="chkNumber" maxlength="4" placeholder="請輸入身分證 / 居留證後四碼"  required>
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             姓名
                                             <span class="fieverti" id="errMsg_name"></span>
                                         </label>
-                                        <input type="text" name="join_edit_name" id="join_edit_name" maxlength="200" placeholder="請輸入姓名">
+                                        <input type="text" name="join_edit_name" id="join_edit_name" maxlength="200" placeholder="請輸入姓名"  required>
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             機關名稱
                                             <span class="fieverti" id="errMsg_organs"></span>
                                         </label>
-                                        <input type="text" name="join_edit_organs" id="join_edit_organs" placeholder="請輸入機關名稱">
+                                        <input type="text" name="join_edit_organs" id="join_edit_organs" placeholder="請輸入機關名稱" required>
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
@@ -125,27 +125,27 @@
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             職稱
                                             <span class="fieverti" id="errMsg_title"></span>
                                         </label>
-                                        <input type="text" name="join_edit_title" id="join_edit_title" placeholder="請輸入職稱">
+                                        <input type="text" name="join_edit_title" id="join_edit_title" placeholder="請輸入職稱"  required>
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             聯絡電話
                                             <span class="fieverti" id="errMsg_tel"></span>
                                         </label>
-                                        <input type="text" name="join_edit_tel" id="join_edit_tel" placeholder="例:(04)25265394#5377 或 0911123456                                        ">
+                                        <input type="text" name="join_edit_tel" id="join_edit_tel" placeholder="例:(04)25265394#5377 或 0911123456"  required>
                                     </div>
                                     <div class="field fidArea grid--50" id="need_food_div" style="display: none;">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             是否用餐
                                             <span class="fieverti" id="errMsg_need_food"></span>
                                         </label>
-                                        <select class="ui selection dropdown selectItem" name="join_edit_need_food" id="join_edit_need_food">
+                                        <select class="ui selection dropdown selectItem" name="join_edit_need_food" id="join_edit_need_food"  required>
                                             <option value="">請選擇</option>
                                         </select>
                                     </div>
@@ -176,7 +176,7 @@
                                     </div>
                                     <div class="field fidArea grid--33">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" aria-label="必填">＊</span>
                                             輸入驗證碼
                                             <span class="fieverti" id="errMsg_captchaCode"></span>
                                         </label>

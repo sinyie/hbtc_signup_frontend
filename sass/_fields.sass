@@ -254,35 +254,57 @@ label
 			color: $black !important
 	input[type="checkbox"],input[type="radio"]
 		padding-left: 20px !important
-		// border: 2px solid $bg-gray-400 !important
 		background: $bg-gray-400 !important
 		&:hover
-			border: 2px solid $bg-gray-400 !important
+			border: 2px solid $second-color !important
 		&:focus
-			border: 2px solid $bg-gray-400 !important
+			border: 2px solid $second-color !important
 
-.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before, .ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before, .ui.checkbox input:checked:focus ~ .box:before, .ui.checkbox input:checked:focus ~ label:before
-	border-color:  $second-color !important
-	label
-		color: $black !important
 
-.ui.checkbox .box:before, .ui.checkbox label:before
-	border: 1px solid $bg-gray-600 !important
-	background: $bg-gray-400 !important
 
-.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after
+
+.ui.checkbox input:checked ~ .box:before, .ui.checkbox input:checked ~ label:before
 	color: $main-color !important
 	top: -1px !important
 	left: 1px !important
+	background: $bg-gray-400 !important
+	border: 2px solid $second-color !important
+	&:hover
+		border: 2px solid $second-color !important
+		background: $bg-gray-400 !important
+	&:focus
+		border: 2px solid $second-color !important
+		background: $bg-gray-400 !important
+
+
+
 
 .ui.checkbox .box:before, .ui.checkbox label:before
 	width: 24px !important
 	height: 24px !important
-	top: -1px !important
+	top: -2px !important
+	background: $bg-gray-400 !important
+	&:hover
+		border: 2px solid $second-color !important
+		background: $bg-gray-400 !important
+	&:focus
+		border: 2px solid $second-color !important
+		background: $bg-gray-400 !important
 
 
+.ui.checkbox input:focus ~ .box:before, .ui.checkbox input:focus ~ label:before
+	border: 2px solid $second-color !important
+	&:hover
+		border: 2px solid $second-color !important
+	&:focus
+		border: 2px solid $second-color !important
 
 
+.ui.checkbox input:checked ~ .box:after, .ui.checkbox input:checked ~ label:after
+	color: $main-color !important
+
+.ui.checkbox .box:after, .ui.checkbox label:after
+	left: 2px !important
 
 //multipal select 選單
 .ui.dropdown.selection.multiple

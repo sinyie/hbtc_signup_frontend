@@ -31264,13 +31264,13 @@ a.ui.card:hover,
   width: 22px;
   height: 22px;
   content: '';
-  background: #FFFFFF;
+  background: #ECEFFA;
   border-radius: 0.21428571rem;
   -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
   transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
   transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
-  border: 1px solid #B6C5DA;
+  border: 2px solid #ECEFFA;
 }
 
 /*--------------
@@ -31323,7 +31323,7 @@ a.ui.card:hover,
 
 .ui.checkbox .box:hover::before,
 .ui.checkbox label:hover::before {
-  background: #FFFFFF;
+  background: #ECEFFA;
   border-color: #5DD0FC;
 }
 
@@ -31358,7 +31358,8 @@ a.ui.card:hover,
 .ui.checkbox input:focus ~ .box:before,
 .ui.checkbox input:focus ~ label:before {
   background: #FFFFFF;
-  border-color: #5DD0FC;
+  /* border-color: #5DD0FC; */
+  border: 2px solid #2095e8;
 }
 
 .ui.checkbox input:focus ~ .box:after,
@@ -31377,7 +31378,7 @@ a.ui.card:hover,
 .ui.checkbox input:checked ~ .box:before,
 .ui.checkbox input:checked ~ label:before {
   background: #FFFFFF;
-  border-color: rgba(34, 36, 38, 0.35);
+  /* border-color: rgba(34, 36, 38, 0.35); */
 }
 
 .ui.checkbox input:checked ~ .box:after,
