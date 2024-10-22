@@ -1,0 +1,362 @@
+//Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 360px,
+  md: 768px,
+  lg: 1024px,
+  //以下為自定義斷點
+  xl: 1260px,
+  xxl: 1440px,
+  xxxl: 1900px
+);
+
+//Containers
+//原始預設尚無變更
+$container-max-widths: (
+  xs: 0,
+  sm: 360px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1260px,
+  xxl: 1440px,
+  xxxl: 1900px
+);
+
+//原始預設尚無變更
+$spacer: 1rem !default;
+
+//Spacing，運用在margin、padding、gap、gutter上面
+//自定義由4px為基準，從4px-40px
+$spacers: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 28px,
+  8: 32px,
+  9: 36px,
+  10: 40px,
+  11: 44px,
+  12: 48px,
+  13: 52px,
+  14: 56px,
+  15: 60px,
+  16: 64px,
+  17: 68px,
+  18: 72px,
+  19: 76px,
+  20: 80px,
+  21: 84px,
+  22: 88px,
+  23: 92px,
+  24: 96px,
+  25: 100px,
+  26: 104px,
+  27: 108px,
+  28: 112px,
+  29: 116px,
+  30: 120px,
+  31: 124px,
+  32: 128px,
+  33: 132px,
+  34: 136px,
+  35: 140px,
+  36: 144px,
+  37: 148px,
+  38: 152px,
+  39: 156px,
+  40: 160px,
+  41: 164px,
+  42: 168px,
+  43: 172px,
+  44: 176px,
+  45: 180px,
+  47: 188px,
+  48: 192px,
+  49: 196px,
+  50: 200px,
+
+);
+
+//客製化字體大小
+
+//小視口H1-H6
+$title-base-phone: 1rem;
+$caption-font-size-phone: $title-base-phone;
+$h6-font-size-phone: $title-base-phone * 1.125;
+$h5-font-size-phone: $h6-font-size-phone * 1.125;
+$h4-font-size-phone: $h5-font-size-phone * 1.125;
+$h3-font-size-phone: $h4-font-size-phone * 1.125;
+$h2-font-size-phone: $h3-font-size-phone * 1.125;
+$h1-font-size-phone: $h2-font-size-phone * 1.125;
+$btn--font-size-phone: 1rem;
+$btns--font-size-phone: 0.9375rem;
+//字體大小設定
+$typo-h-phone: (
+  caption: $caption-font-size-phone,
+  p: $title-base-phone,
+  h1: $h1-font-size-phone,
+  h2: $h2-font-size-phone,
+  h3: $h3-font-size-phone,
+  h4: $h4-font-size-phone,
+  h5: $h5-font-size-phone,
+  h6: $h6-font-size-phone,
+  btn: $btn--font-size-phone,
+  btns: $btns--font-size-phone
+);
+//行高設定
+$typo-h-phone-lh: (
+  caption: 1,
+  p: 1.5,
+  h1: 1.37,
+  h2: 1.4,
+  h3: 1.42,
+  h4: 1.42,
+  h5: 1.6,
+  h6: 1.55
+);
+
+//大視口H1-H6
+$title-base-monitor: 1.125rem;
+$caption-font-size-monitor: 1rem;
+$h6-font-size-monitor: $title-base-monitor * 1.2;
+$h5-font-size-monitor: $h6-font-size-monitor * 1.2;
+$h4-font-size-monitor: $h5-font-size-monitor * 1.2;
+$h3-font-size-monitor: $h4-font-size-monitor * 1.2;
+$h2-font-size-monitor: $h3-font-size-monitor * 1.2;
+$h1-font-size-monitor: $h2-font-size-monitor * 1.2;
+$btn-font-size-monitor: 1.125rem;
+$btns-font-size-monitor: 1rem;
+//字體大小設定
+$typo-h-monitor: (
+  caption: $caption-font-size-monitor,
+  p: $title-base-monitor,
+  h1: $h1-font-size-monitor,
+  h2: $h2-font-size-monitor,
+  h3: $h3-font-size-monitor,
+  h4: $h4-font-size-monitor,
+  h5: $h5-font-size-monitor,
+  h6: $h6-font-size-monitor,
+  btn: $btn-font-size-monitor,
+  btns: $btns-font-size-monitor
+);
+//行高設定
+$typo-h-monitor-lh: (
+  caption: 1,
+  p: 1.55,
+  h1: 1.41,
+  h2: 1.42,
+  h3: 1.4,
+  h4: 1.41,
+  h5: 1.54,
+  h6: 1.48
+);
+//input 字體大小
+$input-phone-title: 1rem;
+$input-phone-placeholder: $input-phone-title;
+$input-phone-hint: 1rem;
+//電腦input
+$input-monitor-title: 1.125rem;
+$input-monitor-placeholder: $input-monitor-title;
+$input-monitor-hint: 1.125rem;
+$input-phone: (
+  title: $input-phone-title,
+  placeholder: $input-phone-placeholder,
+  hint: $input-phone-hint
+);
+$input-monitor: (
+  title: $input-monitor-title,
+  placeholder: $input-monitor-placeholder,
+  hint: $input-monitor-hint
+);
+$input-monitor-lh: (
+  title: 1.5,
+  placeholder: 1,
+  hint: 1
+);
+$input-phone-lh: (
+  title: 1.5,
+  placeholder: 1,
+  hint: 1
+);
+
+//顏色設定
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff ;
+$gray-100: #E1E3E8 ;
+$gray-200: #C4C7D1 ;
+$gray-300: #A8ACB8 ;
+$gray-400: #8D919F ;
+$gray-500: #727685 ;
+$gray-600: #565F6B ;
+$gray-700: #3C4451 ;
+$black:    #212A37 ;
+
+$primary:    #326EF0;
+$blue:    #3ABEF9;
+$indigo:  #050C9C ;
+$yellow: #FFD214;
+$green: #5AE600;
+$red: #FF4238;
+$purple: #8800FF;
+$cyan: #32FFFF;
+$bg: #F7FAFF;
+$accent: #A7E6FF;
+
+
+$colors: (
+  "gray":       $gray-600,
+  "gray-dark":  $gray-700
+);
+
+//修改顏色設定
+$purple-100: #E9CCFF;
+$purple-200: #D199FF;
+$purple-300: #BA66FF;
+$purple-400: #A133FF;
+$purple-500: $purple;
+$purple-600: #6E00CC;
+$purple-700: #540099;
+$purple-800: #380066;
+$purple-900: #1D0033;
+
+$red-100: #FFE6D7;
+$red-200: #FFC7AF;
+$red-300: #FFA187;
+$red-400: #FF7D69;
+$red-500: $red;
+$red-600: #DB282E;
+$red-700: #B71C2E;
+$red-800: #93112C;
+$red-900: #7A0A2A;
+
+$yellow-100: #FFF9D0;
+$yellow-200: #FFF2A1;
+$yellow-300: #FFE972;
+$yellow-400: #FFE04E;
+$yellow-500: $yellow;
+$yellow-600: #DBB00E;
+$yellow-700: #B78F0A;
+$yellow-800: #937006;
+$yellow-900: #7A5A03;
+
+$green-100: #EAFDCB;
+$green-200: #D1FC97;
+$green-300: #AEF763;
+$green-400: #8DF03C;
+$green-500: $green;
+$green-600: #41C500;
+$green-700: #2DA500;
+$green-800: #1C8500;
+$green-900: #106E00;
+
+$cyan-100: #D6FFF0;
+$cyan-200: #ADFFE9;
+$cyan-300: #83FFE9;
+$cyan-400: #65FFF1;
+$cyan-500: $cyan;
+$cyan-600: #24CBDB;
+$cyan-700: #199CB7;
+$cyan-800: #0F7193;
+$cyan-900: #09537A;
+
+
+//修改主題顏色
+// scss-docs-start theme-color-variables
+$primary:       $primary;
+$secondary:     $blue;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-700;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+// scss-docs-end theme-colors-map
+
+
+// 文字相關設定
+$typo-fs--14: 0.875rem;
+$typo-fs--15: 0.9375rem;
+$typo-fs--16: 1rem;
+$typo-fs--18: 1.125rem;
+$typo-fs--20: 1.25rem;
+$typo-fs--28: 1.75rem;
+$typo-fs--36: 2.25rem;
+
+
+
+//字型設定
+$text-style: 'Montserrat-Medium', 'NotoSansTC-Medium';
+$text-weight--en--500: 'Montserrat-Medium';
+$text-weight--ch--400: 'NotoSansTC-Regular';
+
+
+//元素設定
+$gray-line: #E2E8F0;
+
+// 矩形邊框
+$br: (
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+  48: 48px
+);
+// // 客製化column
+// $custom-grid-columns: 4; // 預設值
+
+// // xs: 0,
+// // sm: 360px,
+// // md: 768px,
+// // lg: 1024px,
+// // //以下為自定義斷點
+// // xl: 1260px,
+// // xxl: 1440px,
+// // xxxl: 1900px
+
+// @media (min-width: 768px) {
+//   $custom-grid-columns: 8 !important ; // 在中尺寸螢幕以上，使用 8 欄
+// };
+
+// @media (min-width: 1260px) {
+//   $custom-grid-columns: 9 !important ; // 在大尺寸螢幕以上，使用 9 欄
+// };
+
+
+// Modals
+
+// scss-docs-start modal-variables
+
+$modal-backdrop-bg: $gray-700;
+$modal-backdrop-opacity: 0.82;
+$modal-content-inner-border-radius: 24px;
+$modal-content-border-radius: 24px;
+$modal-content-bg: $accent;
+$modal-inner-padding: 24px;
+
+// scss-docs-start form-input-variables
+$input-placeholder-color: $gray-400;
+$input-border-color: none;
+$input-focus-bg: $accent;
+$input-focus-color: $black;
+$input-btn-focus-box-shadow: none;
+$input-padding-y: 10px;

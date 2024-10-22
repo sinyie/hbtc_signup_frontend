@@ -1,0 +1,66 @@
+
+
+@mixin typoBasic
+    font-family: $text-style
+    font-size: $title-base-phone
+    color: $black
+    line-height: 1.5
+    letter-spacing: 0.2px
+
+h1,h2,h3,h4,h5,h6,p,label,button,a,input,select,textarea,li
+    @include typoBasic
+    margin: 0 
+    font-weight: normal
+
+a
+    text-decoration: none
+
+ul
+    list-style: none
+
+.typo-fw--400
+    font-weight: 400
+.typo-fw--500
+    font-weight: 500
+.typo-fw--600
+    font-weight: 600
+
+.typo-lh--1.typo-lh--1
+    line-height: 1
+
+.typo-ls--1
+    letter-spacing: 1px
+.typo-ls--0
+    letter-spacing: 0
+.typo-ls--05
+    letter-spacing: -0.5px
+
+.typo-fz--16
+    font-size: 1rem
+.typo-fz--17
+    font-size: 1.0625rem
+.typo-fz--18
+    font-size: 1.125rem
+.typo-fz--20
+    font-size: 1.25rem
+.typo-fz--30
+    font-size: 1.875rem
+.typo-fz--40
+    font-size: 2.5rem
+.typo-fz--48
+    font-size: 3rem
+    
+.typo-underline
+    &:hover
+        text-decoration: underline
+
+.typo-ls--05
+    letter-spacing: 0.5px
+.typo-ls--0
+    letter-spacing: 0px
+
+.typo-fw--ch--400
+    font-family: $text-weight--ch--400
+
+.typo-fw--ch400--en500
+    font-family: $text-weight--en--500 , $text-weight--ch--400

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/sign-in/signin.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+	
+	<!-- 設定檔 -->
+    <script src="js/config.js"></script>
+  
+    
+</head>
+
+<body>
+	<div class="stu-wrapper">
+		<div class="stu-primary pb-sm-22">
+			<div class="stu-ele01"></div>
+			<div class="stu-ele02"></div>
+			<!-- <div class="stu-ele03"></div> -->
+
+			<!-- 內頁header -->
+			<div class="px-sm-6 pt-sm-6 pb-sm-8 px-md-22 pt-md-10 pb-md-8 stuPageHeader">
+				<a href="javascript:history.back();" class="stuPageHeader--bt btn--icon" data-button-variant="white"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+					<div class="icon icon-w--20 icon-arrow-left--20"></div>
+				</a>
+				<section class="stuPageHeader--text">
+					<p class="typo-s-sm-caption col-black text-center pt-sm-2">簽到表</p>
+				</section>
+			</div>
+
+
+			<div class="eleBorderLineBlank px-sm-6 py-sm-6">
+				<!-- 主要數據區 -->
+				<div class="d-flex justify-content-center align-items-center row gx-2 gy-3">
+					<div class="col-sm-4">
+						<div class="bg-cyan--300 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">活動人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">50</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="bg-green--200 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">簽到人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">32</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="bg-yellow--300 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">簽退人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">0</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 簽到表區 -->
+				<div class="pt-6">
+					<ul class="mod-tableBk">
+						<!-- 標題 -->
+						<li id="js-table-title" class="mod-table-title">
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">簽到</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">簽退</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">姓名</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">機關名稱</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">部門</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">職稱</p>
+							<p class="mod-table-info typo-s-sm-caption typo-lh--1 col-black mod-table-title--list">用餐</p>
+						</li>
+						<!-- 清單 -->
+						<!-- 簽到退按鈕 -->
+						<li class="mod-table-list">
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<a data-button-variant="ghost" href="javascript:void(0);" class="btn--inline">
+									<div class="icon icon-w--20 icon-nav-log-in--24 icon-col-black me-2"></div>
+									<span class="typo-s-sm-btn typo-l-md-btn">簽到</span>
+								</a>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<a data-button-variant="ghost" href="javascript:void(0);" class="btn--inline">
+									<div class="icon icon-w--20 icon-nav-log-out--24 icon-col-black me-2"></div>
+									<span class="typo-s-sm-btn typo-l-md-btn">簽退</span>
+								</a>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-black mod-table-info">帝瓦伊．撒耘</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">台中市衛生局食藥處</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">資訊科</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">IT 工程師</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">葷食</div>
+						</li>
+						<!-- 簽到退狀態 -->
+						<li class="mod-table-list">
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-green--100 col-green--600  typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-green--6 me-1"></div>
+									已簽到
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-red--100 col-red--500 typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-red--5 me-1"></div>
+									已簽退
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-black mod-table-info">Baqah Siqeyu（潘金榮）</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">台中市衛生局食藥處</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計科</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計主任</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">葷食</div>
+						</li>
+						<!-- 簽到退狀態 -->
+						<li class="mod-table-list">
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-green--100 col-green--600  typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-green--6 me-1"></div>
+									已簽到
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-red--100 col-red--500 typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-red--5 me-1"></div>
+									已簽退
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-black mod-table-info">Baqah Siqeyu（潘金榮）</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">台中市衛生局食藥處</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計科</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計主任</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">葷食</div>
+						</li>
+						<!-- 簽到退狀態 -->
+						<li class="mod-table-list">
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-green--100 col-green--600  typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-green--6 me-1"></div>
+									已簽到
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-red--100 col-red--500 typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-red--5 me-1"></div>
+									已簽退
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-black mod-table-info">Baqah Siqeyu（潘金榮）</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">台中市衛生局食藥處</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計科</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計主任</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">葷食</div>
+						</li>
+						<!-- 簽到退狀態 -->
+						<li class="mod-table-list">
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-green--100 col-green--600  typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-green--6 me-1"></div>
+									已簽到
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">
+								<div class="eleSignLabel bg-red--100 col-red--500 typo-s-sm-p typo-l-md-p typo-lh--1">
+									<div class="icon icon-w--20 icon-check--20 icon-col-red--5 me-1"></div>
+									已簽退
+								</div>
+							</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-black mod-table-info">Baqah Siqeyu（潘金榮）</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">台中市衛生局食藥處</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計科</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">會計主任</div>
+							<div class="mod-table-list--list mod-table-info typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--600 mod-table-info">葷食</div>
+						</li>
+						
+
+
+					</ul>
+				</div>
+
+				
+			</div>
+
+			<!-- 系統資訊區 -->
+			<div class="px-sm-6 py-sm-6">
+				<section class="br-sm-32 eleBlank--mg--52 p-sm-5 px-md-6 pt-md-6 pb-md-5">
+					<div class="d-flex align-items-center mb-sm-6">
+						<span class="eleIcon-sqaure bg-accent">
+							<div class="icon icon-w--20 icon-clock--20 icon-col-black"></div>
+						</span>
+						<p class="ms-3 typo-s-sm-caption typo-l-md-caption">系統資訊</p>
+					</div>
+					<div class="d-flex align-items-center justify-content-between mb-sm-4 mb-md-5">
+						<div class="pe-sm-4">
+							<p class="typo-s-sm-caption col-text--300 pb-sm-1">剩餘使用時間</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">00 : 27 : 12</p>
+						</div>
+						<div class="flex-shrink-0">
+							<a data-button-variant="ghost" href="javascript:void(0);" class="btn--inline">
+								<span class="typo-s-sm-btn typo-l-md-btn">重置</span>
+							</a>
+						</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-between mb-sm-4 mb-md-5">
+						<div>
+							<p class="typo-s-sm-caption col-text--300 pb-sm-1">上次登入 IP</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">192 . 168 . 0 . 1</p>
+						</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-between">
+						<div>
+							<p class="typo-s-sm-caption col-text--300  pb-sm-1">上次登入時間</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">2024 / 10 / 30 20 : 55 : 08</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+		</div>
+	</div>
+
+	
+</body>
+</html>

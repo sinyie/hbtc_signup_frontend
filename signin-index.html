@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/sign-in/signin.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+
+	<!-- 本頁js -->
+	<script src="js/js-html5qrcode.js"></script>
+</head>
+
+<body>
+	<div class="stu-wrapper">
+		<div class="stu-primary pb-sm-22">
+			<div class="stu-ele01"></div>
+			<div class="stu-ele02"></div>
+			<div class="stu-ele03"></div>
+
+			<!-- welcome -->
+			<div class="px-sm-5 pt-sm-9 pb-sm-7 pt-md-12 pb-md-8">
+				<div class="d-flex justify-content-center align-items-center row gx-2 ">
+					<div class="col-sm-10">
+						<p class="typo-s-sm-caption typo-l-md-caption mb-1">
+							👋  Welcome in,
+							<!-- 帳號 -->
+							<span>a06001456</span>
+						</p>
+						<p class="typo-l-h2 typo-l-lh-h2">HELLO</p>
+						<p class="typo-s-sm-h4 typo-l-md-h5">
+							<!-- 姓名 -->
+							<span>曾梓展</span>，歡迎登入！
+						</p>
+					</div>
+					<div class="col-sm-2 d-flex justify-content-end">
+						<a href="javascript:void(0);" class="btn--icon" data-button-variant="ghost"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+							<div class="icon icon-w--20 icon-log-out--20"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-sm">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h6 class="typo-s-sm-h6 typo-lh--1 typo-l-md-h6 mt-1">登出系統</h6>
+					</div>
+					<div class="modal-body">
+						<p class="typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--700">
+							要登出報名系統嗎？
+						</p>
+					</div>
+					<div class="modal-footer">
+						<div class="d-flex justify-content-end">
+							<a data-button-variant="danger" href="javascript:void(0);" class="btn--basic me-sm-2" data-bs-dismiss="modal">
+								<span class="typo-s-sm-btn typo-l-md-btn">取消</span>
+								<div class="icon icon-w--20 icon-x--20 icon-col-black ms-3"></div>
+							</a>
+							<a data-button-variant="success" href="javascript:void(0);" class="btn--basic">
+								<span class="typo-s-sm-btn typo-l-md-btn">登出</span>
+								<div class="icon icon-w--20 icon-check--20 icon-col-black ms-3"></div>
+							</a>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- welcome -->
+			<div class="eleBorderLineBlank px-sm-6 py-sm-6">
+				<!-- 主要數據區 -->
+				<div class="d-flex justify-content-center align-items-center row gx-2 gy-3">
+					<div class="col-sm-12">
+						<a href="signinTable.html" title="進入活動簽到表" class="d-flex flex-wrap align-items-center mod-keySection px-sm-8 pt-sm-8 pb-sm-6">
+							<h1 class="typo-s-sm-h5 typo-s-lh-sm-h5 typo-s-md-h5 typo-s-lh-md-h5 col-white typo-ls--0">
+								113 年臺中市糖尿病共同照護網醫事人員認證專業知識課程電腦考試：第 2 場－詳如考試簡章
+							</h1>
+							<h2 class="typo-l-sm-h3 typo-l-lh-sm-h3 col-white mt-sm-10">$ 800</h2>
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<div class="bg-cyan--300 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">活動人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">50</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="bg-green--200 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">簽到人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">32</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="bg-yellow--300 pt-sm-6 pb-sm-3 text-center d-flex flex-column align-items-center br-sm-24">
+							<p class="typo-s-sm-caption typo-l-md-caption col-black typo-lh--1 pb-sm-1 pb-md-1">簽退人數</p>
+							<p class="typo-s-sm-h1 typo-l-md-h3 col-pri">0</p>
+						</div>
+					</div>
+				</div>
+				<!-- 活動資訊區 -->
+				<div class="d-flex justify-content-center align-items-center row gx-2 gy-2 pt-sm-6">
+					<div class="col-sm-6">
+						<div class="br-sm-24 eleBlank--mg--68 pt-sm-6 pb-sm-4 pb-md-5 px-sm-5 px-md-6">
+							<p class="typo-s-sm-caption typo-l-md-caption pb-sm-2 col-text--300">開始時間</p>
+							<p class="typo-s-sm-p typo-l-md-p col-text--700 typo-black">
+								2024 / 10 / 31
+								<br />
+								08 : 30
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="br-sm-24 eleBlank--mg--68 pt-sm-6 pb-sm-4 pb-md-5 px-sm-5 px-md-6">
+							<p class="typo-s-sm-caption typo-l-md-caption pb-sm-2 col-text--300">結束時間</p>
+							<p class="typo-s-sm-p typo-l-md-p col-text--700 typo-black">
+								2024 / 10 / 31
+								<br />
+								17 : 00
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="br-sm-24 eleBlank--mg--68 pt-sm-6 pb-sm-4 pb-md-5 px-sm-5 px-md-6">
+							<p class="typo-s-sm-caption typo-l-md-caption pb-sm-2 col-text--300">活動地點</p>
+							<p class="typo-s-sm-p typo-l-md-p col-text--700 typo-fw--ch400--en500 typo-black">
+								【思享空間】
+								<br />
+								臺中市東區公園東路 130 號
+								<br />
+								二館 203 演講廳
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 系統資訊區 -->
+			<div class="px-sm-6 py-sm-6">
+				<section class="br-sm-32 eleBlank--mg--52 p-sm-5 px-md-6 pt-md-6 pb-md-5">
+					<div class="d-flex align-items-center mb-sm-6">
+						<span class="eleIcon-sqaure bg-accent">
+							<div class="icon icon-w--20 icon-clock--20 icon-col-black"></div>
+						</span>
+						<p class="ms-3 typo-s-sm-caption typo-l-md-caption">系統資訊</p>
+					</div>
+					<div class="d-flex align-items-center justify-content-between mb-sm-4 mb-md-5">
+						<div class="pe-sm-4">
+							<p class="typo-s-sm-caption col-text--300 pb-sm-1">剩餘使用時間</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">00 : 27 : 12</p>
+						</div>
+						<div class="flex-shrink-0">
+							<a data-button-variant="ghost" href="javascript:void(0);" class="btn--inline">
+								<span class="typo-s-sm-btn typo-l-md-btn">重置</span>
+							</a>
+						</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-between mb-sm-4 mb-md-5">
+						<div>
+							<p class="typo-s-sm-caption col-text--300 pb-sm-1">上次登入 IP</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">192 . 168 . 0 . 1</p>
+						</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-between">
+						<div>
+							<p class="typo-s-sm-caption col-text--300  pb-sm-1">上次登入時間</p>
+							<p class="typo-s-sm-p typo-l-md-p typo-black">2024 / 10 / 30 20 : 55 : 08</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+		</div>
+	</div>
+
+	<!-- navgation -->
+	<div class="stuNavBk">
+		<div class="stu-primary px-sm-6 pb-sm-2">
+			<nav class="br-sm-20 stuNav pt-sm-3 pb-sm-2 px-sm-9 px-md-30 d-flex align-items-center justify-content-between">
+				<a href="signin-index.html" class="stuNav-link" title="回概觀頁">
+					<span class="eleIcon-sqaure bg-cyan--400">
+						<div class="icon icon-w--20 icon-nav-home--24 icon-col-primary"></div>
+					</span>
+					<span class="col-black text-center stuNav-link--text mt-sm-1">首頁</span>
+				</a>
+				<a href="signin.html" class="stuNav-link" title="到簽到作業區">
+					<span class="eleIcon-sqaure">
+						<div class="icon icon-w--16 icon-nav-log-in--24 icon-col-gray--4"></div>
+					</span>
+					<span class="col-text--400 text-center stuNav-link--text mt-sm-1">簽到</span>
+				</a>
+				<a href="signin.html" class="stuNav-link" title="到簽退作業區">
+					<span class="eleIcon-sqaure">
+						<div class="icon icon-w--16 icon-nav-log-out--24 icon-col-gray--4"></div>
+					</span>
+					<span class="col-text--400 text-center stuNav-link--text mt-sm-1">簽退</span>
+				</a>
+				<a href="signin-table.html" class="stuNav-link" title="到簽到表">
+					<span class="eleIcon-sqaure">
+						<div class="icon icon-w--16 icon-nav-table--24 icon-col-gray--4"></div>
+					</span>
+					<span class="col-text--400 text-center stuNav-link--text mt-sm-1">簽到表</span>
+				</a>
+			</nav>
+		</div>
+	</div>
+	
+</body>
+</html>

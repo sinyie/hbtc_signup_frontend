@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/sign-in/signin.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/html5-qrcode.min.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+
+    <!-- 本頁js -->
+    <script src="js/config.js"></script>
+    <script src="js/js-html5qrcode.js"></script>
+</head>
+<style>
+    
+</style>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="hintModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="typo-s-sm-h6 typo-lh--1 typo-l-md-h6 mt-1">系統提醒</h6>
+            </div>
+            <div class="modal-body">
+                <p class="typo-s-sm-p typo-s-lh-sm-p typo-l-md-p typo-l-lh-md-p col-text--700">
+                    要結束簽到作業，請務必點擊下方的”結束作業”按鈕。
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="d-flex justify-content-end">
+                    <a data-button-variant="primary" href="javascript:void(0);" class="btn--basic" data-bs-dismiss="modal">
+                        <span class="typo-s-sm-btn typo-l-md-btn">開始作業</span>
+                        <div class="icon icon-w--20 icon-check--20 icon-col-black ms-3"></div>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stu-wrapper">
+		<div class="stu-primary pb-sm-22">
+			<div class="stu-ele01"></div>
+			<div class="stu-ele02"></div>
+			<!-- <div class="stu-ele03"></div> -->
+
+
+			<!-- 內頁header -->
+			<div class="px-sm-6 pt-sm-6 px-md-22 pt-md-10 pb-sm-6 pb-md-8 stuPageHeader">
+				<a href="javascript:history.back();" class="stuPageHeader--bt btn--icon mt-2" data-button-variant="white"  data-bs-toggle="modal" data-bs-target="#logoutModal">
+					<div class="icon icon-w--20 icon-arrow-left--20"></div>
+				</a>
+				<section class="stuPageHeader--text">
+					<p class="typo-s-sm-caption col-black text-center pb-sm-1">簽到作業</p>
+                	<p class="d-inline eleStatus--progress typo-s-sm-caption typo-l-md-caption col-text--700">進行中</p>
+				</section>
+			</div>
+
+
+
+			<div class="eleCamBk overflow-hidden">
+				<div style="width: 100vw;" id="reader">
+
+
+                </div>
+			</div>
+
+            <div class="eleCam--endBtBk d-flex justify-content-center">
+                <a href="javascript:void(0);" id="star_scan" style="color:red;">開始掃描</a>
+
+                <a id="stop_scan" data-button-variant="accent" href="javascript:void(0);" class="btn--basic">
+                    <div class="icon icon-w--20 icon-coffee--20 icon-col-black me-3"></div>
+                    <span class="typo-s-sm-btn typo-l-md-btn">結束簽到作業</span>
+                </a>
+            </div>
+
+			
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+
+    // 偵測ios或android
+    // var classNames = [];
+    // if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('device-ios');
+    // if (navigator.userAgent.match(/android/i)) classNames.push('device-android');
+    // var html = document.getElementsByTagName('html')[0];
+
+    // if (classNames.length) classNames.push('on-device');
+    // if (html.classList) html.classList.add.apply(html.classList, classNames);
+
+    console.log(window.innerHeight);
+    var camClass = document.querySelectorAll('.eleCamBk');
+    var camClassHeight = "" ;
+    if(document.body.clientWidth < 768){
+        camClassHeight = window.innerHeight - 100 ;
+        console.log(camClassHeight);
+    }else{
+        camClassHeight = window.innerHeight - 124 ;
+        console.log(camClassHeight);
+    }
+    
+    var camClassHeightString = camClassHeight.toString() ;
+    console.log(camClass);
+
+    camClass.forEach(element => {
+        element.style.height = camClassHeightString + "px"; // 設置為所需的高度，例如 100px
+    });
+    
+    // 進入畫面自動打開modal
+    $(document).ready(function() {
+        $('#hintModal').modal('show');
+    });
+</script>

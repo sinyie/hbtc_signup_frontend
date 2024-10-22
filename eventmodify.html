@@ -19,6 +19,9 @@
     <script src="js/csrf.js"></script>
     <script type="text/javascript" src="js/jquery.md5.js"></script>
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+    
     <!-- i18n -->
     <script src="i18n/jquery.i18n.js"></script>
     <script src="i18n/jquery.i18n.messagestore.js"></script>
@@ -126,7 +129,7 @@
                             <section class="grid--66 fieldBk">
                                 <div class="ui form">
                                     <div class="field fidArea grid--50">
-                                        <label>
+                                        <label for="join_edit_email">
                                             <span class="fidMustStyle">＊</span>
                                             E-mail
                                             <span class="fieverti" id="errMsg_email"></span>
@@ -135,15 +138,15 @@
                                         <br><span class="fidMustStyle">(※此欄位為系統發送通知用！請詳細填寫正確信箱，避免無法成功收到相關資訊通知！)</span>
                                     </div>
                                     <div class="field fidArea grid--50">
-                                        <label>
-                                            <span class="fidMustStyle">＊</span>
+                                        <label for="join_edit_email">
+                                            <span class="join_edit_id_number">＊</span>
                                             身分證 / 居留證後四碼
                                             <span class="fieverti" id="errMsg_id_number"></span>
                                         </label>
                                         <input type="text" name="join_edit_id_number" id="join_edit_id_number" class="chkNumber" maxlength="4" placeholder="請輸入身分證 / 居留證後四碼">
                                     </div>
                                     <div class="field fidArea grid--50">
-                                        <label>
+                                        <label for="join_edit_name">
                                             <span class="fidMustStyle">＊</span>
                                             姓名
                                             <span class="fieverti" id="errMsg_name"></span>
@@ -151,15 +154,15 @@
                                         <input type="text" name="join_edit_name" id="join_edit_name" maxlength="200" placeholder="請輸入姓名">
                                     </div>
                                     <div class="field fidArea grid--50">
-                                        <label>
-                                            <span class="fidMustStyle">＊</span>
+                                        <label for="join_edit_name">
+                                            <span for="join_edit_organs">＊</span>
                                             機關名稱
                                             <span class="fieverti" id="errMsg_organs"></span>
                                         </label>
                                         <input type="text" name="join_edit_organs" id="join_edit_organs" placeholder="請輸入機關名稱">
                                     </div>
                                     <div class="field fidArea grid--50">
-                                        <label>
+                                        <label for="join_edit_department">
                                             <!-- <span class="fidMustStyle">＊</span> -->
                                             部門
                                             <span class="fieverti" id="errMsg_department"></span>
@@ -168,14 +171,14 @@
                                     </div>
                                     <div class="field fidArea grid--50">
                                         <label>
-                                            <span class="fidMustStyle">＊</span>
+                                            <span class="fidMustStyle" for="join_edit_title">＊</span>
                                             職稱
                                             <span class="fieverti" id="errMsg_title"></span>
                                         </label>
                                         <input type="text" name="join_edit_title" id="join_edit_title" placeholder="請輸入職稱">
                                     </div>
                                     <div class="field fidArea grid--50">
-                                        <label>
+                                        <label for="join_edit_tel">
                                             <span class="fidMustStyle">＊</span>
                                             聯絡電話
                                             <span class="fieverti" id="errMsg_tel"></span>
@@ -183,7 +186,7 @@
                                         <input type="text" name="join_edit_tel" id="join_edit_tel" placeholder="請輸入連絡電話">
                                     </div>
                                     <div class="field fidArea grid--50" id="need_food_div" style="display: none;">
-                                        <label>
+                                        <label for="join_edit_need_food">
                                             <span class="fidMustStyle">＊</span>
                                             是否用餐
                                             <span class="fieverti" id="errMsg_need_food"></span>
@@ -193,7 +196,7 @@
                                         </select>
                                     </div>
                                     <div class="field fidArea grid--100">
-                                        <label>
+                                        <label for="join_edit_remarks">
                                             備註
                                             <span class="fieverti" id="errMsg_remarks"></span>
                                         </label>
@@ -210,7 +213,7 @@
                             <section class="grid--66 fieldBk">
                                 <div class="ui form">
                                     <div class="field fidArea grid--25">
-                                        <label>
+                                        <label for="captcha_img">
                                             圖形驗證碼
                                         </label>
                                         <div>
@@ -218,7 +221,7 @@
                                         </div>
                                     </div>
                                     <div class="field fidArea grid--25">
-                                        <label>
+                                        <label for="captcha_key">
                                             <span class="fidMustStyle" aria-label="必填">＊</span>
                                             輸入驗證碼
                                             <span class="fieverti" id="errMsg_captchaCode"></span>

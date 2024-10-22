@@ -1,0 +1,39 @@
+// 更改 BS 原始設定 placeholder 、 focus
+.field-input-content
+    &:focus
+        border-color: $purple
+        box-shadow: 0 0 0 4px $purple
+        color: $purple
+    &::placeholder
+        color: $purple
+.field-input-content-pla-neu-12
+    &::placeholder
+        color: $purple
+.field-input-select
+    color: $purple
+
+
+// 更改 BS form-select 的設定 用新的class 覆蓋 icon 背景顏色、大小、位置距離
+.field-form-select
+    // 顏色更換為 --bs-form-select-bg-img 裡面的 stroke='%23E2B189'數值(設計稿設定為 Secondary 6 #E2B189) / url 換算
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23E2B189' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+    background-size: 16px 16px
+    background-position: right 20px center
+
+// 更改 BS form-check 
+.field-switch .form-check-input
+    // 顏色更換為  --bs-form-switch-bg 裡面的 fill='%23FFFFFF' 數值(設計稿設定為 Background-3 #FFFFFF) / url 換算
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFFFFF'/%3e%3c/svg%3e")
+    width: 40px !important
+    height: 20px !important
+    &:focus
+        --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFFFFF'/%3e%3c/svg%3e")
+        box-shadow: 0 0 0 3px $purple
+
+
+// input原生text  隱藏clear
+input::-ms-clear
+    display: none
+// input原生 password 隱藏眼睛
+input::-ms-reveal
+    display: none

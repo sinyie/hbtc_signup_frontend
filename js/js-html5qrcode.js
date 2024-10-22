@@ -20,6 +20,7 @@ $(document).ready(function () {
     });
 
     csrf_promise.then((value) => {
+        
 
     });
 
@@ -29,19 +30,25 @@ $(document).ready(function () {
             alert("找不到攝影機！");
         } else {
             html5QrCode = new Html5Qrcode("reader");
+           
             const qrCodeSuccessCallback = (decodedText, decodedResult) => {
                 /* handle success */
                 alert(decodedText);
+                
             };
             const qrCodeErrorCallback = (errorMessage) => {
                 // handle on error condition, with error message
                 //console.log(errorMessage);
             };
-            const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+            const config = { fps: 10, qrbox: { width: 200, height: 200 } };
 
             //html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback, qrCodeErrorCallback);
-            html5QrCode.start({ deviceId: { exact: cameraId} }, config, qrCodeSuccessCallback, qrCodeErrorCallback);
+            html5QrCode.start({ deviceId: { exact: cameraId} }, config , qrCodeSuccessCallback, qrCodeErrorCallback);
 
+            const videoElement = document.getElementById('qr-canvas');
+            if (videoElement) {
+                alert('Video element found!');
+            }
             /* html5QrCode = new Html5Qrcode("reader");
             html5QrCode.start(
             cameraId,

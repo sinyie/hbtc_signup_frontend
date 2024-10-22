@@ -1,0 +1,104 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    'cursor': (
+      property: cursor,
+      class: typoH,
+      responsive: true,
+      values: auto pointer grab
+    ),
+    //小視口caption、p、H1-H6
+    'typo-H-phone':
+      (
+        property: font-size,
+        class: typo-s,
+        values: map-merge($typo-h-phone, ()),
+        responsive: true
+      ),
+    //小視口caption、p、H1-H6的line-height
+    'typo-H-phone-lh':
+      (
+        property: line-height,
+        class: typo-s-lh,
+        values: map-merge($typo-h-phone-lh, ()),
+        responsive: true
+      ),
+    //大視口caption、p、H1-H6
+    'typo-H-monitor':
+      (
+        property: font-size,
+        class: typo-l,
+        values: map-merge($typo-h-monitor, ()),
+        responsive: true
+      ),
+    //大視口caption、p、H1-H6的line-height
+    'typo-H-monitor-lh':
+      (
+        property: line-height,
+        class: typo-l-lh,
+        values: map-merge($typo-h-monitor-lh, ()),
+        responsive: true
+      ),
+    'input-monitor': (
+      property: font-size,
+      class: input-large,
+      values: map-merge($input-monitor, ()),
+      responsive: true
+    ),
+    'input-phone': (
+      property: font-size,
+      class: input-small,
+      values: map-merge($input-phone, ()),
+      responsive: true
+    ),
+    'input-monitor-lh': (
+      property: line-height,
+      class: input-large-lh,
+      values: map-merge($input-monitor-lh, ()),
+      responsive: true
+    ),
+    'input-phone-lh': (
+      property: line-height,
+      class: input-small-lh,
+      values: map-merge($input-phone-lh, ()),
+      responsive: true
+    ),
+    //矩形邊框
+    'border-radius':
+      (
+        property: border-radius,
+        class: br,
+        values: map-merge($br, ()),
+        responsive: true
+      ),
+  )
+);
+
+// // 遍歷字體大小
+// @each $name, $value in $typo-h {
+//   // 遍歷斷點
+//   @each $breakpoint, $breakpoint-value in $typo-breakpoints {
+//     // 生成類名
+//     $class-name: generate-class-name($name, $breakpoint);
+
+//     // 判斷是否是 xs 斷點，如果是，直接設定字體大小
+//     @if $breakpoint == xs {
+//       .typo-small-#{$name} {
+//         font-size: $value;
+//       }
+//     } @else {
+//       // 否則，使用媒體查詢設定字體大小
+//       @media (min-width: $breakpoint-value) {
+//         .typo-small-#{$name} {
+//           font-size: $value;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @each $name, $value in $typo-h-phone {
+//   .typo-smallTest-#{$name} {
+//     font-size: $value;
+//   }
+// }

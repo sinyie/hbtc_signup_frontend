@@ -1,0 +1,80 @@
+// bootstrap全部引用檔案
+// @import "~bootstrap/scss/bootstrap"
+
+// 1.引用bootstrap基本設定
+@import 'bootstrap/scss/mixins/banner';
+@include bsBanner('');
+@import 'bootstrap/scss/functions';
+
+// 2.自定義bootstrap樣式要在bootstrap的variables前
+// 同一 Sass 文件中的變數可以在預設變數之前或之後覆蓋。
+// 但是，當覆蓋橫跨 Sass 文件時，您必須在導入 Bootstrap 的 Sass 文件之前進行覆蓋。
+@import '_custom-variables.scss';
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+// 3.載入自定義樣式utilities
+@import '_custom-utilities.scss';
+
+//4.載入scss檔案
+// @import '_pages'
+
+// 5.載入bootstrap的layout
+// Layout & components
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+@import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/placeholders';
+// Helpers
+@import 'bootstrap/scss/helpers';
+// Utilities
+@import 'bootstrap/scss/utilities/api';
+
+@import '_viewport.sass';
+@import '_font.sass';
+@import '_typo.sass';
+@import '_base.sass';
+@import '_bg.sass';
+@import '_color.sass';
+@import '_button.sass';
+@import '_variable.sass';
+@import '_icon.sass';
+@import '_element.sass';
+@import '_field.sass';
+@import '_modal.sass';
+@import '_header.sass';
+@import '_navgation.sass';
+@import '_structure.sass';
+@import '_bsCover.sass';
+// @import '_miltiselect.sass';

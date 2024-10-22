@@ -19,6 +19,9 @@
     <script type="text/javascript" src="js/jquery.md5.js"></script>
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/html5-qrcode.min.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+    
     <!-- i18n -->
     <script src="i18n/jquery.i18n.js"></script>
     <script src="i18n/jquery.i18n.messagestore.js"></script>
@@ -43,6 +46,19 @@
     <!-- 網站區layout -->
     <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
 </head>
+<style>
+    #reader{
+       position: fixed !important; 
+       z-index: 1;
+    }
+    .bt-area{
+        position: fixed !important; 
+        z-index: 2;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+</style>
 
 <body>
 
@@ -51,11 +67,12 @@
     </div>
 
     <div class="patMainbody">
-        <div style="width: 500px" id="reader"></div>
+        <div style="width: 100vw;" id="reader">
 
-        <a href="javascript:void(0);" id="star_scan">開始掃描</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="javascript:void(0);" id="stop_scan">結束掃描</a>
+
+        </div>
+
+       
 
         <br><br>
         <?xml version="1.0" encoding="UTF-8"?>
@@ -69,6 +86,17 @@
                 </g>
             </g>
         </svg>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="bt-area">
+            <a href="javascript:void(0);" id="star_scan" style="color:red;">開始掃描</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0);" id="stop_scan" style="color:red;">結束掃描</a>
+        </div>
     </div>
 
     <!-- semantic UI -->

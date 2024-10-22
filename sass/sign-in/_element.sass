@@ -1,0 +1,87 @@
+// 框線
+.eleBorderLineBlank
+	border: 1px solid $gray-line
+	border-radius: 48px
+
+
+// 狀態
+.eleStatus--progress
+	padding: 4px 10px
+	border-radius: 8px
+	background: $green-300
+	text-align: center
+
+
+// 標籤
+.eleSignLabel
+	padding: 8px 12px
+	border-radius: 30px
+	text-align: center
+	position: relative
+	display: inline-flex
+	align-items: center
+	// .icon
+	// 	position: relative
+	// 	top: -1px
+
+.eleIcon-sqaure
+	border-radius: 12px
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 10px
+
+// 色塊底色
+.eleBlank--mg--52
+	background: rgba(255,255,255,0.52)
+	// filter: blur(35px)
+	backdrop-filter: blur(35px)
+	box-shadow: 1px 1px 0px 0px rgba(255,255,255,1)
+
+.eleBlank--mg--68
+	background: rgba(255,255,255,0.68)
+	// filter: blur(35px)
+	backdrop-filter: blur(35px)
+	box-shadow: 1px 1px 0px 0px rgba(255,255,255,1)
+
+
+//camera 區域
+.eleCamBk
+	width: 100%
+	// height: calc(100dvh - 100px)
+	position: fixed
+	z-index: 3
+	border-radius: 48px 48px 0 0
+	background: $black
+	bottom: 0
+	left: 0
+	display: flex
+	align-items: center
+	// +ipad
+	// 	height: calc(100dvh - 124px)
+		
+// .eleCamBk
+// 	height: calc(100vh - 100px)
+// 	+ipad
+// 		height: calc(100vh - 124px)
+
+// .device-ios
+// 	.eleCamBk
+// 		height: calc(100dvh - 100px)
+
+// .device-android
+// 	.eleCamBk
+// 		height: calc(100vh - 100px)
+// 		+ipad
+// 			height: calc(100vh - 124px)
+
+
+.eleCam--endBtBk
+	position: fixed
+	z-index: 4
+	bottom: 20px
+	width: 100%
+	left: 0
+	+ipad
+		bottom: 24px
+

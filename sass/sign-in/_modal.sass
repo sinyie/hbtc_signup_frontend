@@ -1,0 +1,76 @@
+// main-section
+.mod-keySection
+	border-radius: 32px
+	background-color: hsla(275,100%,74%,1)
+	background-image: radial-gradient(at 30% 15%, hsla(178,93%,69%,0.66) 0px, transparent 50%),radial-gradient(at 13% 52%, hsla(174,71%,73%,1) 0px, transparent 50%),radial-gradient(at 91% 19%, hsla(252,89%,63%,0.91) 0px, transparent 50%),radial-gradient(at 11% 13%, hsla(251,66%,62%,1) 0px, transparent 70%),radial-gradient(at 92% 83%, hsla(318,90%,80%,0.22) 0px, transparent 50%)
+	text-decoration: none
+
+// table樣式
+.mod-tableBk
+	width: 100%
+	height: auto
+	overflow-x: auto
+	margin-bottom: 0px
+	position: relative
+
+
+
+.mod-table-title
+	width: 1300px
+	position: relative
+	z-index: 2
+	left: 0
+	top: 0
+	display: flex
+	flex-wrap: nowrap
+	list-style-type: none
+	height: auto
+
+.mod-table-title--list
+	background: $accent
+	&:first-of-type
+		border-radius: 24px 0 0 0
+	&:last-of-type
+		border-radius: 0 24px 0 0
+
+.mod-table-list
+	width: 1300px
+	background: $white
+	border-bottom: 1px solid $gray-line
+	list-style-type: none
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+	&:hover,&:active,&:focus
+		background: $cyan-200
+	&:last-of-type
+		border-radius: 0 0 24px 24px
+		border-bottom: none
+
+.mod-table-info
+	flex-shrink: 0
+	padding: 18px 0 16px 24px
+	// width: 180px
+	&:nth-of-type(1)
+		width: 150px
+	&:nth-of-type(2)
+		width: 150px
+	&:nth-of-type(3)
+		width: 270px
+	&:nth-of-type(4)
+		width: 250px
+	&:nth-of-type(5)
+		width: 170px
+	&:nth-of-type(6)
+		width: 170px
+	&:nth-of-type(7)
+		width: 140px
+
+
+.mod-table-list--list
+	// background: $white
+	&:first-of-type
+		border-radius: 0 0 0 24px 
+	&:last-of-type
+		border-radius: 0 0 24px 0 
+

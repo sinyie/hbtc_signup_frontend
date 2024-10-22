@@ -1,0 +1,72 @@
+{
+    // 20240924
+    // 電腦版安裝應用程式：
+    // https://support.google.com/chrome/answer/9658361?hl=zh-Hant&co=GENIE.Platform%3DDesktop
+    // 手機板安裝應用程式：
+    // https://www.suntrans.net/aboutus/pwa
+    // 參考網頁：
+    // https://www.letswrite.tw/pwa-manifest/#start-url-%e9%96%8b%e5%95%9f%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f%e6%99%82%e7%9a%84%e9%a0%90%e8%a8%ad%e7%b6%b2%e5%9d%80
+    // https://web.dev/articles/add-manifest?utm_source=devtools&hl=zh-tw
+    "short_name": "Multi-Purpose Registration for Health Bureau of Taichung City Government",
+    "name": "Multi-Purpose Registration for Health Bureau of Taichung City Government",
+    "icons": [
+        // 至少提供192 / 512尺寸
+        // sizes 圖片尺寸，可用在多個尺寸上的話用空白鍵區隔。
+        // src 圖片的路徑，如果是相對路徑，是以 manifest 所在的位置為基準。
+        // type 圖檔類型，這項排必填，主要是告知裝置類型，讓不支援的裝置可以快速略過。
+        {
+            "src": "images/icon-512x512.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        },
+        {
+            "src": "images/icon-192x192.svg",
+            "type": "image/svg+xml",
+            "sizes": "192x192"
+        }
+    ],
+    // id
+    // https://developer.chrome.com/docs/capabilities/pwa-manifest-id?hl=zh-tw#determine-id
+    // 目前還抓不到
+    // "id": "",
+    // start_url 是必要屬性。可讓瀏覽器瞭解 應用程式應在啟動後啟動，並防止應用程式在啟動時啟動 也就是使用者將應用程式加入主畫面時所在的網頁。
+    //     如果有設定的話，開啟應用程式時就會進到設定的網址。沒設定的話就是使用者按加入主畫面時的那個網址。
+    // 如果填寫的是相對路徑，是以 manifest 所在的位置為基準。
+    // 建議可以在網址上加入 Google Analytics 的 utm 參數，這樣在 GA 上就可以看見多少來源是來自於 PWA，可以檢測成效。
+    "start_url": "/html5qrcode.html",
+    "background_color": "#F7FAFF",
+    // 您可以自訂應用程式啟動時要顯示的瀏覽器使用者介面。適用對象 例如，您可以隱藏網址列和瀏覽器的使用者介面元素。遊戲 甚至可以啟動全螢幕display 屬性會採用以下其中一個值：
+    // fullscreen	不需任何瀏覽器 UI 就能開啟網頁應用程式，並佔據所有 可用的顯示區域。
+    // standalone	開啟網頁應用程式，外觀與風格類似獨立的應用程式。應用程式執行 在瀏覽器視窗中獨立於瀏覽器視窗中，並隱藏標準圖片 瀏覽器的 UI 元素，例如網址列
+    // minimal-ui	這個模式與 standalone 類似，但會提供 僅使用少量 UI 元素控制導覽功能 例如返回和重新載入按鈕
+    // browser	標準瀏覽器體驗。
+    "display": "standalone",
+    // scope 應用程式的使用範圍
+    // 這項如果有填，那應用程式的作用域就會限在指定的目錄裡，超過指定目錄，就會當成一般的網頁瀏覽。
+    "scope": "/",
+    // theme_color 會設定工具列的顏色，且可反映在 工作切換器中的應用程式預覽theme_color 應與 文件標頭中指定的meta主題顏色。
+    "theme_color": "#006fca",
+    // shortcuts
+    // https://web.dev/articles/app-shortcuts?hl=zh-tw
+    // shortcuts 屬性是應用程式捷徑的陣列物件，讓使用者快速存取應用程式中的主要工作。每位成員是至少包含 name 和 url 的字典。
+    // android及電腦桌面可使用,iphone測試還沒辦法
+    // 應用程式捷徑不支援 SVG 檔案。 請改用 PNG 格式。
+    "shortcuts": [],
+    "description": "臺中市政府衛生局線上報名系統",
+    // screenshots
+    // screenshots 屬性是代表應用程式的圖片物件陣列 常見用途每個物件都必須包含 src，而 sizes ，以及圖片的 type。form_factor 為選用屬性， 如要支援寬螢幕螢幕截圖，可以將其設為 "wide" "narrow" 或僅針對窄版螢幕截圖。
+    "screenshots": [
+        //   {
+        //     "src": "/images/screenshot1.png",
+        //     "type": "image/png",
+        //     "sizes": "540x720",
+        //     "form_factor": "narrow"
+        //   },
+        //   {
+        //     "src": "/images/screenshot2.jpg",
+        //     "type": "image/jpg",
+        //     "sizes": "720x540",
+        //     "form_factor": "wide"
+        //   }
+    ]
+}

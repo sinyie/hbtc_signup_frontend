@@ -1,0 +1,93 @@
+// 頁面結構
+.stu-wrapper
+	width: 100%
+	min-height: 100vh
+	height: auto
+	overflow: hidden
+.stu-primary
+	width: 100%
+	margin: 0 auto
+	position: relative
+	+ipad
+		width: 640px
+
+.stu-ele01
+	position: absolute
+	z-index: -1
+	background: url(../../images/sign-in/ele-01.svg) no-repeat
+	background-size: 420px
+	left: -100px
+	top: 100px
+	width: 420px
+	height: 420px
+	+ipad
+		background-size: 440px
+		width: 440px
+		height: 440px
+		top: 100px
+		left: -160px
+.stu-ele02
+	position: absolute
+	z-index: -1
+	background: url(../../images/sign-in/ele-02.svg) no-repeat
+	background-size: 200px
+	right: -100px
+	top: 580px
+	width: 200px
+	height: 200px
+	+ipad
+		background-size: 280px
+		width: 280px
+		height: 280px
+		top: 460px
+.stu-ele03
+	position: absolute
+	z-index: -1
+	background: url(../../images/sign-in/ele-03.svg) no-repeat
+	background-size: 207px 158px
+	right: -110px
+	top: -58px
+	width: 207px
+	height: 158px
+	+ipad
+		right: -85px
+		top: -43px
+
+
+// navgation
+.stuNavBk
+	position: fixed
+	z-index: 5
+	width: 100%
+	bottom: 0
+	left: 0
+
+.stuNav
+	background: rgba(255,255,255,0.68)
+	backdrop-filter: blur(35px)
+	box-shadow: 1px 1px 0px 0px rgba(255,255,255,1),0px 10px 100px 0px rgba(50,110,240,0.1)
+
+.stuNav-link
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.stuNav-link--text
+	font-size: $typo-fs--15
+	+ipad
+		font-size: $typo-fs--16
+
+
+// 內頁header
+.stuPageHeader
+	position: relative
+
+
+.stuPageHeader--text
+	width: 100%
+	text-align: center
+
+.stuPageHeader--bt
+	position: absolute
+	left: 24px

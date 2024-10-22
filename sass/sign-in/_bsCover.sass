@@ -1,0 +1,40 @@
+// 覆蓋BS 原始設定的 sass
+
+// btn 設定
+// 設定字型、字級、字重、行高
+.btn
+    font-family: $text-style
+    font-size: $title-base-monitor
+    font-weight: normal
+// row 預設值
+// .row > *
+//     padding-right: 0
+//     padding-left: 0
+
+// modal
+.modal-header
+    border-bottom: none
+    padding: 24px 24px 12px 24px
+
+
+.modal-footer
+    border-top: none
+    padding: 0px 24px 16px 24px
+
+// form
+.form-text 
+    color: $gray-700
+    font-size: $typo-fs--16
+    +ipad
+        font-size: $typo-fs--18
+
+
+.form-control
+    border: $input-border-width solid $input-border-color
+    padding: 10px 24px
+    border-radius: 12px
+    letter-spacing: 0.5px
+    &::placeholder
+        font-family: 'Montserrat-Regular','NotoSansTC-Regular'
+    &:focus
+        color: $black

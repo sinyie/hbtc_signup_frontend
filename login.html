@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>臺中市政府衛生局　線上報名系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="zh-TW" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!--css檔連結區-->
+    <link href="css/sign-in/signin.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--js檔連結區-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/csrf.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- manifest -- PWA相關設定 -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- i18n -->
+    <script src="i18n/jquery.i18n.js"></script>
+    <script src="i18n/jquery.i18n.messagestore.js"></script>
+    <script src="i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="i18n/jquery.i18n.language.js"></script>
+    <script src="i18n/jquery.i18n.parser.js"></script>
+    <script src="i18n/jquery.i18n.emitter.js"></script>
+    <script src="i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="i18n/i18n-config.js"></script>
+
+	<!-- 本頁js -->
+	<script src="js/js-html5qrcode.js"></script>
+</head>
+
+<body>
+	<div class="stu-wrapper">
+		<div class="stu-primary pb-sm-22">
+			<div class="stu-ele01"></div>
+			<div class="stu-ele02"></div>
+			<div class="stu-ele03"></div>
+
+			<!-- welcome -->
+			<div class="px-sm-5 pt-sm-10 pb-sm-10 pt-md-17 pb-md-12 px-sm-6">
+				<div>
+					<p class="typo-l-sm-h3 typo-l-md-h1 mb-sm-2">LOGIN</p>
+					<p class="typo-s-sm-caption typo-l-md-p">
+						臺中市政府衛生局線上報名
+					</p>
+					<p class="typo-s-sm-caption typo-l-md-p">
+						現場服務櫃台系統
+					</p>
+				</div>
+			</div>
+			
+			<!-- 輸入區 -->
+			<div class="eleBlank--mg--52 br-sm-48 px-sm-6 py-sm-9">
+				<div class="mb-sm-5 mb-md-6">
+					<label for="input-01" class="typo-s-sm-caption typo-l-md-caption mb-3">
+						<span class="col-red--400 pe-1">＊</span>
+						櫃台編號
+						<span class="col-red--400 ps-2">請輸入櫃台編號</span>
+					</label>
+					<input type="text" class="form-control" id="input-01" placeholder="請輸入櫃檯號碼">
+				</div>
+				<div class="mb-sm-5 mb-md-6">
+					<label for="input-02" class="typo-s-sm-caption typo-l-md-caption mb-3">
+						<span class="col-red--400 pe-1">＊</span>
+						登入碼
+						<span class="col-red--400 ps-2">請輸入登入碼</span>
+					</label>
+					<input type="text" class="form-control" id="input-02" placeholder="請輸入登入碼">
+				</div>
+				<div class="mb-sm-5 mb-md-6">
+					<label for="input-02" class="typo-s-sm-caption typo-l-md-caption mb-3">
+						<span class="col-red--400 pe-1">＊</span>
+						驗證碼
+						<span class="col-red--400 ps-2">請輸入驗證碼</span>
+					</label>
+					<input type="text" class="form-control" id="input-02" placeholder="請輸入驗證碼">
+				</div>
+				<div class="mb-sm-5 mb-md-6">
+					<!-- 驗證碼圖片放這邊 -->
+				</div>
+				<a data-button-variant="primary" href="javascript:void(0);" class="w-100 btn--basic">
+					<span class="typo-s-sm-btn typo-l-md-btn">登入系統</span>
+				</a>
+			</div>
+
+			
+		</div>
+	</div>
+
+	
+	
+</body>
+</html>

@@ -319,19 +319,12 @@ h6 .icon, p .icon, div .icon, a .icon {
 /*基底通用設定*/
 body {
   font-size: 100%;
-  background: #F7FAFF;
   font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
   font-size: 1.125rem;
   color: #0F172A;
   line-height: 1.8;
   background-size: auto 100%;
 }
-@media all and (min-width: 78em) {
-  body {
-    background-size: 100% auto;
-  }
-}
-
 a {
   font-family: "Montserrat-Medium", sans-serif, "NotoSansTC-Medium", sans-serif, "Microsoft JhengHei";
   font-size: 1.125rem;
@@ -403,7 +396,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background: rgb(0, 102, 255);
+  background: #0066ff;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 10px rgba(34, 34, 34, 0.12);
           box-shadow: 0 0 10px rgba(34, 34, 34, 0.12);
@@ -1487,7 +1480,7 @@ button {
   color: #FFF;
 }
 .btnCurcleRec-secondColor:hover, .btnCurcleRec-secondColor:active, .btnCurcleRec-secondColor:focus {
-  background: rgb(0, 102, 255);
+  background: #0066ff;
 }
 
 .btnCurcleRec-mainColor {
@@ -2956,12 +2949,12 @@ label {
 
 .eleColorLabel--lightinfo {
   color: #006fca;
-  background: rgb(0, 102, 255);
+  background: #0066ff;
 }
 
 .eleColorLabel--info {
   color: #FFF;
-  background: rgb(0, 102, 255);
+  background: #0066ff;
 }
 
 .eleColorLabel--lightgray {
@@ -4666,7 +4659,7 @@ label {
   text-align: right;
 }
 .calEventList .calEventList-infoBk .calEventList-infoBk--endTime, .calEventList--project .calEventList-infoBk .calEventList-infoBk--endTime, .calEventList--meeting .calEventList-infoBk .calEventList-infoBk--endTime {
-  color: rgb(0, 102, 255);
+  color: #0066ff;
   opacity: 0.6;
   font-weight: 500;
 }
@@ -4682,10 +4675,10 @@ label {
 }
 
 .calEventList--project .calEventList-infoBk {
-  background: rgb(0, 102, 255);
+  background: #0066ff;
 }
 .calEventList--project .calEventList-infoBk--startTime {
-  color: rgb(0, 102, 255);
+  color: #0066ff;
 }
 .calEventList--project .calEventList-infoBk--listContent {
   color: #575A6A;
