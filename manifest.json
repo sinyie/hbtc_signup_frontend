@@ -23,11 +23,11 @@
             "sizes": "192x192"
         }
     ],
-    "start_url": "/signin-index.html",
+    "start_url": "index.html",
     "background_color": "#F7FAFF",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#F7FAFF",
+    "theme_color": "#F2F5FA",
     "shortcuts": [],
     "description": "臺中市政府衛生局線上報名系統",
     "screenshots": [

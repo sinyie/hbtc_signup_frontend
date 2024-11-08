@@ -36729,7 +36729,7 @@ body {
   color: #212A37;
   line-height: 1.5;
   letter-spacing: 0.2px;
-  background: #F7FAFF;
+  background: #F2F5FA;
   background-size: auto 100%;
   line-height: 0;
 }
@@ -36808,7 +36808,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .bg {
-  background: #F7FAFF;
+  background: #F2F5FA;
 }
 
 .bg-white {
@@ -37012,7 +37012,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .col-bg {
-  color: #F7FAFF;
+  color: #F2F5FA;
 }
 
 .col-white {
@@ -37320,7 +37320,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .btn--inline[data-button-variant=ghost] {
   color: #8D919F;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #DEE3EB;
   background: #fff;
 }
 .btn--inline[data-button-variant=ghost] .icon {
@@ -37349,8 +37349,8 @@ html::-webkit-scrollbar-thumb:hover {
 
 .btn--icon[data-button-variant=ghost] {
   color: #212A37;
-  border: 1px solid #E2E8F0;
-  background: #F7FAFF;
+  border: 1px solid #DEE3EB;
+  background: #F2F5FA;
 }
 .btn--icon[data-button-variant=ghost] .icon {
   color: currentColor;
@@ -37361,7 +37361,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .btn--icon[data-button-variant=white] {
   color: #212A37;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #DEE3EB;
   background: #fff;
 }
 .btn--icon[data-button-variant=white] .icon {
@@ -37541,7 +37541,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .eleBorderLineBlank {
-  border: 1px solid #E2E8F0;
+  border: 1px solid #DEE3EB;
   border-radius: 48px;
 }
 
@@ -37738,7 +37738,7 @@ input::-ms-reveal {
 .mod-table-list {
   width: 1300px;
   background: #fff;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #DEE3EB;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37810,41 +37810,42 @@ input::-ms-reveal {
 }
 
 .stu-ele01 {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   background: url(../../images/sign-in/ele-01.svg) no-repeat;
-  background-size: 420px;
-  left: -100px;
-  top: 100px;
-  width: 420px;
-  height: 420px;
+  background-size: 540px;
+  left: -160px;
+  top: 80px;
+  width: 540px;
+  height: 540px;
 }
 @media all and (min-width: 48em) {
   .stu-ele01 {
-    background-size: 440px;
-    width: 440px;
-    height: 440px;
-    top: 100px;
-    left: -160px;
+    background-size: 740px;
+    width: 740px;
+    height: 740px;
+    top: 60px;
+    left: -300px;
   }
 }
 
 .stu-ele02 {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   background: url(../../images/sign-in/ele-02.svg) no-repeat;
-  background-size: 200px;
+  background-size: 400px;
   right: -100px;
-  top: 580px;
-  width: 200px;
-  height: 200px;
+  top: 390px;
+  width: 400px;
+  height: 400px;
 }
 @media all and (min-width: 48em) {
   .stu-ele02 {
-    background-size: 280px;
-    width: 280px;
-    height: 280px;
-    top: 460px;
+    background-size: 480px;
+    width: 480px;
+    height: 480px;
+    top: 420px;
+    right: -200px;
   }
 }
 
